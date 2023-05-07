@@ -6,9 +6,9 @@ import Footer from '../component/Footer'
 const Physics = () => {
   return (
     <>
-          <NeetNav />
-            <QuizPhy />
-            <Footer />
+      <NeetNav />
+      <QuizPhy />
+      <Footer />
     </>
   )
 }

@@ -14,7 +14,7 @@ function ForgotPassword() {
   const [message, setMessage] = useState("");
 
   const userValid = async () => {
-    const res = await fetch(`${process.env.REACT_APP_SERVER_HOST}/forgotpassword/${id}/${token}`, {
+    const res = await fetch(`http://localhost:8009/forgotpassword/${id}/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -48,7 +48,7 @@ function ForgotPassword() {
         autoClose: 2000,
       })
     } else {
-      const res = await fetch(`/${id}/${token}`, {
+      const res = await fetch(`http://localhost:8009/${id}/${token}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

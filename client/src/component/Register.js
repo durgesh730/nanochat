@@ -78,7 +78,7 @@ const Register = () => {
             })
         } else {
             // console.log('user registration succesfully done')
-            const data = await fetch( `${process.env.REACT_APP_SERVER_HOST}/register`, {
+            const data = await fetch( `http://localhost:8009/register`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

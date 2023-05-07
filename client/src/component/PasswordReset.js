@@ -26,7 +26,7 @@ const PasswordReset = () => {
         e.preventDefault();
 
         // call api to front end 
-        const res = await fetch(`${process.env.REACT_APP_SERVER_HOST}/sendpasswordlink`, {
+        const res = await fetch(`http://localhost:8009/sendpasswordlink`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -123,8 +123,18 @@ router.get("/validuser", authenticate, async (req, res) => {
     }
 });
 
+// ========================Get Users data =================================
 
-//======================  logout API and endl point ======================================
+router.get("/users", authenticate, async (req, res) => {
+    try {
+        const user = await userdb.findOne({ _id: req.userId });
+        res.status(201).json({ status: 201, user});
+    } catch (error) {
+        res.status(401).json({ status: 401, error });
+    }
+});
+
+//======================  logout API and endl point ========================
 
 router.get("/logout", authenticate, async (req, res) => {
     try {
@@ -148,14 +158,16 @@ router.get("/logout", authenticate, async (req, res) => {
 
 router.post('/studentform', async (req, res) => {
 
-    const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category, choice1, choice2, choice3, choice4, question, state } = req.body;
+    const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category, 
+        choice1, choice2, choice3, choice4, question, state } = req.body;
 
     if (!fname || !AIQRank || !phonenumber || !category) {
         res.status(404).json({ error: "fill all the deatils" })
     }
 
     try {
-        const finalUser = new Form({ fname, lastname, DOB, AIQRank, CRank, phonenumber, category, choice1, choice2, choice3, choice4, question, state });
+        const finalUser = new Form({ fname, lastname, DOB, AIQRank, CRank,
+             phonenumber, category, choice1, choice2, choice3, choice4, question, state });
 
         const storeData = await finalUser.save();
         res.status(201).json({ status: 201, storeData })

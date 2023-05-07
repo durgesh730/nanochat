@@ -20,7 +20,7 @@ export const useFetchQuestion = () => {
         (async () => {
 
             try {
-                const [{questions, answers}] =  await getServerData( `${process.env.REACT_APP_SERVER_HOST}/getquestions` , (data)=>data)
+                const [{questions, answers}] =  await getServerData( `http://localhost:8009/getquestions` , (data)=>data)
 
                 if (questions.length > 0) {
                     setGetData(prev => ({ ...prev, isLoading: false }));

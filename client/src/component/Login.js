@@ -60,7 +60,7 @@ const Login = () => {
             })
         } else {
             // console.log('user registration succesfully done')
-            const data = await fetch(`${process.env.REACT_APP_SERVER_HOST}/login`, {
+            const data = await fetch(`http://localhost:8009/login`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

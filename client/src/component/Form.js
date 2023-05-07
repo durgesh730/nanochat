@@ -38,7 +38,8 @@ const Form = () => {
   const handleform = async (e) => {
     e.preventDefault();
 
-    const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category, choice1, choice2, choice3, choice4, question, state } = inVal;
+    const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category,
+       choice1, choice2, choice3, choice4, question, state } = inVal;
 
     if (fname === '') {
       toast("Enter Your Name", {
@@ -57,12 +58,13 @@ const Form = () => {
         autoClose: 3000,
       })
     } else {
-      const data = await fetch(`${process.env.REACT_APP_SERVER_HOST}/studentform`, {
+      const data = await fetch(`http://localhost:8009/studentform`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ fname, lastname, DOB, AIQRank, CRank, phonenumber, category, choice1, choice2, choice3, choice4, question, state })
+        body: JSON.stringify({ fname, lastname, DOB, AIQRank, CRank, phonenumber,
+           category, choice1, choice2, choice3, choice4, question, state })
       });
 
       const res = await data.json();

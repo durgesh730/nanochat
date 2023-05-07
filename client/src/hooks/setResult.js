@@ -21,7 +21,7 @@ export const updateResult = (index) => async (dispatch) => {
 export const usePublishResult = (resultData) => {
 ( async () =>{
       try {
-         await postServerData(  `${process.env.REACT_APP_SERVER_HOST}/result` , resultData, data => data)
+         await postServerData(  `http://localhost:8009/result` , resultData, data => data)
       } catch (error) {
          console.log(error)
       }
@@ -32,7 +32,7 @@ export const usePublishResult = (resultData) => {
 export const usePublishResultPhy = (resultData) => {
    ( async () =>{
          try {
-            await postServerData( `${process.env.REACT_APP_SERVER_HOST}/PhyResult `, resultData, data => data)
+            await postServerData( `http://localhost:8009/PhyResult `, resultData, data => data)
          } catch (error) {
             console.log(error)
          }
@@ -45,7 +45,7 @@ export const usePublishResultBio = (resultData) => {
 
    ( async () =>{
          try {
-            await postServerData( `${process.env.REACT_APP_SERVER_HOST}/BioResult`  , resultData, data => data)
+            await postServerData( `http://localhost:8009/BioResult`  , resultData, data => data)
          } catch (error) {
             console.log(error)
          }

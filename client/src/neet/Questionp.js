@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import '../style/question.css'
 
 // custom hook
-
 import { useFetchQuestion } from '../hooks/pFetchQuestions'
 import { updateResult } from '../hooks/setResult'
 
@@ -27,13 +26,12 @@ export default function Question({ onChecked }) {
         setChecked(i)
         dispatch(updateResult({ trace, checked }))
     }
-
-    if (isLoading) return <h3 className='text-dark'>isLoading...</h3>
     if (serverError) return <h3 className='text-dark'>{serverError || "Unknow Error"}</h3>
-
-
     return (
         <>
+          
+          { isLoading? <div class="loader"></div> : (
+            
             <div className='totalheight' >
 
                 <div className='subjectName text-center '>
@@ -70,6 +68,7 @@ export default function Question({ onChecked }) {
                 </div>
 
             </div>
+            ) }
         </>
     )
 }

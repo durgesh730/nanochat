@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../style/navbar.css"
 import { FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { json, Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { BsArrowReturnLeft } from 'react-icons/bs';
+import { BsArrowReturnLeft, BsFillPersonFill } from 'react-icons/bs';
 
 // for reset value of result
 import { useDispatch } from 'react-redux';
@@ -13,7 +13,7 @@ import { resetResultAction } from '../redux/result_reducer';
 
 
 const Navbar = () => {
-  
+
   const dispatch = useDispatch();
   var [isShown] = useState(false);
 
@@ -42,10 +42,33 @@ const Navbar = () => {
     }
   }
 
-  const onReset=()=>{
-      dispatch(resetALLAction())
-      dispatch(resetResultAction());
+  const onReset = () => {
+    dispatch(resetALLAction())
+    dispatch(resetResultAction());
   }
+
+  const [users, setusers] = useState([]);
+  console.log(users)
+
+  const userData = async () => {
+    const data = await fetch('http://localhost:8009/users', {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+        "authorization": localStorage.getItem("usersdatatoken")
+      },
+    })
+    const res = await data.json();
+    if(res.user !== null){
+      setusers(res.user);
+    }
+    //  console.log(res.user)
+  }
+
+  useEffect(() => {
+    userData();
+  }, [])
+
 
   return (
     <>
@@ -53,12 +76,12 @@ const Navbar = () => {
         <div className='container'>
           <nav>
             <div className='logo'><Link to="/" onClick={onReset} >Nano chat</Link></div>
-            
             <div className='RightNav'>
               <Link to='/neet'>NEET</Link>
               <Link to='/login'>Login</Link>
               <Link to='/signup'>Signup</Link>
               {token == null ? " " : <Link onClick={handleLogout} id='logout' >Logout</Link>}
+              <span className='avtar' to='/signup'><BsFillPersonFill /><small >{ users?users.fname:"No Login "}</small> </span>
               <span className='Bars' onClick={handleClick}><FaBars /></span>
             </div>
           </nav>
@@ -66,6 +89,7 @@ const Navbar = () => {
 
         <div className='Sidenav' id='SideNav'>
           <span onClick={CloseNav} id="Close" style={{ fontSize: "1.5rem" }} ><BsArrowReturnLeft /></span>
+          <Link to='/signup'><BsFillPersonFill /><small >{ users?users.fname:"No Login "}</small> </Link>
           <Link to='/'>Home</Link>
           <Link to='/neet' onClick={onReset} >NEET</Link>
           <Link to='/login'>Login</Link>
