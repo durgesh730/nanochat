@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, json, useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
 import '../style/login.css';
 import logimg from "../images/Mobile login-rafiki.png";
@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Footer from '../component/Footer'
 import Navbar from './Navbar';
+import SocialMedia from './SocialMedia';
 
 const Login = () => {
 
@@ -25,10 +26,8 @@ const Login = () => {
         email: '',
         password: '',
     })
-    // console.log(inpval);
 
     const setVal = (e) => {
-        // console.log(e.target.value);
         const { name, value } = e.target;
 
         setInpval(() => {
@@ -59,7 +58,6 @@ const Login = () => {
                 autoClose: 3000,
             })
         } else {
-            // console.log('user registration succesfully done')
             const data = await fetch(`http://localhost:8009/login`, {
                 method: 'POST',
                 headers: {
@@ -70,12 +68,12 @@ const Login = () => {
                 })
             });
             const res = await data.json();
-            // console.log(res);
             if (res.status === (201)) {
                 toast("Logged In successfully", {
                     autoClose: 3000,
                 })
-                localStorage.setItem('usersdatatoken', res.result.token)
+                localStorage.setItem('token', res.result.token)
+                localStorage.setItem("user", JSON.stringify(res.result.userValid));
                 Navigate('/')
                 setInpval({ ...inpval, email: " ", password: "" })
             } else if (res.status !== (201)) {
@@ -89,6 +87,7 @@ const Login = () => {
     return (
         <>
           <Navbar/>
+          <SocialMedia/>
             <section className='container login'>
                 <div className='loginimg' data-aos="fade-down-right">
                     <img src={logimg} alt ="img"></img>
@@ -124,7 +123,7 @@ const Login = () => {
           
             <Footer/>
 
-            <ToastContainer />
+         
         </>
     )
 }

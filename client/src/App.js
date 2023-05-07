@@ -1,6 +1,7 @@
 import Neet from "./neet/Neet";
 import Body from "./component/Body";
 import { Route, BrowserRouter, Routes, } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 
 import UP from "./downloads/UP";
 import Panjab from "./downloads/Panjab";
@@ -80,6 +81,7 @@ function App() {
           <Route path='/Gujrat' element={<Gujrat />} ></Route>
 
         </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </>
   );

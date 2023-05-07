@@ -23,10 +23,8 @@ function ForgotPassword() {
     const data = await res.json()
 
     if (data.status === 201) {
-      // console.log("user valid")
-      console.log("")
+      console.log("user valid ")
     } else {
-      // if user is not valid the go to error page
       history("/")
     }
   }

@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
+import SocialMedia from './SocialMedia';
 
 const Form = () => {
 
@@ -24,7 +25,6 @@ const Form = () => {
   })
 
   const setVal = (e) => {
-    // console.log(e.target.value);
     const { name, value } = e.target;
 
     setInpval(() => {
@@ -39,7 +39,7 @@ const Form = () => {
     e.preventDefault();
 
     const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category,
-       choice1, choice2, choice3, choice4, question, state } = inVal;
+      choice1, choice2, choice3, choice4, question, state } = inVal;
 
     if (fname === '') {
       toast("Enter Your Name", {
@@ -49,11 +49,11 @@ const Form = () => {
       toast("Enter Your Correct Phone number", {
         autoClose: 3000,
       })
-    } else if (AIQRank ==="") {
+    } else if (AIQRank === "") {
       toast("Enter Your AIQ Rank", {
         autoClose: 3000,
       })
-    } else if (category ==="") {
+    } else if (category === "") {
       toast("Enter Your Category", {
         autoClose: 3000,
       })
@@ -63,8 +63,10 @@ const Form = () => {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ fname, lastname, DOB, AIQRank, CRank, phonenumber,
-           category, choice1, choice2, choice3, choice4, question, state })
+        body: JSON.stringify({
+          fname, lastname, DOB, AIQRank, CRank, phonenumber,
+          category, choice1, choice2, choice3, choice4, question, state
+        })
       });
 
       const res = await data.json();
@@ -103,48 +105,40 @@ const Form = () => {
   return (
     <>
 
-    <Navbar/>
-     
+      <Navbar />
+
+      <SocialMedia/>
       <div className='container formfields '>
         <form >
           <h2 className='text-center my-4'>Counselling Form</h2>
           <div className=' inputs'>
             <div className="form-group p-3 ">
-              {/* <label htmlfor="name">Name</label> */}
               <input type="fname" className="form-control" value={inVal.fname} name="fname" id="name" aria-describedby="emailHelp" placeholder="First Name" onChange={setVal} minlength="3" />
             </div>
 
             <div className="form-group p-3 ">
-              {/* <label for="lastname">Last Name</label> */}
               <input type="lastname" className="form-control" id="lastname" name="lastname" value={inVal.lastname} placeholder="Last Name" onChange={setVal} />
             </div>
 
-
-
             <div className="form-group p-3 ">
-              {/* <label for="DOB">DOB</label> */}
               <input type="DOB" className="form-control" id="DOB" value={inVal.DOB} name="DOB" placeholder="Category" onChange={setVal} />
             </div>
           </div>
 
           <div className='inputs'>
             <div className="form-group p-3 ">
-              {/* <label htmlfor="name">Name</label> */}
               <input type="AIQRank" className="form-control" id="AIQRank" value={inVal.AIQRank} name="AIQRank" aria-describedby="emailHelp" placeholder="AIQ Rank" onChange={setVal} />
             </div>
 
             <div className="form-group p-3 ">
-              {/* <label for="lastname">Last Name</label> */}
               <input type="CRank" className="form-control" id="CRank" name="CRank" value={inVal.CRank} placeholder="Category Rank" onChange={setVal} />
             </div>
 
             <div className="form-group p-3 ">
-              {/* <label for="DOB">DOB</label> */}
               <input type="phonenumber" className="form-control" name="phonenumber" value={inVal.phonenumber} id="phonenumber" placeholder="Phone Number" onChange={setVal} minlength="10" />
             </div>
 
             <div className="form-group p-3 ">
-              {/* <label for="DOB">DOB</label> */}
               <input type="category" className="form-control" name="category" value={inVal.category} id="category" placeholder="Category" onChange={setVal} />
             </div>
           </div>
@@ -154,24 +148,20 @@ const Form = () => {
 
           <div className='inputs'>
             <div className="form-group p-3 ">
-              {/* <label htmlfor="name">Name</label> */}
               <input type="choice1" className="form-control" id="choice1" name="choice1" value={inVal.choice1} aria-describedby="emailHelp" placeholder="1. Choice" onChange={setVal} />
             </div>
 
             <div className="form-group p-3 ">
-              {/* <label for="lastname">Last Name</label> */}
               <input type="choice2" className="form-control" id="choice2" name="choice2" value={inVal.choice2} placeholder="2. Choice" onChange={setVal} />
             </div>
 
             <div className="form-group p-3 ">
-              {/* <label for="DOB">DOB</label> */}
               <input type="choice3" className="form-control" id="choice3" name="choice3" value={inVal.choice3} placeholder="3. Choice" onChange={setVal} />
             </div>
           </div>
 
           <div className='d-flex'>
             <div className="form-group p-3 ">
-              {/* <label for="DOB">DOB</label> */}
               <input type="choice4" className="form-control  " value={inVal.choice4} name="choice4" id="choice4" placeholder="4. Choice" onChange={setVal} />
             </div>
           </div>
@@ -194,7 +184,7 @@ const Form = () => {
         </form>
       </div>
 
-      <Footer/>
+      <Footer />
 
       <ToastContainer />
     </>

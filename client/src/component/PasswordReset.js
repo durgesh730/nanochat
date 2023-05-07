@@ -18,7 +18,6 @@ const PasswordReset = () => {
     const [message, setMessage] = useState("");
 
     const setVal = (e) => {
-        // user ka email setemail me ajayega
         setEmail(e.target.value)
     }
 

@@ -31,43 +31,24 @@ const Navbar = () => {
     document.getElementById('SideNav').style.width = "0px"
   }
 
-  const token = localStorage.getItem('usersdatatoken');
+
+  const token = localStorage.getItem('token');
+  const userData = localStorage.getItem('user');
+  const users = JSON.parse(userData);
+
 
   const handleLogout = () => {
-    const deleted = localStorage.removeItem('usersdatatoken');
-    if (deleted !== "") {
-      toast("You are Logged Out successfully", {
-        autoClose: 3000,
-      })
-    }
+    localStorage.clear();
+    window.location.reload();
+    toast("You are Logged Out successfully", {
+      autoClose: 3000,
+    })
   }
 
   const onReset = () => {
     dispatch(resetALLAction())
     dispatch(resetResultAction());
   }
-
-  const [users, setusers] = useState([]);
-  console.log(users)
-
-  const userData = async () => {
-    const data = await fetch('http://localhost:8009/users', {
-      method: 'GET',
-      headers: {
-        "Content-Type": "application/json",
-        "authorization": localStorage.getItem("usersdatatoken")
-      },
-    })
-    const res = await data.json();
-    if(res.user !== null){
-      setusers(res.user);
-    }
-    //  console.log(res.user)
-  }
-
-  useEffect(() => {
-    userData();
-  }, [])
 
 
   return (
@@ -80,8 +61,8 @@ const Navbar = () => {
               <Link to='/neet'>NEET</Link>
               <Link to='/login'>Login</Link>
               <Link to='/signup'>Signup</Link>
-              {token == null ? " " : <Link onClick={handleLogout} id='logout' >Logout</Link>}
-              <span className='avtar' to='/signup'><BsFillPersonFill /><small >{ users?users.fname:"No Login "}</small> </span>
+              {token === null ? " " : <Link onClick={handleLogout} id='logout' >Logout</Link>}
+              <span className='avtar' to='/signup'><BsFillPersonFill /><small >{users ? users.fname : "No Login "}</small> </span>
               <span className='Bars' onClick={handleClick}><FaBars /></span>
             </div>
           </nav>
@@ -89,7 +70,7 @@ const Navbar = () => {
 
         <div className='Sidenav' id='SideNav'>
           <span onClick={CloseNav} id="Close" style={{ fontSize: "1.5rem" }} ><BsArrowReturnLeft /></span>
-          <Link to='/signup'><BsFillPersonFill /><small >{ users?users.fname:"No Login "}</small> </Link>
+          <Link to='/signup'><BsFillPersonFill /><small >{users ? users.fname : "No Login "}</small> </Link>
           <Link to='/'>Home</Link>
           <Link to='/neet' onClick={onReset} >NEET</Link>
           <Link to='/login'>Login</Link>

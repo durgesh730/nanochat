@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-import NeetNav from './NeetNav'
 import '../style/neet.css'
 import neetpic from '../images/Analytics-amico.png'
 import { Link } from 'react-router-dom'
 import Footer from '../component/Footer'
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import SocialMedia from '../component/SocialMedia'
+import Navbar from '../component/Navbar'
 
 
 const Neet = () => {
@@ -18,7 +19,9 @@ const Neet = () => {
 
   return (
     <>
-      <NeetNav />
+   
+     <Navbar/>
+      <SocialMedia/>
       <div className='container '>
         <div className='block'>
           <div className='topics' data-aos="fade-down-right" >

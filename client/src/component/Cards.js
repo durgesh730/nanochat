@@ -57,7 +57,6 @@ const Cards = () => {
                     </div>
                 </div>
             </div>
-            {/* </div> */}
         </>
     )
 }

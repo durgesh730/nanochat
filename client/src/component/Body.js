@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import '../style/body.css';
 import imgaes from '../images/landing page.png'
-import { BsYoutube, BsLinkedin, BsTwitter } from 'react-icons/bs';
-import { SiInstagram } from 'react-icons/si';
+
 import Cards from './Cards';
 import Tables from './Tables';
 
@@ -14,6 +13,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import Navbar from "../component/Navbar";
+import SocialMedia from './SocialMedia';
 
 
 const Body = () => {
@@ -35,7 +35,6 @@ const Body = () => {
             <div className='textthird' ><small>we effort to improve the ability to think and euip them with specialized </small></div>
             <div className='textfourth' ><small>skill usefil in differentareas of medical, engineering and others</small></div>
             <div className='textButton'>
-              {/* <button className='btn'>Our Channel</button> */}
               <Link className='btn' to="form" >Counselling Form</Link>
               </div>
           </div>
@@ -43,18 +42,7 @@ const Body = () => {
             <img src={imgaes} alt="images" ></img></div>
         </div>
       </div>
-
-      {/* ==================== side social media icons ============================ */}
-
-      <section>
-        <div className='socialMediaLogo' id='phonemedia'>
-          <div className='youtube'><a href='https://www.youtube.com/@nanochat' target='black'><BsYoutube /></a></div>
-          <div className='linkdin'><a href='/' target='black'><BsLinkedin /></a></div>
-          <div className='instagram'><a href='https://www.instagram.com/_durgesh.chaudhary/' target='black'><SiInstagram /></a></div>
-          <div className='gmail'><a href='/' target='black'><BsTwitter /></a></div>
-        </div>
-      </section>
-
+      <SocialMedia/>
       <Cards/>
       <Notification/>
       <Tables/>

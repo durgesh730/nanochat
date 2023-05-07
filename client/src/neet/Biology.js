@@ -7,7 +7,6 @@ const Biology = () => {
   return (
     <>
       <NeetNav />
-      {/* <Quiz /> */}
       <QuizBio/>
       <Footer />
     </>

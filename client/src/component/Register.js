@@ -7,6 +7,7 @@ import Footer from '../component/Footer'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Navbar from './Navbar';
+import SocialMedia from './SocialMedia';
 
 const Register = () => {
 
@@ -106,7 +107,7 @@ const Register = () => {
     return (
         <>
            <Navbar/>
-           
+            <SocialMedia/>
             <section className='container ragister'>
 
                 <div className='ragisterimg' data-aos="fade-down-right">
