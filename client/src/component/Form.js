@@ -68,9 +68,7 @@ const Form = () => {
           category, choice1, choice2, choice3, choice4, question, state
         })
       });
-
       const res = await data.json();
-      // console.log(res)
 
       if (res.status === (201)) {
         toast("Your form submitted successfully", {
@@ -106,7 +104,6 @@ const Form = () => {
     <>
 
       <Navbar />
-
       <SocialMedia/>
       <div className='container formfields '>
         <form >

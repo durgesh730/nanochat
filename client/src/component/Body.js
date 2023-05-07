@@ -42,6 +42,7 @@ const Body = () => {
             <img src={imgaes} alt="images" ></img></div>
         </div>
       </div>
+      
       <SocialMedia/>
       <Cards/>
       <Notification/>

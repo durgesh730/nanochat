@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "../style/navbar.css"
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { BsArrowReturnLeft, BsFillPersonFill } from 'react-icons/bs';
+import { MdKeyboardArrowDown } from 'react-icons/md'
 
 // for reset value of result
 import { useDispatch } from 'react-redux';
@@ -16,6 +17,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   var [isShown] = useState(false);
+  const [dropdown, setdropdown] = useState(false);
 
   const handleClick = () => {
     if (isShown === false) {
@@ -26,6 +28,17 @@ const Navbar = () => {
       isShown = false;
     }
   };
+
+
+  function handledropdown() {
+    if (dropdown === false) {
+      document.getElementById("profileOption").style.height = "fit-content";
+      setdropdown(true);
+    } else {
+      document.getElementById("profileOption").style.height = "0px";
+      setdropdown(false);
+    }
+  }
 
   const CloseNav = () => {
     document.getElementById('SideNav').style.width = "0px"
@@ -62,10 +75,30 @@ const Navbar = () => {
               <Link to='/login'>Login</Link>
               <Link to='/signup'>Signup</Link>
               {token === null ? " " : <Link onClick={handleLogout} id='logout' >Logout</Link>}
-              <span className='avtar' to='/signup'><BsFillPersonFill /><small >{users ? users.fname : "No Login "}</small> </span>
+              <span onClick={handledropdown} className='avtar' to='/signup'><BsFillPersonFill /><small >{users ? users.fname : "No Login "} <MdKeyboardArrowDown /> </small> </span>
               <span className='Bars' onClick={handleClick}><FaBars /></span>
             </div>
           </nav>
+        </div>
+
+        <div className="profile-options" id="profileOption">
+          <ul>
+            <li>
+              <a style={{ cursor: "pointer" }} to="/profiledetails"  >My Profile</a>
+            </li>
+
+
+            <li >
+              <Link to="/book">Booked Vehicles</Link>
+            </li>
+
+            <li>
+              <Link to="/help">FAQ's & Help</Link>
+            </li>
+            <li >
+              <Link style={{ cursor: "pointer" }}  >Logout</Link>
+            </li>
+          </ul>
         </div>
 
         <div className='Sidenav' id='SideNav'>
