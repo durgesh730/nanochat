@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "../style/navbar.css"
 import { FaBars } from 'react-icons/fa';
-import { json, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { BsArrowReturnLeft, BsFillPersonFill } from 'react-icons/bs';
 
 // for reset value of result
@@ -78,8 +78,6 @@ const Navbar = () => {
           <Link onClick={handleLogout} id='logout' >Logout</Link>
         </div>
       </div>
-
-      <ToastContainer />
     </>
   )
 }
