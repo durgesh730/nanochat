@@ -20,13 +20,13 @@ const Body = () => {
 
   useEffect(() => {
     Aos.init({
-       duration: 1200
+      duration: 1200
     });
- }, []);
+  }, []);
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className='container'>
         <div className='imgpara' >
           <div className='Text' data-aos="fade-down-right">
@@ -36,21 +36,45 @@ const Body = () => {
             <div className='textfourth' ><small>skill usefil in differentareas of medical, engineering and others</small></div>
             <div className='textButton'>
               <Link className='btn' to="form" >Counselling Form</Link>
-              </div>
+            </div>
           </div>
           <div className='img' data-aos="fade-down-left">
             <img src={imgaes} alt="images" ></img></div>
         </div>
       </div>
+
+      <div className='chennels '>
+        <div className='container'>
+          <div>
+            <h1>5000K</h1>
+            <small>Subscribers</small><br/>
+            <a href=''> on Youtube</a>
+          </div>
+
+          <div class="vl"></div>
+          <div>
+            <h1>2090K</h1>
+            <small>Followers</small><br/>
+            <a href=''> on Instagram </a>
+          </div>
+
+          <div class="vl"></div>
+          <div>
+            <h1>3876K</h1>
+            <span> Followers </span><br/>
+            <a href=''> on Twiter </a>
+          </div>
+        </div>
+      </div>
       
-      <SocialMedia/>
-      <Cards/>
-      <Notification/>
-      <Tables/>
-      <Myself/>
-      <Videos/>
-      <Footer/>
-  
+      <SocialMedia />
+      <Cards />
+      <Notification />
+      <Tables />
+      <Myself />
+      <Videos />
+      <Footer />
+
     </>
   )
 }

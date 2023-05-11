@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Courgette&family=Fira+Sans&family=Fredoka+One&family=Inter:wght@300&family=Leckerli+One&family=Pacifico&family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&family=Rubik&family=Signika+Negative:wght@300&family=Source+Sans+Pro&family=Ubuntu:wght@300;400&family=Varela+Round&family=Yanone+Kaffeesatz&display=swap');
 
 .Navbar{
-    background-color: #232354;
+    /* background-color: #232354; */
     font-family: 'Poppins';
     transition: all .3s;
+    box-shadow: 0px 0px 20px -5px #232354;
 }
 
 nav{
-    padding: .4rem;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -21,29 +22,47 @@ nav .logo{
 nav .logo a{
     font-family: 'Leckerli One';
     text-decoration: none;
-    font-size:1.7rem;
-    color: white;
+    font-size:2rem;
+    color: #232354;
     cursor: pointer;
 }
 
-nav .RightNav a{
-    font-size: 16px;
+.logintab{
+    border: 1px solid #232354;
+    border-radius: .3rem;
+    padding:  .5rem 1.5rem;
+    color: #232354;
+}
+
+.neettab{
+    color: #232354;
+}
+
+.signuptab{
     color: white;
+    background-color: #232354;
+    border-radius: .3rem;
+    padding:  .6rem 1.5rem;
+}
+
+nav .RightNav a{
+    font-size: 19px;
+    font-weight: 400;
     text-decoration: none;
-    padding: 1rem;
+    margin:  0rem 1rem;
     transition: all 400ms ease;
 }
 
 nav .RightNav span{
     font-size: 30px;
-    color: white;
+    color: #232354;
     padding: 1rem;
     transition: all 400ms ease;
 }
 
 nav .RightNav small{
     font-size: 16px;
-    color: white;
+    color: #232354;
     padding: 1rem;
     transition: all 400ms ease;
 }
@@ -53,11 +72,12 @@ nav .RightNav a:hover{
     transform: scale3d(1.3, 1.3, 1.3);
 }
 
-/* ================== phone nav bar css =========== */
+/*  phone nav bar css  */
 .Bars{
     display: none;
-    color: white;
+    color: #232354;
     font-size: 1.4rem;
+    cursor: pointer;
 }
 
 .Sidenav{
@@ -97,7 +117,7 @@ nav .RightNav a:hover{
 }
 
 
-/* =============== dropdown css ============ */
+/* dropdown css  */
 .profile-options {
     position: absolute;
     right: 4.5rem;

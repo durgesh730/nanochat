@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Courgette&family=Fira+Sans&family=Fredoka+One&family=Inter:wght@300&family=Leckerli+One&family=Montez&family=Pacifico&family=Philosopher&family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&family=Rubik&family=Signika+Negative:wght@300&family=Source+Sans+Pro&family=Ubuntu:wght@300;400&family=Varela+Round&family=Yanone+Kaffeesatz&display=swap');
+
 body {
   transition: all 400ms ease;
 }
-
-/* ::-webkit-scrollbar {
-   display: none;
-} */
 
 .imgpara {
   display: grid;
@@ -14,6 +11,8 @@ body {
   font-family: 'Philosopher';
   text-align: center;
   align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 
 .Text .textone span {
@@ -51,7 +50,18 @@ body {
 }
 
 .imgpara .img img {
-  width: 38rem;
+  width: 33rem;
+  -webkit-animation: mover 2s infinite  alternate;
+  animation: mover 2s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
 }
 
 .textButton {
@@ -61,39 +71,27 @@ body {
   justify-content: center;
 }
 
-/* .textButton button {
+
+.textButton a {
   margin-top: .5rem;
   margin-left: 4rem;
+  padding: .7rem 1.2rem;
+  font-size: 1.3rem;
   border-width: 2px;
   border-style: solid;
-  border-color: #232354;
   color: #232354;
-} */
-
-
-.textButton a{
-  margin-top: .5rem;
-  margin-left: 4rem;
-  border-width: 2px;
-  border-style: solid;
   border-color: #232354;
-  color: #232354;
 }
 
-/* .textButton button:hover {
-  background-color: #232354;
-  color: white;
-} */
-
 .textButton a:hover {
-  background-color: #232354;
-  color: white;
+  border-color: #232354;
+  color: #232354;
 }
 
 /* social media css */
 
 .socialMediaLogo {
-  height:32%;
+  height: 32%;
   width: 5%;
   position: fixed;
   z-index: 1;
@@ -172,6 +170,7 @@ body {
   .imgpara {
     padding-top: 2rem;
   }
+
   .imgpara .img img {
     width: 26rem;
   }
@@ -182,7 +181,7 @@ body {
 
   .socialMediaLogo {
     width: 5%;
-    height:32%;
+    height: 32%;
   }
 }
 
@@ -225,9 +224,11 @@ body {
   .imgpara .img img {
     width: 22rem;
   }
+
   .socialMediaLogo {
     display: none;
   }
+
   .Text .textone span {
     font-size: 1.7rem;
   }
@@ -241,7 +242,7 @@ body {
   }
 
   .Text .textthird small {
-    font-size:.7rem;
+    font-size: .7rem;
   }
 
   .Text .textfourth {
@@ -259,9 +260,10 @@ body {
   .Text {
     padding-top: 3rem;
   }
+
   .PhoneIcon {
     display: none;
-  } 
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -291,13 +293,43 @@ body {
   }
 
   .imgpara {
-    grid-gap:2.8rem;
+    grid-gap: 2.8rem;
   }
 
   .Text {
     padding-top: 3rem;
   }
-  .imgpara .img img{
+
+  .imgpara .img img {
     width: 16rem;
   }
+}
+
+
+.chennels {
+  background-color: #232354;
+  padding: 4rem 0rem;
+}
+
+.chennels .container {
+  padding: 0rem 10rem;
+  margin: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  color: white;
+}
+
+.chennels .container a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.chennels .container h1{
+  font-weight: 600;
+}
+
+.vl {
+  border-left: 1px solid white;
+  height: 100px;
 }
