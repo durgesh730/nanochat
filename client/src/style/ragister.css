@@ -2,22 +2,28 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 1rem ;
-    padding-bottom: 2rem;
+    padding-top: 4rem ;
+    padding-bottom: 5rem;
     transition: all .3s;
-    gap: 5rem;
+    font-family: "Poppins";
+}
+
+.ragister .ragisterimg{
+    color: white;
+    padding: 4rem 4rem;
+    background-color: #232354;
 }
 
 .ragister .ragisterimg img{
-    width: 30rem;
+    width: 15rem;
 }
 
 .ragister .form_data{
-    width: 22rem;
-    margin: 25px auto;
-    padding: 35px 30px;
+    width: 28rem;
+    /* margin: 25px auto; */
+    padding: 4rem 2rem;
     box-shadow: 0 0 15px -10px #232354;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,11 +44,6 @@
     color: #718096;
     font-size: 15px;
     padding-top: 0px;
-}
-
-.form_data form{
-    margin-top: 10px;
-    width: 100%;
 }
 
 .form_data form .form_input input{

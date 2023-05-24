@@ -5,6 +5,8 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer'
+import Navbar from './Navbar';
+import SocialMedia from './SocialMedia';
 
 const PasswordReset = () => {
 
@@ -42,6 +44,8 @@ const PasswordReset = () => {
 
     return (
         <>
+           <Navbar/>
+            <SocialMedia/>
             <section className='container Bottom'>
                 <div className='Bottomimg' data-aos="fade-down-right" ><img src={resetimg} /></div>
 

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Navbar from './Navbar';
-
+import Footer from './Footer';
 
 function ForgotPassword() {
 
@@ -89,7 +89,7 @@ function ForgotPassword() {
           </form>
         </div>
       </section>
-
+      <Footer/>
       <ToastContainer />
     </>
   )

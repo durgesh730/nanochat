@@ -2,8 +2,6 @@ import { Link, json, useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
 import '../style/login.css';
 import logimg from "../images/Mobile login-rafiki.png";
-import Aos from "aos";
-import 'aos/dist/aos.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Footer from '../component/Footer'
@@ -11,13 +9,6 @@ import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
 
 const Login = () => {
-
-    useEffect(() => {
-        Aos.init({
-            duration: 1200
-        });
-    }, []);
-
     const Navigate = useNavigate()
     const [passShow, setPassshow] = useState(false);
 
@@ -89,15 +80,15 @@ const Login = () => {
           <Navbar/>
           <SocialMedia/>
             <section className='container login'>
-                <div className='loginimg' data-aos="fade-down-right">
+                <div className='loginimg'>
+                {/* <div className='form_heading'> */}
+                        <h2>Welcome to Login</h2>
+                        <p>Hi, we are you glad you are back.<br/> Please login</p>
+                    {/* </div> */}
                     <img src={logimg} alt ="img"></img>
                 </div>
-                <div className='form_data' data-aos="fade-down-left">
-                    <div className='form_heading'>
-                        <h1>Welcome to Login</h1>
-                        <p>Hi, we are you glad you are back. Please login</p>
-                    </div>
-
+                <div className='form_data'>
+        
                     <form>
                         <div className='form_input'>
                             <label htmlFor='email'>Email</label>

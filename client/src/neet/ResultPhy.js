@@ -2,7 +2,6 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import '../style/result.css'
-import NeetNav from './NeetNav'
 import Footer from '../component/Footer'
 
 // imoprt actions
@@ -10,6 +9,7 @@ import { resetALLAction } from '../redux/question_reducer'
 import { resetResultAction } from '../redux/result_reducer'
 import { attempts_Number, earnPoints_Number} from '../helper/helper'
 import { usePublishResultPhy } from '../hooks/setResult'
+import Navbar from '../component/Navbar'
 
 export default function Result() {
 
@@ -34,7 +34,7 @@ export default function Result() {
 
     return (
         <>
-            <NeetNav />
+            <Navbar/>
             <div className='container'>
                 <div className='result flex-center'>
                     <div className='text-center' >

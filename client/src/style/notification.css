@@ -1,6 +1,3 @@
-/* .notification{
-    background-color: #fbfbff;
-} */
 
 .column {
     display: flex;
@@ -10,7 +7,6 @@
     gap: 1rem;
     margin: auto;
     text-align: center;
-    /* background-color: rgb(237, 255, 255); */
 }
 
 .column img {
@@ -19,8 +15,8 @@
 
 .column .row {
     line-height: 3rem;
-    padding-top: 7rem;
-    font-size: 2.5rem;
+    padding-top: 3rem;
+    font-size: 2rem;
 }
 
 @media screen and (max-width:1200px) {
@@ -82,13 +78,14 @@
     }
 }
 
-/* ========== notification section =================== */
+/*  notification section */
 
 .Othernote {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 7rem;
+    padding-top: 2rem;
     margin: auto;
 }
 
@@ -100,7 +97,7 @@
 
 .notenames a{
     text-decoration: none;
-    color: #232354;
+    color: white;
 }
 
 .notenames a:hover {
@@ -126,4 +123,22 @@
     .Others{
         padding-top: 1rem;
     }
+}
+
+.notification{
+    padding-bottom: 6rem;
+    background-color: #232354;
+    font-family: "Poppins";
+}
+
+.notification .column .row{
+    color: white;
+}
+
+.aiimsnote h4{
+    color: white;
+}
+
+.Others h4{
+    color: white;
 }

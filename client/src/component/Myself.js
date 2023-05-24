@@ -1,22 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Intro from "../images/IMG_1364.JPG"
 import '../style/myself.css'
-import Aos from "aos";
-import 'aos/dist/aos.css';
 
 function Myself() {
-
-    useEffect(() => {
-        Aos.init({
-            duration: 1200
-        });
-    }, []);
-
     return (
         <>
             <div className=' intro ' >
                 <div className='container'>
-                    <div className='myself' data-aos="fade-up">
+                    <div className='myself'>
                         <div className='self' >
                             <div className='text-center' >
                                 <img src={Intro} ></img></div>

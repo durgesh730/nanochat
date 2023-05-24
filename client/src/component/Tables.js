@@ -1,24 +1,15 @@
-import React, { useEffect } from 'react'
 import '../style/tables.css'
-import Aos from "aos";
-import 'aos/dist/aos.css';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 const Tables = () => {
 
-    useEffect(() => {
-        Aos.init({
-           duration: 1200
-        });
-     }, []);
-
     return (
         <>
             <section className="container bothtable">
-                <div className="Firsttable" data-aos="fade-up">
+                <div className="Firsttable">
                     <table class="table borderless">
-                        <thead class="thead"><tr><th scope="col"><span>AIIMS NEET Cut-Off</span></th></tr></thead> <hr/>
-                        <tbody>
+                        <thead class="thead"><tr><th scope="col"><span>AIIMS NEET Cut-Off</span></th></tr></thead> <br/>
+                        <tbody >
                             <tr><td><a href=" #"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Delhi</a></td></tr>
                             <tr><td><a href=" #"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span>  AIIMS Rishikesh</a></td> </tr>
                             <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Kalyani</a></td> </tr>
@@ -32,9 +23,9 @@ const Tables = () => {
                     </table>
                 </div>
 
-                <div className="secondtable" data-aos="fade-up">
+                <div className="secondtable">
                     <table class="table borderless ">
-                        <thead class="thead"> <tr><th scope="col">AIIMS NEET Cut-Off</th></tr></thead> <hr/>
+                        <thead class="thead"> <tr><th scope="col">AIIMS NEET Cut-Off</th></tr></thead> <br/>
                         <tbody>
                             <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS batinda</a></td></tr>
                             <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Raipur</a></td> </tr>

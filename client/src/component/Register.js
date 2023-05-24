@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import '../style/ragister.css';
 import ragimg from "../images/Mobile login-pana.png"
-import Aos from "aos";
-import 'aos/dist/aos.css';
 import Footer from '../component/Footer'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -10,13 +8,6 @@ import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
 
 const Register = () => {
-
-    useEffect(() => {
-        Aos.init({
-           duration: 1200
-        });
-     }, []);
-
     const [passShow, setPassshow] = useState(false);
     const [cpassShow, setCPassshow] = useState(false);
 
@@ -79,7 +70,7 @@ const Register = () => {
             })
         } else {
             // console.log('user registration succesfully done')
-            const data = await fetch( `http://localhost:8009/register`, {
+            const data = await fetch(`http://localhost:8009/register`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"
@@ -96,7 +87,7 @@ const Register = () => {
                     autoClose: 1500,
                 })
                 setInpval({ ...inpval, fname: " ", email: " ", password: "", cpassword: "" })
-            }else{
+            } else {
                 toast("Please Enter Correct Details!", {
                     autoClose: 1500,
                 })
@@ -106,18 +97,20 @@ const Register = () => {
 
     return (
         <>
-           <Navbar/>
-            <SocialMedia/>
+            <Navbar />
+            <SocialMedia />
             <section className='container ragister'>
 
-                <div className='ragisterimg' data-aos="fade-down-right">
-                    <img src={ragimg} alt ="img" ></img>
+                <div className='ragisterimg'>
+                    <h2>Looks like you're <br></br> new here!</h2>
+                    <span>Sign up with your Email <br/> to get started</span> <br/> <br/>
+                    <img src={ragimg} alt="img" ></img>
                 </div>
 
-                <div className='form_data' data-aos="fade-down-left">
-                    <div className='form_heading'>
+                <div className='form_data'>
+                    {/* <div className='form_heading'>
                         <h1>Sign Up</h1>
-                    </div>
+                    </div> */}
 
                     <form>
                         <div className='form_input'>
@@ -141,7 +134,7 @@ const Register = () => {
                         </div>
 
                         <div className='form_input'>
-                            <label htmlFor='password'>Confirm Password</label>
+                            {/* <label htmlFor='password'>Confirm Password</label> */}
                             <div className='two' >
                                 <input onChange={setVal} type={!cpassShow ? "password" : "text"} name="cpassword" value={inpval.cpassword} id='cpassword' placeholder='Confirm Password' />
                                 <div className='showpass' onClick={() => setCPassshow(!cpassShow)}>
@@ -150,12 +143,12 @@ const Register = () => {
                             </div>
                         </div>
 
-                        <button className='btn' onClick={addUserdata} >Sign Up</button>
+                        <button className='btn' onClick={addUserdata} >Continue</button>
                     </form>
                 </div>
             </section>
 
-                <Footer/>
+            <Footer />
 
             <ToastContainer />
         </>
