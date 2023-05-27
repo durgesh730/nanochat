@@ -6,7 +6,7 @@ import Navbar from '../component/Navbar'
 
 const Download = () => {
 
-     const token = localStorage.getItem('usersdatatoken');
+     const token = localStorage.getItem('token');
 
      return (
           <>

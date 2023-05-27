@@ -20,10 +20,8 @@
 
 .ragister .form_data{
     width: 28rem;
-    /* margin: 25px auto; */
     padding: 4rem 2rem;
     box-shadow: 0 0 15px -10px #232354;
-    /* border-radius: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;

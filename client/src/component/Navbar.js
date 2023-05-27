@@ -86,7 +86,6 @@ const Navbar = () => {
               <a style={{ cursor: "pointer" }} to="/profiledetails"  >My Profile</a>
             </li>
 
-
             <li >
               <Link to="/book">Booked Vehicles</Link>
             </li>

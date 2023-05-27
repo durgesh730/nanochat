@@ -81,14 +81,11 @@ const Login = () => {
           <SocialMedia/>
             <section className='container login'>
                 <div className='loginimg'>
-                {/* <div className='form_heading'> */}
                         <h2>Welcome to Login</h2>
                         <p>Hi, we are you glad you are back.<br/> Please login</p>
-                    {/* </div> */}
                     <img src={logimg} alt ="img"></img>
                 </div>
                 <div className='form_data'>
-        
                     <form>
                         <div className='form_input'>
                             <label htmlFor='email'>Email</label>
@@ -111,10 +108,7 @@ const Login = () => {
                     </form>
                 </div>
             </section>
-          
             <Footer/>
-
-         
         </>
     )
 }

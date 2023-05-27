@@ -1,86 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Courgette&family=Fira+Sans&family=Fredoka+One&family=Inter:wght@300&family=Leckerli+One&family=Pacifico&family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&family=Rubik&family=Signika+Negative:wght@300&family=Source+Sans+Pro&family=Ubuntu:wght@300;400&family=Varela+Round&family=Yanone+Kaffeesatz&display=swap');
 
-.Navbar{
-    /* background-color: #232354; */
+.Navbar {
     font-family: 'Poppins';
     transition: all .3s;
     box-shadow: 0px 0px 20px -5px #232354;
 }
 
-nav{
+nav {
     padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-nav .logo{
+nav .logo {
     display: grid;
     text-align: center;
 }
 
-nav .logo a{
+nav .logo a {
     font-family: 'Leckerli One';
     text-decoration: none;
-    font-size:2rem;
+    font-size: 2rem;
     color: #232354;
     cursor: pointer;
 }
 
-.logintab{
+.logintab {
     border: 1px solid #232354;
     border-radius: .3rem;
-    padding:  .5rem 1.5rem;
+    padding: .5rem 1.5rem;
     color: #232354;
 }
 
-.neettab{
+.neettab {
     color: #232354;
 }
 
-.signuptab{
+.signuptab {
     color: white;
     background-color: #232354;
     border-radius: .3rem;
-    padding:  .6rem 1.5rem;
+    padding: .6rem 1.5rem;
 }
 
-nav .RightNav a{
+nav .RightNav a {
     font-size: 19px;
     font-weight: 400;
     text-decoration: none;
-    margin:  0rem 1rem;
+    margin: 0rem 1rem;
     transition: all 400ms ease;
 }
 
-nav .RightNav span{
+nav .RightNav .signuptab:hover {
+    color: white;
+}
+
+nav .RightNav .logintab:hover {
+    color: #232354;
+}
+
+nav .RightNav span {
     font-size: 30px;
     color: #232354;
     padding: 1rem;
     transition: all 400ms ease;
 }
 
-nav .RightNav small{
+nav .RightNav small {
     font-size: 16px;
     color: #232354;
     padding: 1rem;
     transition: all 400ms ease;
 }
 
-
-nav .RightNav a:hover{
-    transform: scale3d(1.3, 1.3, 1.3);
-}
-
 /*  phone nav bar css  */
-.Bars{
+.Bars {
     display: none;
     color: #232354;
     font-size: 1.4rem;
     cursor: pointer;
 }
 
-.Sidenav{
+.Sidenav {
     display: none;
     height: 100%;
     width: 0;
@@ -94,25 +96,25 @@ nav .RightNav a:hover{
     /* padding-top: 0px; */
 }
 
-.Sidenav a{
+.Sidenav a {
     padding: 8px 8px 8px 50px;
     text-decoration: none;
-    font-size:16px;
-    color:white;
+    font-size: 16px;
+    color: white;
     display: block;
     transition: 0.3s;
 }
 
-.Sidenav span{
-    padding:  10px 0px 25px 100px;
+.Sidenav span {
+    padding: 10px 0px 25px 100px;
     text-decoration: none;
-    font-size:16px;
-    color:white;
+    font-size: 16px;
+    color: white;
     display: block;
     transition: 0.3s;
 }
 
-.avtar{
+.avtar {
     cursor: pointer;
 }
 
@@ -170,30 +172,33 @@ nav .RightNav a:hover{
 /* =========== media query start ======== */
 
 @media screen and (max-width:1024px) {
-    .avtar{
+    .avtar {
         display: none;
     }
 }
 
 @media screen and (max-width:800px) {
-    nav{
+    nav {
         padding: .2rem;
     }
-    .RightNav a{
-       display: none;
-    } 
-    .Bars{
+
+    .RightNav a {
+        display: none;
+    }
+
+    .Bars {
         display: block;
     }
-    .Sidenav{
+
+    .Sidenav {
         display: block;
     }
 }
 
 @media screen and (max-width: 500px) {
-    nav .logo span{
+    nav .logo span {
         font-family: 'Leckerli One';
-        font-size:1.3rem;
+        font-size: 1.3rem;
         padding-top: .5rem;
     }
 }
