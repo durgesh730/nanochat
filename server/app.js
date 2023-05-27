@@ -6,7 +6,7 @@ import cors from 'cors';
 import cookieParser from "cookie-parser";
 import * as dotenv from 'dotenv' 
 dotenv.config()
-const port = process.env.SERVER_PORT
+const port = process.env.SERVER_PORT || 8009
 
 
 app.use(express.json());
