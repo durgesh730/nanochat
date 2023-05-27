@@ -1,17 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../style/cards.css'
-import Aos from "aos";
-import 'aos/dist/aos.css';
 
 const Cards = () => {
-
-    useEffect(() => {
-        Aos.init({
-            duration: 1600
-        });
-    }, []);
-
     return (
         <>
             <div className='container'>

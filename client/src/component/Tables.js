@@ -2,7 +2,6 @@ import '../style/tables.css'
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 const Tables = () => {
-
     return (
         <>
             <section className="container bothtable">

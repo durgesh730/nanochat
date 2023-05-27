@@ -31,15 +31,25 @@ import Physics from "./neet/Physics";
 import Result from "./neet/Result";
 import ResultBio from "./neet/ResultBio";
 import ResultPhy from "./neet/ResultPhy";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function App() {
+
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1600
+    });
+  }, []);
 
   return (
     <>
       <BrowserRouter>
         <Routes>
 
-          {/* ===================  NEET component routers ==================================== */}
+          {/*  NEET component routers  */}
 
           <Route path='/neet' element={<Neet />} ></Route>
           <Route path='/chem' element={<Chemistry />} ></Route>
@@ -49,7 +59,7 @@ function App() {
           <Route path='/bioresult' element={<ResultBio />} ></Route>
           <Route path='/phyresult' element={<ResultPhy />} ></Route>
 
-          {/* ====================== Main page routers ===================== */}
+          {/*  Main page routers */}
 
           <Route path='/' element={<Body />} ></Route>
           <Route path='/login' element={<Login />}></Route>
@@ -59,7 +69,7 @@ function App() {
           <Route path='/forgotpassword/:id/:token' element={<ForgotPassword />}></Route>
 
 
-          {/* ========================== cards routers =============================== */}
+          {/*  cards routers  */}
 
           <Route path='/UtterPradesh' element={<UP />} ></Route>
           <Route path='/Panjab' element={<Panjab />} ></Route>

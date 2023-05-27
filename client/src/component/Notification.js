@@ -1,17 +1,7 @@
-import React, { useEffect } from 'react'
-// import PIC from "../images/home_illustration.png"
+import React from 'react'
 import "../style/notification.css"
-import Aos from "aos";
-import 'aos/dist/aos.css';
 
 const Notification = () => {
-
-    useEffect(() => {
-        Aos.init({
-            duration: 1600
-        });
-    }, []);
-
     return (
         <>
             <div className='notification'>

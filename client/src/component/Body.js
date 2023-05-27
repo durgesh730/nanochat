@@ -9,21 +9,12 @@ import Footer from './Footer';
 import Videos from './Videos';
 import Notification from './Notification';
 import Myself from './Myself';
-import Aos from "aos";
-import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import Navbar from "../component/Navbar";
 import SocialMedia from './SocialMedia';
 
 
 const Body = () => {
-
-  useEffect(() => {
-    Aos.init({
-      duration: 1200
-    });
-  }, []);
-
   return (
     <>
       <Navbar />

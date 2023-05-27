@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../style/passwordreset.css'
 import resetimg from '../images/email.png'
-import Aos from "aos";
-import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer'
 import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
 
 const PasswordReset = () => {
-
-    useEffect(() => {
-        Aos.init({
-            duration: 1200
-        });
-    }, []);
-
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("");
 

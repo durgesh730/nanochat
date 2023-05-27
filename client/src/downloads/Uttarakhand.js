@@ -13,48 +13,18 @@ const Download = () => {
                <Navbar />
                <div className='container'>
                     <div className='colleges'>
-                         <div className='TopHeading'>
-                              <span>State Name</span>
-                              <h6>Year</h6>
-                              <small>Option</small>
-                         </div>
-
-                         <div className='stateName'>
-                              <div className='download' >
-                                   <div><span>fgh</span></div>
-                                   <div><span>ggg</span></div>
-                                   <div><span>hghhg</span></div>
-                                   <div><span>hhh</span></div>
-                                   <div><span>hghh</span></div>
-                              </div>
-                              <div className='download' >
-                                   <div><a>2022</a></div>
-                                   <div><a>2022</a></div>
-                                   <div><a>2022</a></div>
-                                   <div><a>2022</a></div>
-                                   <div><a>2022</a></div>
-                              </div>
-
-                              {token !== null ? (
-                                   <div className='option'>
-                                        <div><a href="" target="_blank" >Download</a></div>
-                                        <div><a href="" target="_blank" >Download</a></div>
-                                        <div><a href="" target="_blank"  >Download</a></div>
-                                        <div><a href="" target="_blank"  >Download</a></div>
-                                        <div><a href="" target="_blank"  >Download</a></div>
-                                        <div><a href="" target="_blank" >Download</a></div>
-                                        <div><a href="" target="_blank" >Download</a></div>
-                                   </div>
-                              ) : (
-                                   <div className='option'>
-                                        <div><Link to="/Login" >Download</Link></div>
-                                        <div><Link to="/Login"> Download </Link></div>
-                                        <div><Link to="/Login"> Download </Link></div>
-                                        <div><Link to="/Login"> Download </Link></div>
-                                        <div><Link to="/Login"> Download </Link></div>
-                                   </div>
-                              )}
-                         </div>
+                         <table>
+                              <tr>
+                                   <th>State</th>
+                                   <th>Year</th>
+                                   <th>Option</th>
+                              </tr>
+                              <tr>
+                                   <td>KGF</td>
+                                   <td><Link to="/Login" >Download</Link></td>
+                                   <td>2022</td>
+                              </tr>
+                         </table>
                     </div>
                </div>
                <Footer />
