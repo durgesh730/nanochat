@@ -3,23 +3,14 @@ import '../style/neet.css'
 import neetpic from '../images/Analytics-amico.png'
 import { Link } from 'react-router-dom'
 import Footer from '../component/Footer'
-import Aos from "aos";
-import 'aos/dist/aos.css';
 import SocialMedia from '../component/SocialMedia'
 import Navbar from '../component/Navbar'
 
 
 const Neet = () => {
 
-  useEffect(() => {
-    Aos.init({
-      duration: 1200
-    });
-  }, []);
-
   return (
     <>
-   
      <Navbar/>
       <SocialMedia/>
       <div className='container '>

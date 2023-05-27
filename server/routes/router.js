@@ -5,7 +5,7 @@ import authenticate from "../middleware/authenticate.js";
 import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken"
 
-// ==============  models ===================
+//  models 
 import userdb from "../models/userSchema.js";
 import Form from "../models/formSchema.js"
 import question from '../models/questionSchema.js'
@@ -17,7 +17,7 @@ import PhyResultSchema from "../models/PhyResultSchema.js";
 
 
 
-// ============== insert questions from database folder==============
+//  insert questions from database folder
 import questions, { answers } from '../database/data.js'
 import Bioquestions, { Bioanswers } from '../database/Bioquestion.js'
 import Phyquestions, { Phyanswers } from '../database/Phyquestion.js'
@@ -25,7 +25,7 @@ import Phyquestions, { Phyanswers } from '../database/Phyquestion.js'
 
 const keysecret = "durgeshchaudharydurgeshchaudhary";
 
-// =================  email config=====================
+// email config
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -35,7 +35,7 @@ const transporter = nodemailer.createTransport({
 })
 
 
-//================== user rgistration API =======================
+//user rgistration API
 
 router.post('/register', async (req, res) => {
 
@@ -67,7 +67,7 @@ router.post('/register', async (req, res) => {
     }
 })
 
-// =====================  user Login API and end points =========================
+// user Login API and end points 
 
 router.post("/login", async (req, res) => {
 
@@ -112,7 +112,7 @@ router.post("/login", async (req, res) => {
 });
 
 
-// ============================ user validation =====================
+// user validation 
 
 router.get("/validuser", authenticate, async (req, res) => {
     try {
@@ -123,7 +123,7 @@ router.get("/validuser", authenticate, async (req, res) => {
     }
 });
 
-// ========================Get Users data =================================
+// Get Users data 
 
 router.get("/users", authenticate, async (req, res) => {
     try {
@@ -134,7 +134,7 @@ router.get("/users", authenticate, async (req, res) => {
     }
 });
 
-//======================  logout API and endl point ========================
+// logout API and endl point
 
 router.get("/logout", authenticate, async (req, res) => {
     try {
@@ -154,7 +154,7 @@ router.get("/logout", authenticate, async (req, res) => {
 });
 
 
-//================= student form API===============================
+// student form API
 
 router.post('/studentform', async (req, res) => {
 
@@ -178,7 +178,7 @@ router.post('/studentform', async (req, res) => {
 })
 
 
-// ==================== send email link for reset password ======================
+// send email link for reset password 
 
 router.post("/sendpasswordlink", async (req, res) => {
     
@@ -222,7 +222,7 @@ router.post("/sendpasswordlink", async (req, res) => {
 })
 
 
-//================ verify user for forgot password time ============================
+//verify user for forgot password time
 
 router.get("/forgotpassword/:id/:token", async (req, res) => {
     const { id, token } = req.params;
@@ -245,7 +245,7 @@ router.get("/forgotpassword/:id/:token", async (req, res) => {
 
 });
 
-// =================== change password ==========================
+// change password 
 
 router.post("/:id/:token", async (req, res) => {
     const { id, token } = req.params;
@@ -276,10 +276,10 @@ router.post("/:id/:token", async (req, res) => {
     }
 })
 
-// =================================== neet routes endpoints =================================
+//  neet routes endpoints 
 
 
-// ============= insert questions in database API ( chemistry,biology, physics ) =============
+// insert questions in database API ( chemistry,biology, physics )
 router.post('/insertquestion', async (req, res) => {
     try {
         question.insertMany({ questions, answers }, function (err, data) {
@@ -311,7 +311,7 @@ router.post('/PhyInsertQuestion', async (req, res) => {
 })
 
 
-// =====================  GET question from database API (chemistry, physics, biology,  ) ======================
+// GET question from database API (chemistry, physics, biology,  )
 
 router.get('/getquestions', async (req, res) => {
     try {
@@ -341,7 +341,7 @@ router.get('/Bioquestions', async (req, res) => {
 })
 
 
-// =================== get result end point (chemistry, physics, bio) ==================
+//  get result end point (chemistry, physics, bio) 
 
 router.get('/result', async (req, res) => {
     try {
@@ -371,7 +371,7 @@ router.get('/BioResult', async (req, res) => {
 })
 
 
-// =============== POST result API ( chemistry  bio phy) ===============================
+// POST result API ( chemistry  bio phy) 
 
 router.post('/result', async (req, res) => {
     try {

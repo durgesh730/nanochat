@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
-const DB = 'mongodb+srv://Durgesh:Durgesh02042001@cluster0.skc6gmq.mongodb.net/?retryWrites=true&w=majority';
+import * as dotenv from 'dotenv' 
+dotenv.config()
 
 mongoose.set('strictQuery', true);
 export default async function connect(){
-    mongoose.connect(DB)
+    mongoose.connect(process.env.DATA_BASE)
     console.log("Database Connected")
 }
