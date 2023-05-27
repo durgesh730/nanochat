@@ -3,15 +3,15 @@ import React, { useEffect, useState } from 'react'
 import '../style/login.css';
 import logimg from "../images/Mobile login-rafiki.png";
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import Footer from '../component/Footer'
 import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
+import { serverhost } from '../host';
 
 const Login = () => {
     const Navigate = useNavigate()
     const [passShow, setPassshow] = useState(false);
-
 
     const [inpval, setInpval] = useState({
         email: '',
@@ -49,7 +49,7 @@ const Login = () => {
                 autoClose: 3000,
             })
         } else {
-            const data = await fetch(`http://localhost:8009/login`, {
+            const data = await fetch(`${serverhost}/login`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

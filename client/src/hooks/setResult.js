@@ -1,5 +1,7 @@
 import { postServerData } from '../helper/helper'
+import { serverhost } from '../host'
 import * as Action from '../redux/result_reducer'
+
 
 export const PushAnswer = (result) => async (dispatch) => {
    try {
@@ -21,7 +23,7 @@ export const updateResult = (index) => async (dispatch) => {
 export const usePublishResult = (resultData) => {
 ( async () =>{
       try {
-         await postServerData(  `http://localhost:8009/result` , resultData, data => data)
+         await postServerData(  `${serverhost}/result` , resultData, data => data)
       } catch (error) {
          console.log(error)
       }
@@ -32,7 +34,7 @@ export const usePublishResult = (resultData) => {
 export const usePublishResultPhy = (resultData) => {
    ( async () =>{
          try {
-            await postServerData( `http://localhost:8009/PhyResult `, resultData, data => data)
+            await postServerData( `${serverhost}/PhyResult `, resultData, data => data)
          } catch (error) {
             console.log(error)
          }
@@ -45,7 +47,7 @@ export const usePublishResultBio = (resultData) => {
 
    ( async () =>{
          try {
-            await postServerData( `http://localhost:8009/BioResult`  , resultData, data => data)
+            await postServerData( `${serverhost}/BioResult`  , resultData, data => data)
          } catch (error) {
             console.log(error)
          }

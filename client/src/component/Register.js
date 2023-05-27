@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
+import { serverhost } from '../host';
 
 const Register = () => {
     const [passShow, setPassshow] = useState(false);
@@ -70,7 +71,7 @@ const Register = () => {
             })
         } else {
             // console.log('user registration succesfully done')
-            const data = await fetch(`http://localhost:8009/register`, {
+            const data = await fetch(`${serverhost}/register`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

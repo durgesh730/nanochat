@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../component/Footer'
 import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
+import { serverhost } from '../host';
 
 const PasswordReset = () => {
     const [email, setEmail] = useState("")
@@ -18,7 +19,7 @@ const PasswordReset = () => {
         e.preventDefault();
 
         // call api to front end 
-        const res = await fetch(`http://localhost:8009/sendpasswordlink`, {
+        const res = await fetch(`${serverhost}/sendpasswordlink`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

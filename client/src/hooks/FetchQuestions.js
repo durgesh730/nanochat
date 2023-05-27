@@ -6,6 +6,8 @@ import { getServerData } from "../helper/helper";
 // redux action 
 
 import * as Action from "../redux/question_reducer"
+import { serverhost } from "../host";
+
 
 // fetch question hook to fetch  api data set value to store 
 export const useFetchQuestion = () => {
@@ -20,7 +22,7 @@ export const useFetchQuestion = () => {
         (async () => {
 
             try {
-                const [{questions, answers}] =  await getServerData( `http://localhost:8009/getquestions` , (data)=>data)
+                const [{questions, answers}] =  await getServerData( `${serverhost}/getquestions` , (data)=>data)
 
                 if (questions.length > 0) {
                     setGetData(prev => ({ ...prev, isLoading: false }));

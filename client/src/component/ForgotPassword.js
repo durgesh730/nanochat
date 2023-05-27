@@ -4,6 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { serverhost } from '../host';
+
 
 function ForgotPassword() {
 
@@ -14,7 +16,7 @@ function ForgotPassword() {
   const [message, setMessage] = useState("");
 
   const userValid = async () => {
-    const res = await fetch(`http://localhost:8009/forgotpassword/${id}/${token}`, {
+    const res = await fetch(`${serverhost}/forgotpassword/${id}/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -46,7 +48,7 @@ function ForgotPassword() {
         autoClose: 2000,
       })
     } else {
-      const res = await fetch(`http://localhost:8009/${id}/${token}`, {
+      const res = await fetch(`${serverhost}/${id}/${token}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

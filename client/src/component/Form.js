@@ -5,6 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
 import SocialMedia from './SocialMedia';
+import { serverhost } from '../host';
+
 
 const Form = () => {
 
@@ -58,7 +60,7 @@ const Form = () => {
         autoClose: 3000,
       })
     } else {
-      const data = await fetch(`http://localhost:8009/studentform`, {
+      const data = await fetch(`${serverhost}/studentform`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
