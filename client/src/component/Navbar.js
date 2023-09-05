@@ -44,11 +44,11 @@ const Navbar = () => {
     document.getElementById('SideNav').style.width = "0px"
   }
 
-
-  const token = localStorage.getItem('token');
   const userData = localStorage.getItem('user');
-  const users = JSON.parse(userData);
-
+  let users
+  if (userData) {
+    users = JSON?.parse(userData);
+  }
 
   const handleLogout = () => {
     localStorage.clear();
@@ -80,7 +80,7 @@ const Navbar = () => {
           </nav>
         </div>
 
-        <div className="profile-options" id="profileOption">
+        {/* <div className="profile-options" id="profileOption">
           <ul>
             <li>
               <Link style={{ cursor: "pointer" }} to="/profiledetails"  >My Profile</Link>
@@ -89,7 +89,7 @@ const Navbar = () => {
               <Link onClick={handleLogout} id='logout' >Logout</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className='Sidenav' id='SideNav'>
           <span onClick={CloseNav} id="Close" style={{ fontSize: "1.5rem" }} ><BsArrowReturnLeft /></span>
