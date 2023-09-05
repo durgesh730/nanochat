@@ -5,6 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { serverhost } from '../host';
+import resetimg from '../images/email.png'
+import SocialMedia from './SocialMedia';
 
 
 function ForgotPassword() {
@@ -76,22 +78,27 @@ function ForgotPassword() {
 
   return (
     <>
-       <Navbar/>
-
+      <Navbar />
+     <SocialMedia/>
       <section className='container forgot '>
+        <div className='Bottomimg'><img src={resetimg} /></div>
         <div className='form_data'>
-          <div className='form_heading'><h1>Enter Your New Passsword</h1></div>
+          <div className='form_heading'><h1>Change Your Passsword</h1></div>
           {message ? <p style={{ color: "green", fontweight: "bold" }} >Your Passsword Updated Successfully</p> : " "}
           <form>
             <div className='form_input'>
-              <label htmlFor='email'>New Passsword</label>
-              <input type='password' name="password" value={password} id='password' placeholder='Enter Your Password' onChange={setval} /> </div>
+              <label htmlFor='email'>Passsword</label>
+              <input type='password' name="password" value={password} id='password' placeholder='Password' onChange={setval} />
 
+              <label htmlFor='email'>Confirm Passsword</label>
+              <input type='password' name="password" value={password} id='password' placeholder='Confirm Password' onChange={setval} />
+            </div>
             <button className='btn' onClick={sendpassword} >Submit</button>
           </form>
         </div>
       </section>
-      <Footer/>
+
+      <Footer />
       <ToastContainer />
     </>
   )

@@ -63,7 +63,6 @@ const Navbar = () => {
     dispatch(resetResultAction());
   }
 
-
   return (
     <>
       <div className='Navbar'>
