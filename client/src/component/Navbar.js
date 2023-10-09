@@ -29,7 +29,6 @@ const Navbar = () => {
     }
   };
 
-
   function handledropdown() {
     if (dropdown === false) {
       document.getElementById("profileOption").style.height = "fit-content";

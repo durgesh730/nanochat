@@ -15,8 +15,6 @@ import Result from "../models/resultSchema.js";
 import BioResultSchema from "../models/BioResultSchema.js";
 import PhyResultSchema from "../models/PhyResultSchema.js";
 
-
-
 //  insert questions from database folder
 import questions, { answers } from '../database/data.js'
 import Bioquestions, { Bioanswers } from '../database/Bioquestion.js'
