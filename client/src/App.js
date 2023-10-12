@@ -35,6 +35,12 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
+import { AIIMSDelhi } from "./component/Detail/AIIMSDelhi";
+import AIIMSrishi from "./component/Detail/AIIMSrishi";
+import AIIMSkalyani from "./component/Detail/AIIMSkalyani";
+import AIIMSmadurai from "./component/Detail/AIIMSmadurai";
+
+
 function App() {
 
   useEffect(() => {
@@ -88,6 +94,12 @@ function App() {
           <Route path='/Uttarakhand' element={<Uttarakhand />} ></Route>
           <Route path='/Bihar' element={<Bihar />} ></Route>
           <Route path='/Gujrat' element={<Gujrat />} ></Route>
+         
+             {/* Details page routers */}
+             <Route path="Aiimsdelhi" element={<AIIMSDelhi/>}></Route>
+          <Route path="Aiimsrishi" element={<AIIMSrishi/>}></Route>
+          <Route path="Aiimskalyani" element={<AIIMSkalyani/>}></Route>
+          <Route path="Aiimsmadurai" element={<AIIMSmadurai/>}></Route>
 
         </Routes>
         <ToastContainer />

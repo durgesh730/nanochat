@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../style/tables.css'
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
@@ -9,10 +10,10 @@ const Tables = () => {
                     <table class="table borderless">
                         <thead class="thead"><tr><th scope="col"><span>AIIMS NEET Cut-Off</span></th></tr></thead> <br/>
                         <tbody >
-                            <tr><td><a href=" #"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Delhi</a></td></tr>
-                            <tr><td><a href=" #"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span>  AIIMS Rishikesh</a></td> </tr>
-                            <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Kalyani</a></td> </tr>
-                            <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Madurai</a></td></tr>
+                            <tr><td><Link to="/aiimsdelhi"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Delhi</Link></td></tr>
+                            <tr><td><Link to="/aiimsrishi"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span>  AIIMS Rishikesh</Link></td> </tr>
+                            <tr><td><Link to="/aiimskalyani"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Kalyani</Link></td> </tr>
+                            <tr><td><Link to="/aiimsmadurai"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Madurai</Link></td></tr>
                             <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Gorakhpur </a></td></tr>
                             <tr> <td><a href=" #"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span>  AIIMS Raebareli</a></td></tr>
                             <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Jammu </a></td></tr>
