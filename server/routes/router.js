@@ -32,83 +32,79 @@ const transporter = nodemailer.createTransport({
     }
 })
 
-
-//user rgistration API
-
+//user sign up API
 router.post('/register', async (req, res) => {
-
     const { fname, email, password, cpassword } = req.body;
 
     if (!fname || !email || !password || !cpassword) {
-        res.status(404).json({ error: "fill all the deatils" })
+        return res.status(400).json({ error: "Please fill in all the details." });
     }
+
+    if (password !== cpassword) {
+        return res.status(400).json({ error: "Passwords do not match." });
+    }
+
     try {
         const preuser = await userdb.findOne({ email: email });
         if (preuser) {
-            res.status(404).json({ error: "This Email is Already Exist" });
-        } else if (password !== cpassword) {
-            res.status(404).json({ error: "This Email is Already Exist" });
-        } else {
-            const finalUser = new userdb({
-                fname, email, password, cpassword
-            });
-
-            // here password hashing
-            const storeData = await finalUser.save();
-          
-            res.status(201).json({ status: 201, storeData })
+            return res.status(409).json({ error: "This email is already registered." });
         }
 
+        const finalUser = new userdb({
+            fname, email, password, cpassword
+        });
+
+        const storeData = await finalUser.save();
+        return res.status(201).json({ status: 201, storeData });
+
     } catch (error) {
-        res.status(404).json({ error });
-        console.log("catch block error");
+        return res.status(500).json({ error: "Internal server error." });
     }
-})
+});
+
 
 // user Login API and end points 
 
 router.post("/login", async (req, res) => {
-
     const { email, password } = req.body;
 
     if (!email || !password) {
-        res.status(422).json({ error: "fill all the details" })
+        return res.status(400).json({ error: "Please fill in all the details." });
     }
 
     try {
         const userValid = await userdb.findOne({ email: email });
 
-        if (userValid) {
-
-            const isMatch = await bcrypt.compare(password, userValid.password);
-
-            if (!isMatch) {
-                res.status(422).json({ error: "invalid details" })
-            } else {
-
-                // token generate
-                const token = await userValid.generateAuthtoken();
-
-                // cookiegenerate
-                res.cookie("usercookie", token, {
-                    expires: new Date(Date.now() + 9000000),
-                    httpOnly: true
-                });
-
-                const result = {
-                    userValid,
-                    token
-                }
-                res.status(201).json({ status: 201, result })
-            }
+        if (!userValid) {
+            return res.status(401).json({ error: "Invalid login details." });
         }
 
+        const isMatch = await bcrypt.compare(password, userValid.password);
+
+        if (!isMatch) {
+            return res.status(401).json({ error: "Invalid login details." });
+        }
+
+        // Token generation
+        const token = await userValid.generateAuthtoken();
+
+        // Generate cookie
+        res.cookie("usercookie", token, {
+            expires: new Date(Date.now() + 9000000),
+            httpOnly: true
+        });
+
+        const result = {
+            userValid,
+            token
+        };
+
+        return res.status(200).json({ status: 200, result });
+
     } catch (error) {
-        res.status(401).json(error);
-        console.log("catch block");
+        return res.status(500).json({ error: "Internal server error." });
     }
 });
-
 
 // user validation 
 
@@ -123,10 +119,10 @@ router.get("/validuser", authenticate, async (req, res) => {
 
 // Get Users data 
 
-router.get("/users", authenticate, async (req, res) => {
+router.get("/users/", authenticate, async (req, res) => {
     try {
         const user = await userdb.findOne({ _id: req.userId });
-        res.status(201).json({ status: 201, user});
+        res.status(201).json({ status: 201, user });
     } catch (error) {
         res.status(401).json({ status: 401, error });
     }
@@ -155,31 +151,26 @@ router.get("/logout", authenticate, async (req, res) => {
 // student form API
 
 router.post('/studentform', async (req, res) => {
+    const requiredFields = ['fname', 'AIQRank', 'phonenumber', 'category'];
 
-    const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category, 
-        choice1, choice2, choice3, choice4, question, state } = req.body;
-
-    if (!fname || !AIQRank || !phonenumber || !category) {
-        res.status(404).json({ error: "fill all the deatils" })
+    for (let field of requiredFields) {
+        if (!req.body[field]) {
+            return res.status(400).json({ error: "Please fill in all the required details." });
+        }
     }
 
     try {
-        const finalUser = new Form({ fname, lastname, DOB, AIQRank, CRank,
-             phonenumber, category, choice1, choice2, choice3, choice4, question, state });
-
-        const storeData = await finalUser.save();
-        res.status(201).json({ status: 201, storeData })
-
+        const finalUser = new Form({ ...req.body });
+        return res.status(201).json({ status: 201, storeData: await finalUser.save() });
     } catch (error) {
-        res.status(201).json({ status: 201, message: " In form some internal error occurred" })
+        return res.status(500).json({ status: 500, message: "An internal error occurred." });
     }
-})
-
+});
 
 // send email link for reset password 
 
 router.post("/sendpasswordlink", async (req, res) => {
-    
+
     const { email } = req.body;
 
     if (!email) {
@@ -290,7 +281,7 @@ router.post('/insertquestion', async (req, res) => {
 
 router.post('/BioInsertQuestion', async (req, res) => {
     try {
-        Biology.insertMany({ questions:Bioquestions, answers:Bioanswers }, function (err, data) {
+        Biology.insertMany({ questions: Bioquestions, answers: Bioanswers }, function (err, data) {
             res.json({ msg: "Data saved Successfuly" })
         })
     } catch (error) {
@@ -300,7 +291,7 @@ router.post('/BioInsertQuestion', async (req, res) => {
 
 router.post('/PhyInsertQuestion', async (req, res) => {
     try {
-        Physics.insertMany({ questions:Phyquestions, answers:Phyanswers }, function (err, data) {
+        Physics.insertMany({ questions: Phyquestions, answers: Phyanswers }, function (err, data) {
             res.json({ msg: "Data saved Successfuly" })
         })
     } catch (error) {

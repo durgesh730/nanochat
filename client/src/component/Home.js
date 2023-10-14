@@ -14,7 +14,6 @@ import Navbar from "./Navbar";
 import SocialMedia from './SocialMedia';
 
 const Home = () => {
-  
   return (
     <>
       <Navbar />

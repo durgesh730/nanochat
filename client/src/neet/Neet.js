@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import '../style/neet.css'
 import neetpic from '../images/Analytics-amico.png'
 import { Link } from 'react-router-dom'
@@ -6,16 +5,14 @@ import Footer from '../component/Footer'
 import SocialMedia from '../component/SocialMedia'
 import Navbar from '../component/Navbar'
 
-
 const Neet = () => {
-
   return (
     <>
      <Navbar/>
       <SocialMedia/>
       <div className='container '>
         <div className='block'>
-          <div className='topics' data-aos="fade-down-right" >
+          <div className='topics'>
             <h1>Choose Your Subject and  <br /> get start Practice </h1>
             <div className='my-4'>
               <Link className='chem' to={"/chem"}>chemistry</Link>
@@ -23,7 +20,7 @@ const Neet = () => {
               <Link className='bio' to='/bio'>Biology</Link></div>
           </div>
 
-          <div className='gredimg' data-aos="fade-down-left">
+          <div className='gredimg'>
             <img src={neetpic} alt="img" />
           </div>
         </div>

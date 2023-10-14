@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import '../style/login.css';
 import logimg from "../images/Mobile login-rafiki.png";
 import 'react-toastify/dist/ReactToastify.css';
-import {toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import Footer from '../component/Footer'
 import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
@@ -59,12 +59,14 @@ const Login = () => {
                 })
             });
             const res = await data.json();
-            if (res.status === (201)) {
+            console.log(res, "login")
+            if (res.status === (200)) {
                 toast("Logged In successfully", {
                     autoClose: 3000,
                 })
-                localStorage.setItem('token', res.result.token)
-                localStorage.setItem("user", JSON.stringify(res.result.userValid));
+                localStorage.setItem('token', res.result?.token)
+                localStorage.setItem("user", res.result?.userValid.fname);
+                localStorage.setItem("Id", res.result?.userValid._id);
                 Navigate('/')
                 setInpval({ ...inpval, email: " ", password: "" })
             } else if (res.status !== (201)) {
@@ -77,13 +79,13 @@ const Login = () => {
 
     return (
         <>
-          <Navbar/>
-          <SocialMedia/>
+            <Navbar />
+            <SocialMedia />
             <section className='container login'>
                 <div className='loginimg'>
-                        <h2>Welcome to Login</h2>
-                        <p>Hi, we are you glad you are back.<br/> Please login</p>
-                    <img src={logimg} alt ="img"></img>
+                    <h2>Welcome to Login</h2>
+                    <p>Hi, we are you glad you are back.<br /> Please login</p>
+                    <img src={logimg} alt="img"></img>
                 </div>
                 <div className='form_data'>
                     <form>
@@ -108,7 +110,7 @@ const Login = () => {
                     </form>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }
