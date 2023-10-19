@@ -3,7 +3,9 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import "../../style/aiimsdelhi.css";
 import SocialMedia from "../SocialMedia";
-import pic1 from "../../images/aiimsdelhi.jpg";
+import pic1 from "../../images/delhi.png";
+import pic2 from "../../images/delhiaiims1.jpg";
+
 
 export const AIIMSDelhi = () => {
   return (
@@ -13,11 +15,12 @@ export const AIIMSDelhi = () => {
       <div className="conatinerdelhi">
         <div className="subconatinerdelhi">
           <div className="subconatinerdelhiimg">
+          <h1>AIIMS DELHI</h1>
             <img src={pic1} alt="fghj" />
           </div>
         </div>
         <div className="detaillist">
-          <h1>AIIMS DELHI</h1>
+          {/* <h1>AIIMS DELHI</h1> */}
           <h2>Table of Contents</h2>
           <ul>
             <li>1. Ouick Summary</li>
@@ -38,10 +41,13 @@ export const AIIMSDelhi = () => {
           </ul>
         </div>
       </div>
-      <div className="Ouick Summary">
-        <div className="quicksummaerytable">
-          <h1>QUICK SUMMARY</h1>
-          <table>
+      <div className="d1">
+      <div className="OuickSummary">
+          <div className="ouicktitle">
+            <h1>QUICK SUMMARY</h1>
+          </div>
+          <div>
+          <table className="tabletext">
             <tr>
               <td>Estabilshed</td>
               <td>1956</td>
@@ -76,8 +82,20 @@ export const AIIMSDelhi = () => {
               <td>91-11-23456423/3456789 </td>
             </tr>
           </table>
-        </div>
+          </div>
       </div>
+      {/* <div className="delhiimg">
+        <img src={pic2}></img>
+      </div> */}
+    <div className=" d1text">
+      <p>
+      &#x2022; The health survey and development committee, chaired by Sir Joseph Bhore, <br></br>an Indian government official, recommended as early as 1946 the establishment  <br></br>of a national medical center that would concentrate on meeting the need for a<br></br> highly-skilled workforce to support healthcare activities country.<br></br>
+
+      &#x2022; AIIMS was finally created in 1956 as an autonomous institutio under  a <br></br> parliamentary act,serving as a center to support excellence in all aspects <br></br>of care health.
+      </p>
+    </div>
+
+</div>
       <Footer />
     </>
   );

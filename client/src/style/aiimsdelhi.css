@@ -37,6 +37,56 @@
 .subconatinerdelhiimg img{
    width: 110%;
    border-radius: 1rem;
-   margin-top: 5rem;
+   margin-top: 2rem;
+   height: 25rem;
+}
+
+.subconatinerdelhiimg h1{
+    color: rgb(6, 6, 74);
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.OuickSummary{
+  padding-left: 3rem;
+  margin-bottom: 7rem;
+
+}
+
+.ouicktitle h1{
+   /* text-align: center; */
+    color: rgb(6, 6, 74);
+    padding-top: -4rem;
+    padding-left: 9rem;
+    margin-bottom: 2rem;
+
+}
+.quicksummaerytable table{
+    box-shadow: 0px 0px 8px -2px;
+   
+}
+.tabletext{
+    box-shadow: 0px 0px 8px -2px;
+    margin-left: 9rem;
+    /* border: 2px solid black; */
+    
+}
+table tr{
+    border: 1px solid black;
+}
+.tabletext td{
+    border: 1px solid black;
+    
+}
+.d1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.d1text{
+    margin-top: 5rem;
+    padding-right: 10rem;
+
 }
 
