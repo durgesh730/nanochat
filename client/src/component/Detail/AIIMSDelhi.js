@@ -15,7 +15,7 @@ export const AIIMSDelhi = () => {
       <div className="conatinerdelhi">
         <div className="subconatinerdelhi">
           <div className="subconatinerdelhiimg">
-          <h1>AIIMS DELHI</h1>
+            <h1>AIIMS DELHI</h1>
             <img src={pic1} alt="fghj" />
           </div>
         </div>
@@ -42,60 +42,60 @@ export const AIIMSDelhi = () => {
         </div>
       </div>
       <div className="d1">
-      <div className="OuickSummary">
+        <div className="OuickSummary">
           <div className="ouicktitle">
             <h1>QUICK SUMMARY</h1>
           </div>
           <div>
-          <table className="tabletext">
-            <tr>
-              <td>Estabilshed</td>
-              <td>1956</td>
-            </tr>
-            <tr>
-              <td>Institution type</td>
-              <td>Goverment </td>
-            </tr>
-            <tr>
-              <td> Affilliated University</td>
-              <td>Statutory Autonomuns,Aiims </td>
-            </tr>
+            <table className="tabletext">
+              <tr>
+                <td>Estabilshed</td>
+                <td>1956</td>
+              </tr>
+              <tr>
+                <td>Institution type</td>
+                <td>Goverment </td>
+              </tr>
+              <tr>
+                <td> Affilliated University</td>
+                <td>Statutory Autonomuns,Aiims </td>
+              </tr>
 
-            <tr>
-              <td> Post Graduate Courses</td>
-              <td>30 </td>
-            </tr>
-            <tr>
-              <td>Super Speciality Courses</td>
-              <td>33 </td>
-            </tr>
-            <tr>
-              <td>Address</td>
-              <td>AIIMS,Ansari Nagar, New delhi-110029 </td>
-            </tr>
-            <tr>
-              <td>Officaila Website </td>
-              <td> </td>
-            </tr>
-            <tr>
-              <td>Contact</td>
-              <td>91-11-23456423/3456789 </td>
-            </tr>
-          </table>
+              <tr>
+                <td> Post Graduate Courses</td>
+                <td>30 </td>
+              </tr>
+              <tr>
+                <td>Super Speciality Courses</td>
+                <td>33 </td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>AIIMS,Ansari Nagar, New delhi-110029 </td>
+              </tr>
+              <tr>
+                <td>Officaila Website </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Contact</td>
+                <td>91-11-23456423/3456789 </td>
+              </tr>
+            </table>
           </div>
-      </div>
-      {/* <div className="delhiimg">
+        </div>
+        {/* <div className="delhiimg">
         <img src={pic2}></img>
       </div> */}
-    <div className=" d1text">
-      <p>
-      &#x2022; The health survey and development committee, chaired by Sir Joseph Bhore, <br></br>an Indian government official, recommended as early as 1946 the establishment  <br></br>of a national medical center that would concentrate on meeting the need for a<br></br> highly-skilled workforce to support healthcare activities country.<br></br>
+        <div className=" d1text">
+          <p>
+            &#x2022; The health survey and development committee, chaired by Sir Joseph Bhore, <br></br>an Indian government official, recommended as early as 1946 the establishment  <br></br>of a national medical center that would concentrate on meeting the need for a<br></br> highly-skilled workforce to support healthcare activities country.<br></br>
 
-      &#x2022; AIIMS was finally created in 1956 as an autonomous institutio under  a <br></br> parliamentary act,serving as a center to support excellence in all aspects <br></br>of care health.
-      </p>
-    </div>
+            &#x2022; AIIMS was finally created in 1956 as an autonomous institutio under  a <br></br> parliamentary act,serving as a center to support excellence in all aspects <br></br>of care health.
+          </p>
+        </div>
 
-</div>
+      </div>
       <Footer />
     </>
   );
