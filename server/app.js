@@ -4,16 +4,14 @@ import connect from "./db/conn.js";
 import router from "./routes/router.js";
 import cors from 'cors';
 import cookieParser from "cookie-parser";
-import * as dotenv from 'dotenv' 
-dotenv.config()
-const port = process.env.SERVER_PORT || 8009
-
+// import * as dotenv from 'dotenv'
+// dotenv.config()
+const port = 8009
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 app.use(router);
-
 
 connect().then(() => {
     try {

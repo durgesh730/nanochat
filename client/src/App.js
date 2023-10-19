@@ -1,10 +1,10 @@
 import Neet from "./neet/Neet";
-import Body from "./component/Body";
+import Home from "./component/Home";
 import { Route, BrowserRouter, Routes, } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 
 import UP from "./downloads/UP";
-import Panjab from "./downloads/Panjab";
+import Punjab from "./downloads/Punjab";
 import Delhi from "./downloads/Delhi";
 import Himachal from "./downloads/Himachal";
 import Chandigarh from "./downloads/Chandigarh";
@@ -66,7 +66,7 @@ function App() {
 
           {/*  Main page routers */}
 
-          <Route path='/' element={<Body />} ></Route>
+          <Route path='/' element={<Home />} ></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/form' element={<Form />} ></Route>
           <Route path='/signup' element={<Register />} ></Route>
@@ -77,7 +77,7 @@ function App() {
           {/*  cards routers  */}
 
           <Route path='/UtterPradesh' element={<UP />} ></Route>
-          <Route path='/Panjab' element={<Panjab />} ></Route>
+          <Route path='/Panjab' element={<Punjab />} ></Route>
           <Route path='/Delhi' element={<Delhi />} ></Route>
           <Route path='/HimanchalPradesh' element={<Himachal />} ></Route>
           <Route path='/Chandigarh' element={<Chandigarh />} ></Route>

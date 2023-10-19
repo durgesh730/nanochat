@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../style/body.css';
 import imgaes from '../images/landing page.png'
 
@@ -10,11 +10,10 @@ import Videos from './Videos';
 import Notification from './Notification';
 import Myself from './Myself';
 import { Link } from 'react-router-dom';
-import Navbar from "../component/Navbar";
+import Navbar from "./Navbar";
 import SocialMedia from './SocialMedia';
 
-
-const Body = () => {
+const Home = () => {
   return (
     <>
       <Navbar />
@@ -70,4 +69,4 @@ const Body = () => {
   )
 }
 
-export default Body
+export default Home

@@ -5,30 +5,27 @@ import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { BsArrowReturnLeft, BsFillPersonFill, BsBoxArrowRight } from 'react-icons/bs';
-import { MdKeyboardArrowDown } from 'react-icons/md'
 
 // for reset value of result
 import { useDispatch } from 'react-redux';
 import { resetALLAction } from '../redux/question_reducer';
 import { resetResultAction } from '../redux/result_reducer';
 
-
 const Navbar = () => {
 
   const dispatch = useDispatch();
-  var [isShown] = useState(false);
+  var [isShown, setIsShown] = useState(false);
   const [dropdown, setdropdown] = useState(false);
 
   const handleClick = () => {
-    if (isShown === false) {
+    if (!isShown) {
       document.getElementById('SideNav').style.width = "170px"
-      isShown = true;
+      setIsShown(true);
     } else {
       document.getElementById('SideNav').style.width = "0px"
-      isShown = false;
+      setIsShown(false);
     }
   };
-
 
   function handledropdown() {
     if (dropdown === false) {
@@ -44,11 +41,7 @@ const Navbar = () => {
     document.getElementById('SideNav').style.width = "0px"
   }
 
-  const userData = localStorage.getItem('user');
-  let users
-  if (userData) {
-    users = JSON?.parse(userData);
-  }
+  const user = localStorage.getItem('user')
 
   const handleLogout = () => {
     localStorage.clear();
@@ -73,26 +66,17 @@ const Navbar = () => {
               <Link to='/neet' className='neettab' >NEET</Link>
               <Link to='/login' className='logintab' >Login</Link>
               <Link to='/signup' className='signuptab' > Signup <BsBoxArrowRight /> </Link>
-              <span onClick={handledropdown} className='avtar' to='/signup'><BsFillPersonFill /><small >{users ? users.fname : "No Login "} <MdKeyboardArrowDown /> </small> </span>
+              <span onClick={handledropdown} className='avtar' to='/signup'><BsFillPersonFill /><small>Hi {user ? user : "No Login "} </small></span>
               <span className='Bars' onClick={handleClick}><FaBars /></span>
             </div>
           </nav>
         </div>
 
-        {/* <div className="profile-options" id="profileOption">
-          <ul>
-            <li>
-              <Link style={{ cursor: "pointer" }} to="/profiledetails"  >My Profile</Link>
-            </li>
-            <li >
-              <Link onClick={handleLogout} id='logout' >Logout</Link>
-            </li>
-          </ul>
-        </div> */}
-
         <div className='Sidenav' id='SideNav'>
           <span onClick={CloseNav} id="Close" style={{ fontSize: "1.5rem" }} ><BsArrowReturnLeft /></span>
-          <Link to='/signup'><BsFillPersonFill /><small >{users ? users.fname : "No Login "}</small> </Link>
+          <Link to='/signup'><BsFillPersonFill />
+            <small> {user ? user : "No Login "} </small>
+          </Link>
           <Link to='/'>Home</Link>
           <Link to='/neet' onClick={onReset} >NEET</Link>
           <Link to='/login'>Login</Link>
