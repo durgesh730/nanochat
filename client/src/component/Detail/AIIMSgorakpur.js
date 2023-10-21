@@ -4,7 +4,7 @@ import Footer from "../Footer";
 import "../../style/aiimsdelhi.css";
 import SocialMedia from "../SocialMedia";
 import pic1 from "../../images/delhi.png";
-export default function AIIMSmadurai() {
+export default function AIIMSgorakpur() {
   return (
     <>
     <Navbar />
@@ -424,6 +424,5 @@ export default function AIIMSmadurai() {
     </div>
     <Footer />
   </>
-);
-};
-  
+  )
+}
