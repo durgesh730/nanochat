@@ -64,8 +64,15 @@ const Navbar = () => {
             <div className='logo'><Link to="/" onClick={onReset} >Nano chat</Link></div>
             <div className='RightNav'>
               <Link to='/neet' className='neettab' >NEET</Link>
-              <Link to='/login' className='logintab' >Login</Link>
-              <Link to='/signup' className='signuptab' > Signup <BsBoxArrowRight /> </Link>
+              {
+                !user ?
+                  <>
+                    <Link to='/login' className='logintab' >Login</Link>
+                    <Link to='/signup' className='signuptab' > Signup <BsBoxArrowRight /> </Link>
+                  </>
+                  :
+                  <Link onClick={handleLogout} id='logout' className='signuptab'>Logout</Link>
+              }
               <span onClick={handledropdown} className='avtar' to='/signup'><BsFillPersonFill /><small>Hi {user ? user : "No Login "} </small></span>
               <span className='Bars' onClick={handleClick}><FaBars /></span>
             </div>
@@ -79,9 +86,15 @@ const Navbar = () => {
           </Link>
           <Link to='/'>Home</Link>
           <Link to='/neet' onClick={onReset} >NEET</Link>
-          <Link to='/login'>Login</Link>
-          <Link to='/signup'>Signup</Link>
-          <Link onClick={handleLogout} id='logout' >Logout</Link>
+          {
+            !user ?
+              <>
+                <Link to='/login'>Login</Link>
+                <Link to='/signup'>Signup</Link>
+              </>
+              :
+              <Link onClick={handleLogout} id='logout' >Logout</Link>
+          }
         </div>
       </div>
     </>
