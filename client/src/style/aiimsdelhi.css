@@ -3,6 +3,8 @@
 }
 
 .collegeHeading {
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -58,8 +60,8 @@
     color: white;
 }
 
-.quotes{
-    color:black;
+.quotes {
+    color: black;
     padding-top: 5rem;
     font-size: 2.5rem;
     width: 30%;
@@ -72,18 +74,23 @@
     list-style: none;
 }
 
-.QuickSummaryContainer{
+.QuickSummaryContainer {
     padding-top: 4rem;
     padding-bottom: 2rem;
     width: 70%;
     margin: auto;
 }
 
-.quickPara{
+.quickPara {
     padding-top: 1rem;
 }
 
-.rows{
+.QuickSummaryHeading{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.rows {
     padding: 2rem 0rem;
     display: flex;
     flex-direction: row;
@@ -91,15 +98,111 @@
     gap: 6rem;
 }
 
-.mbbsCourseHeading{
+.mbbsCourseHeading {
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
 }
 
-.subtopics{
+.subtopics {
     padding-top: 10px;
 }
 
-.subtopics span{
+.subtopics span {
     font-size: 1.3rem;
     font-weight: 600;
+}
+
+.admissionHeading span {
+    font-size: 28px;
+    background-color: #232354;
+    color: white;
+    padding: 1rem 4rem;
+    font-weight: 600;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.admissionDetails {
+    padding-top: 4rem;
+    font-size: 1.2rem;
+}
+
+.titleDetails {
+    text-align: center;
+}
+
+.tabletext {
+    margin: auto;
+    width: 55%;
+}
+
+.admissionContainer {
+    padding: 4rem 0rem;
+}
+
+.bondContainer {
+    width: 75%;
+    margin: auto;
+    float: right;
+}
+
+.bondtext {
+    width: 70%;
+}
+
+.bondtable{
+    width: 100%;
+}
+
+.bondtitle {
+    font-weight: 600;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.feeStructure{
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.feeStructuretitle{
+    font-weight: 600;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.Infrastructure{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    padding: 0rem 6rem;
+    gap: 3rem;
+    align-items: center;
+}
+
+.infrastructureTitle{
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hostel{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    padding: 0rem 6rem;
+    gap: 0rem;
+    align-items: center;
+}
+
+.hostel p{
+    width: 45%;
+}
+
+.hotelContainer{
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
 }
