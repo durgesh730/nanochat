@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     grid-gap: 16rem;
-    /* border-bottom: 1px solid rgb(168, 167, 167); */
 }
 
 .start{

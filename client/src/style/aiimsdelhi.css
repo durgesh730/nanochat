@@ -1,92 +1,105 @@
-.detaillist ul{
-   list-style: none;
+.ContainerCollege {
+    padding-top: 4rem;
 }
 
-.detaillist  h1{
-    color: rgb(11, 11, 136);
-    margin: 2rem 2rem 2rem 2rem;
-    
-}
-.detaillist h2{
-    margin: 2rem 2rem 2rem 2rem;
-}
-
-.detaillist{
-    padding-right:10rem ;
-    /* border: 1px solid gray; */
-    box-shadow: 0px 0px 8px -5px ;
-    margin: 1rem 1rem 1rem 1rem;
-
-}
-
-.conatinerdelhi{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding:  4rem 8rem;
-   align-items: center;
-}
-
-.subconatinerdelhi{
-    background-color: white;
-    width: 30rem;
-    height: 33rem;
-    /* box-shadow: 0px 0px 8px -5px; */
-}
-
-.subconatinerdelhiimg img{
-   width: 110%;
-   border-radius: 1rem;
-   margin-top: 2rem;
-   height: 25rem;
-}
-
-.subconatinerdelhiimg h1{
-    color: rgb(6, 6, 74);
+.collegeHeading {
     text-align: center;
-    font-weight: bolder;
 }
 
-
-.OuickSummary{
-  padding-left: 3rem;
-  margin-bottom: 7rem;
-
+.collegeAboutText span {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-.ouicktitle h1{
-   /* text-align: center; */
-    color: rgb(6, 6, 74);
-    padding-top: -4rem;
-    padding-left: 9rem;
-    margin-bottom: 2rem;
-
-}
-.quicksummaerytable table{
-    box-shadow: 0px 0px 8px -2px;
-   
-}
-.tabletext{
-    box-shadow: 0px 0px 8px -2px;
-    margin-left: 9rem;
-    /* border: 2px solid black; */
-    
-}
-table tr{
-    border: 1px solid black;
-}
-.tabletext td{
-    border: 1px solid black;
-    
-}
-.d1{
+.CollegeContainer {
+    width: 75%;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
 }
-.d1text{
-    margin-top: 5rem;
-    padding-right: 10rem;
+
+.CollegeImage img {
+    width: 60vh;
+    height: 40vh;
+    border-radius: 5px;
+}
+
+.CollegeContainer {
+    padding: 2rem 0rem;
+}
+
+.learn-btn {
+    padding-top: 1rem;
+}
+
+.learn-btn button {
+    border: 1px solid #232354;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
 
 }
 
+.learn-btn button:hover {
+    background-color: #232354;
+    color: white;
+}
+
+.listContainer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem 0rem;
+    background-color: #232354;
+    color: white;
+}
+
+.quotes{
+    color:black;
+    padding-top: 5rem;
+    font-size: 2.5rem;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.CollegePoints ul li {
+    list-style: none;
+}
+
+.QuickSummaryContainer{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    width: 70%;
+    margin: auto;
+}
+
+.quickPara{
+    padding-top: 1rem;
+}
+
+.rows{
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 6rem;
+}
+
+.mbbsCourseHeading{
+    text-align: center;
+}
+
+.subtopics{
+    padding-top: 10px;
+}
+
+.subtopics span{
+    font-size: 1.3rem;
+    font-weight: 600;
+}

@@ -20,7 +20,6 @@ const rows = [
      createData('AUTONOMOUS MEDICAL COLLEGE, AYODHYA', 2023, "Download"),
      createData('AUTONOMOUS MEDICAL COLLEGE, DEORIA', 2023, "Download"),
      createData('AUTONOMOUS MEDICAL COLLEGE, ETAH', 2023, "Download"),
-
      createData('AUTONOMOUS MEDICAL COLLEGE, FATEHPUR', 2023, "Download"),
 ];
 
@@ -31,9 +30,9 @@ export default function BasicTable() {
 
                <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Utter Pradesh Medical Colleges List </Typography>
 
-               <TableContainer component={Paper} sx={{ width: "70%", margin: "auto", marginBottom: "4rem" }} >
+               <TableContainer component={Paper} sx={{ margin: "auto", marginBottom: "4rem", border: "none" }} >
 
-                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <Table sx={{ minWidth: 650, border: "none" }} aria-label="simple table">
                          <TableHead>
                               <TableRow>
                                    <TableCell>College</TableCell>
