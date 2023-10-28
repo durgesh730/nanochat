@@ -14,7 +14,7 @@ const Tables = () => {
                             <tr><td><Link to="/aiimsrishi"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span>  AIIMS Rishikesh</Link></td> </tr>
                             <tr><td><Link to="/aiimskalyani"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Kalyani</Link></td> </tr>
                             <tr><td><Link to="/aiimsmadurai"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Madurai</Link></td></tr>
-                            <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Gorakhpur </a></td></tr>
+                            <tr><td><Link to="/aiimsgorakpur"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Gorakhpur </Link></td></tr>
                             <tr> <td><a href=" #"><span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span>  AIIMS Raebareli</a></td></tr>
                             <tr><td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Jammu </a></td></tr>
                             <tr> <td><a href=" #"> <span style={{fontSize:".8rem", color:"#232354"}} ><BsFillCheckCircleFill/></span> AIIMS Deoghar</a></td></tr>
