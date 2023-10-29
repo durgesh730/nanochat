@@ -35,11 +35,11 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
-import AIIMSrishi from "./component/Detail/AIIMSrishi";
-import AIIMSkalyani from "./component/Detail/AIIMSkalyani";
-import AIIMSmadurai from "./component/Detail/AIIMSmadurai";
-import AIIMSgorakpur from "./component/Detail/AIIMSgorakpur";
-import { AIIMSDelhi } from "./component/Detail/AIIMSDelhi";
+import AIIMSrishi from "./component/Detail/AIIMSRishikesh";
+import AIIMSkalyani from "./component/Detail/AIIMSKalyani";
+import AIIMSmadurai from "./component/Detail/AIIMSMadurai";
+import AIIMSgorakpur from "./component/Detail/AIIMSGorakhpur";
+import AIIMSDelhi from "./component/Detail/AIIMSDelhi";
 
 function App() {
 

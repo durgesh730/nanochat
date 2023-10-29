@@ -1,8 +1,7 @@
-import React from 'react'
 import "../../style/aiimsdelhi.css";
 import CollegeDetails from './CollegeDetails';
 
-const AIIMSKalyani = () => {
+const AIIMSRishikesh = () => {
 
   const CollegeInfo = [
     {
@@ -91,5 +90,4 @@ const AIIMSKalyani = () => {
   )
 }
 
-export default AIIMSKalyani
-
+export default AIIMSRishikesh
