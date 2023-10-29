@@ -7,8 +7,26 @@ import pic from '../../images/aiimsdelhi.jpg'
 import Infrastructure from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import located from '../../images/location.png'
+import Videos from "../Videos"
+import '../../style/video.css'
 
 export const AIIMSDelhi = () => {
+
+  const Videosdata = [
+    {
+      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
+      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+    },
+    {
+      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
+      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+    },
+    {
+      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
+      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+    },
+  ]
+
   return (
     <>
       <Navbar />
@@ -393,6 +411,27 @@ export const AIIMSDelhi = () => {
             Jhajjar has 2,792 beds, including 288 private sector beds. Rural/Urban
             Health Training Centres Ballabgarh 35 km distance from the college
           </p>
+        </div>
+
+        <div>
+          <div className='text-center counsellingInfo'>
+            <span className='font-weight-bold'>Counselling Information</span>
+          </div>
+          <div className="CounsellingPara" >
+            <span>All the NEET Under Graduate (MBBS/BDS) aspirant candidates are hereby informed that counseling for All India Quota seats/
+              Institutional Quota/ Domicile (internal candidates) of Central Universities (Aligarh Muslim University/ Banaras Hindu University/
+              University of Delhi/Faculty of Dentistry, Jamia Millia Islamia, Delhi), (wards of ESIC insured persons)
+              seats of colleges under Employee State Insurance Corporation and Armed Forces Medical College, Pune for the Under graduate session 2023-24 will
+              be conducted by Medical Counseling Committee/ Directorate General of Health Services, Ministry of Health and Family Welfare, Government of 
+              India. <a href="#">click here for more</a></span>
+          </div>
+          <div className='yotubeVideo' >
+            {Videosdata.map((item, index) => {
+              return (
+                <Videos item={item} key={index} />
+              )
+            })}
+          </div>
         </div>
 
         <div className="hotelContainer" >

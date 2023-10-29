@@ -206,3 +206,15 @@
     font-size: 2rem;
     text-align: center;
 }
+
+.counsellingInfo{
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.CounsellingPara{
+    padding-top: 1rem;
+    margin: auto;
+    width: 80%;
+}
