@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 4rem;
+    gap: 13rem;
     padding: 2rem 0rem;
     background-color: #232354;
     color: white;
@@ -117,7 +117,7 @@
     font-size: 28px;
     background-color: #232354;
     color: white;
-    padding: 1rem 4rem;
+    padding: 1rem 12rem;
     font-weight: 600;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
