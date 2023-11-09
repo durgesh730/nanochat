@@ -88,6 +88,7 @@ const AIIMSMadurai = () => {
             location: {
                 img: location,
                 para: "New Delhi Bus Stand and Inter State Bus Terminal to AIIMS Medical college is 20 km distance. We can reach within 40 min from NH 44 and Baba Banda Singh Bahadur Setu road. Ajmeri Gate Railway station in Delhi is located 10.5 km away from this college, we can reach here within 30 min through Prithviraj Road and Sri Aurobindo Marg. Indira Gandhi International Airport, Delhi is the nearest airport of this medical college, which is located 9.8 km away from Medical College. Through Mahatma Gandhi Road and NH 48, we can reach the Airport within 20 min to this Medical College.",
+                maplink:"www.map.com"
             },
         }
     ]

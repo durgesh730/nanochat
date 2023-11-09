@@ -391,7 +391,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
           <span>How to Reach</span>
         </div>
         <div className="hostel">
-          <p>{info?.location?.para}</p>
+          <p>{info?.location?.para} <a href={info?.location?.maplink} >see in Map</a> </p>
           <img src={info?.location?.img} alt="hostel img" />
         </div>
       </div>
