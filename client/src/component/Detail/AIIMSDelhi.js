@@ -4,6 +4,7 @@ import collegeImg from '../../images/aiimsdelhi.jpg'
 import infra from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import location from '../../images/location.png'
+import hospital from '../../images/hospital (1).png'
 
 
 const AIIMSDelhi = () => {
@@ -77,7 +78,7 @@ const AIIMSDelhi = () => {
                 paraSecond: "These are spread over different hostels and residences in the AIIMS Main Campus, Masjid Moth, Ayurvigyan Nagar, and JPNA Trauma Centre Hostel available in Raj Nagar. Male hostels have a total of more than 1350 student accommodation facilities. Female hostel has 650 accommodation facilities, Staff Hostel 400 accommodation, and also Guest rooms are available here. All residences have common rooms, sports clubs, Gymnasium, reading rooms, and recreational facilities.",
             },
             hospital: {
-                img: infra,
+                img: hospital,
                 paraFirst: "AIIMS is currently not a single hospital, but a conglomerate of facilities. It has over 1,500 units located in the main hospital, the Ophthalmological Center of dr.Rajendra Prasad, Cardiac Surgery Center, Neuroscience Center, Hospital Center, Rotary Institute, and Detox Center. This facility complex serves approximately 1.5 million outpatients and 80,000 inpatients annually.",
                 paraSecond: "The number of surgical operations performed at AIIMS last year amounted to over 100,000. The total number of beds available at Major Hospital and Dr.B.R. Ambedkar Institute Rotary Cancer Hospital, Dr.RP Center, NDDTC, CCM, NCI Jhajjar has 2,792 beds, including 288 private sector beds. Rural/Urban Health Training Centres Ballabgarh 35 km distance from the college",
             },

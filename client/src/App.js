@@ -36,10 +36,10 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
 import AIIMSrishi from "./component/Detail/AIIMSRishikesh";
-import AIIMSkalyani from "./component/Detail/AIIMSKalyani";
-import AIIMSmadurai from "./component/Detail/AIIMSMadurai";
 import AIIMSgorakpur from "./component/Detail/AIIMSGorakhpur";
 import AIIMSDelhi from "./component/Detail/AIIMSDelhi";
+import AIIMSKalyani from "./component/Detail/AIIMSKalyani";
+import AIIMSMadurai from "./component/Detail/AIIMSmadurai";
 
 function App() {
 
@@ -98,8 +98,8 @@ function App() {
           {/* Details page routers */}
           <Route path="/Aiimsdelhi" element={<AIIMSDelhi />}></Route>
           <Route path="/Aiimsrishi" element={<AIIMSrishi />}></Route>
-          <Route path="/Aiimsmadurai" element={<AIIMSmadurai />}></Route>
-          <Route path="/Aimskalyani" element={<AIIMSkalyani />}></Route>
+          <Route path="/Aiimsmadurai" element={<AIIMSMadurai />}></Route>
+          <Route path="/Aimskalyani" element={<AIIMSKalyani />}></Route>
           <Route path="/Aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
 
         </Routes>
