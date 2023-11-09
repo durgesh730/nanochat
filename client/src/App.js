@@ -11,24 +11,27 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // components
-import Neet from "./neet/Neet";
+import Neet from "./component/neet/Neet";
 import Home from "./component/Home/Home";
 
-import UP from "./downloads/UP";
-import Punjab from "./downloads/Punjab";
-import Delhi from "./downloads/Delhi";
-import Himachal from "./downloads/Himachal";
-import Chandigarh from "./downloads/Chandigarh";
-import Bihar from './downloads/Bihar'
-import Rajasthan from './downloads/Rajasthan'
-import WestBengal from './downloads/WestBengal'
-import Odisha from './downloads/Odisha'
-import Gujrat from './downloads/Gujarat'
-import Uttarakhand from './downloads/Uttarakhand'
-import Maharashtra from './downloads/Maharashtra'
-import Haryana from './downloads/Haryana'
-import Telangana from './downloads/Telangana'
-import MP from './downloads/MP'
+// import UP from './component/Downloads'
+import UP from "./component/Downloads/UP";
+import Punjab from "./component/Downloads/Punjab";
+import Delhi from "./component/Downloads/Delhi";
+import Himachal from "./component/Downloads/Himachal";
+import Chandigarh from "./component/Downloads/Chandigarh";
+import Bihar from './component/Downloads/Bihar'
+import Rajasthan from './component/Downloads/Rajasthan'
+import WestBengal from './component/Downloads/WestBengal'
+import Odisha from './component/Downloads/Odisha'
+import Gujrat from './component/Downloads/Gujarat'
+import Uttarakhand from './component/Downloads/Uttarakhand'
+import Maharashtra from './component/Downloads/Maharashtra'
+import Haryana from './component/Downloads/Haryana'
+// import Telangana from './component/downloads/Telangana'
+import MP from './component/Downloads/MP'
+
+import Telagana from './component/Downloads/Telangana'
 
 import Login from "./component/Login/Login";
 import ForgotPassword from "./component/ForgetPassword/ForgotPassword";
@@ -36,12 +39,12 @@ import Register from "./component/Register/Register";
 import PasswordReset from "./component/ResetPassword/PasswordReset";
 import Form from "./component/CounsellingFrom/Form";
 
-import Chemistry from "./neet/Chemistry";
-import Biology from "./neet/Biology";
-import Physics from "./neet/Physics";
-import Result from "./neet/Result";
-import ResultBio from "./neet/ResultBio";
-import ResultPhy from "./neet/ResultPhy";
+import Chemistry from "./component/neet/Chemistry";
+import Biology from "./component/neet/Biology";
+import Physics from "./component/neet/Physics";
+import Result from "./component/neet/Result";
+import ResultBio from './component/neet/ResultBio'
+import ResultPhy from "./component/neet/ResultPhy";
 
 import AIIMSrishi from "./component/CollegeDetails/AIIMSRishikesh";
 import AIIMSgorakpur from "./component/CollegeDetails/AIIMSGorakhpur";
@@ -79,9 +82,7 @@ function App() {
           <Route path='/password-reset' element={<PasswordReset />}> </Route>
           <Route path='/forgotpassword/:id/:token' element={<ForgotPassword />}></Route>
 
-
           {/*  cards routers  */}
-
           <Route path='/UtterPradesh' element={<UP />} ></Route>
           <Route path='/Panjab' element={<Punjab />} ></Route>
           <Route path='/Delhi' element={<Delhi />} ></Route>
@@ -94,7 +95,7 @@ function App() {
           <Route path='/Rajasthan' element={<Rajasthan />} ></Route>
           <Route path='/Bihar' element={<Bihar />} ></Route>
 
-          <Route path='/Telangana' element={<Telangana />} ></Route>
+          <Route path='/Telangana' element={<Telagana />} ></Route>
           <Route path='/Haryana' element={<Haryana />} ></Route>
           <Route path='/Maharashtra' element={<Maharashtra />} ></Route>
           <Route path='/Uttarakhand' element={<Uttarakhand />} ></Route>

@@ -1,9 +1,9 @@
-import '../style/neet.css'
-import neetpic from '../images/Analytics-amico.png'
+import '../../style/neet.css'
+import neetpic from '../../images/Analytics-amico.png'
 import { Link } from 'react-router-dom'
-import Footer from '../component/Footer/Footer'
-import SocialMedia from '../component/SocialMedia/SocialMedia'
-import Navbar from '../component/Navbar/Navbar'
+import Footer from '../../component/Footer/Footer'
+import SocialMedia from '../../component/SocialMedia/SocialMedia'
+import Navbar from '../../component/Navbar/Navbar'
 
 const Neet = () => {
   return (

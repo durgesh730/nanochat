@@ -1,15 +1,15 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import '../style/result.css'
-import Footer from '../component/Footer/Footer'
+import '../../style/result.css'
+import Footer from '../Footer/Footer'
 
 // imoprt actions
-import { resetALLAction } from '../redux/question_reducer'
-import { resetResultAction } from '../redux/result_reducer'
-import { attempts_Number, earnPoints_Number} from '../helper/helper'
-import { usePublishResult } from '../hooks/setResult'
-import Navbar from '../component/Navbar/Navbar'
+import { resetALLAction } from '../../redux/question_reducer'
+import { resetResultAction } from '../../redux/result_reducer'
+import { attempts_Number, earnPoints_Number} from '../../helper/helper'
+import { usePublishResult } from '../../hooks/setResult'
+import Navbar from '../Navbar/Navbar'
 
 export default function Result() {
 

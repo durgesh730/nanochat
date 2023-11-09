@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Question from './Question'
-import '../style/quiz.css'
+import '../../style/quiz.css'
 
-import { moveNextQuestion, movePrevQuestion } from '../hooks/FetchQuestions'
-import { PushAnswer } from '../hooks/setResult'
+import { moveNextQuestion, movePrevQuestion } from '../../hooks/FetchQuestions'
+import { PushAnswer } from '../../hooks/setResult'
 
 // redux store import
 import { useSelector, useDispatch } from 'react-redux'

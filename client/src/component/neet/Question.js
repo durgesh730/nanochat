@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import '../style/question.css'
+import '../../style/question.css'
 // custom hook
-import { useFetchQuestion } from '../hooks/FetchQuestions'
-import { updateResult } from '../hooks/setResult'
+import { useFetchQuestion } from '../../hooks/FetchQuestions'
+import { updateResult } from '../../hooks/setResult'
 
 
 export default function Question({ onChecked }) {
