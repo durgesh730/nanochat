@@ -39,7 +39,7 @@ import AIIMSrishi from "./component/Detail/AIIMSRishikesh";
 import AIIMSgorakpur from "./component/Detail/AIIMSGorakhpur";
 import AIIMSDelhi from "./component/Detail/AIIMSDelhi";
 import AIIMSKalyani from "./component/Detail/AIIMSKalyani";
-import AIIMSMadurai from "./component/Detail/AIIMSmadurai";
+import AIIMSMadurai from "./component/Detail/AIIMSMadurai";
 
 function App() {
 
