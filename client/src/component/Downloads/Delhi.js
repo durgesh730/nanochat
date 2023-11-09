@@ -20,7 +20,6 @@ const rows = [
      createData('AUTONOMOUS MEDICAL COLLEGE, AYODHYA', 2023, "Download"),
      createData('AUTONOMOUS MEDICAL COLLEGE, DEORIA', 2023, "Download"),
      createData('AUTONOMOUS MEDICAL COLLEGE, ETAH', 2023, "Download"),
-
      createData('AUTONOMOUS MEDICAL COLLEGE, FATEHPUR', 2023, "Download"),
 ];
 

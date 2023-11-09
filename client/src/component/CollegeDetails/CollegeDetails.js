@@ -45,7 +45,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
                 </span>
               </div>
               <div className="learn-btn" >
-                <button onClick={() => handleLocation(info?.about?.btnLink)} >Learn More</button>
+                <a href={info?.about?.btnLink} target="_blank" >Learn More</a>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
             <span>MBBS Courses</span>
           </div>
 
-          <div className="CollegeContainer" >
+          <div className="CollegeContainer gap" >
             <div className="CollegeImage" >
               <img src={info?.courses?.img} alt="college image" />
             </div>

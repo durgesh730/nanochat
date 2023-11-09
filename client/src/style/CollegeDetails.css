@@ -20,9 +20,15 @@
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+    align-items: center;
+}
+
+.gap{
+    gap: 16%;
 }
 
 .CollegeImage img {
+
     width: 60vh;
     height: 40vh;
     border-radius: 5px;
@@ -36,14 +42,16 @@
     padding-top: 1rem;
 }
 
-.learn-btn button {
+.learn-btn a {
     border: 1px solid #232354;
     background-color: transparent;
     padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    color: #232354;
 
 }
 
-.learn-btn button:hover {
+.learn-btn a:hover {
     background-color: #232354;
     color: white;
 }
@@ -117,9 +125,10 @@
     font-size: 28px;
     background-color: #232354;
     color: white;
-    padding: 1rem 12rem;
+    margin-left: 6rem;
+    padding: 1rem 30rem;
     font-weight: 600;
-    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
 
