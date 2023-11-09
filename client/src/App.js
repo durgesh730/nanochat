@@ -1,7 +1,18 @@
-import Neet from "./neet/Neet";
-import Home from "./component/Home";
+// react 
 import { Route, BrowserRouter, Routes, } from "react-router-dom";
+import { useEffect } from "react";
+
+// aos effect
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
+//toast
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// components
+import Neet from "./neet/Neet";
+import Home from "./component/Home/Home";
 
 import UP from "./downloads/UP";
 import Punjab from "./downloads/Punjab";
@@ -19,11 +30,11 @@ import Haryana from './downloads/Haryana'
 import Telangana from './downloads/Telangana'
 import MP from './downloads/MP'
 
-import Login from "./component/Login";
-import ForgotPassword from "./component/ForgotPassword";
-import Register from "./component/Register";
-import PasswordReset from "./component/PasswordReset";
-import Form from "./component/Form";
+import Login from "./component/Login/Login";
+import ForgotPassword from "./component/ForgetPassword/ForgotPassword";
+import Register from "./component/Register/Register";
+import PasswordReset from "./component/ResetPassword/PasswordReset";
+import Form from "./component/CounsellingFrom/Form";
 
 import Chemistry from "./neet/Chemistry";
 import Biology from "./neet/Biology";
@@ -31,15 +42,12 @@ import Physics from "./neet/Physics";
 import Result from "./neet/Result";
 import ResultBio from "./neet/ResultBio";
 import ResultPhy from "./neet/ResultPhy";
-import Aos from "aos";
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
 
-import AIIMSrishi from "./component/Detail/AIIMSRishikesh";
-import AIIMSgorakpur from "./component/Detail/AIIMSGorakhpur";
-import AIIMSDelhi from "./component/Detail/AIIMSDelhi";
-import AIIMSKalyani from "./component/Detail/AIIMSKalyani";
-import AIIMSMadurai from "./component/Detail/AIIMSMadurai";
+import AIIMSrishi from "./component/CollegeDetails/AIIMSRishikesh";
+import AIIMSgorakpur from "./component/CollegeDetails/AIIMSGorakhpur";
+import AIIMSDelhi from "./component/CollegeDetails/AIIMSDelhi";
+import AIIMSKalyani from "./component/CollegeDetails/AIIMSKalyani";
+import AIIMSMadurai from "./component/CollegeDetails/AIIMSMadurai";
 
 function App() {
 
@@ -55,7 +63,6 @@ function App() {
         <Routes>
 
           {/*  NEET component routers  */}
-
           <Route path='/neet' element={<Neet />} ></Route>
           <Route path='/chem' element={<Chemistry />} ></Route>
           <Route path='/bio' element={<Biology />} ></Route>
@@ -65,7 +72,6 @@ function App() {
           <Route path='/phyresult' element={<ResultPhy />} ></Route>
 
           {/*  Main page routers */}
-
           <Route path='/' element={<Home />} ></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/form' element={<Form />} ></Route>
