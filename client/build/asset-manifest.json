@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.260a5a9c.css",
-    "main.js": "/static/js/main.422838c8.js",
+    "main.css": "/static/css/main.e341b4f3.css",
+    "main.js": "/static/js/main.4ff8d0db.js",
     "static/media/IMG_1364.JPG": "/static/media/IMG_1364.860f082a20763e49681a.JPG",
     "static/media/landing page.png": "/static/media/landing page.4ab0bdeafb9ac19ce686.png",
     "static/media/email.png": "/static/media/email.aba4635b3a7f834ccee3.png",
     "static/media/Mobile login-rafiki.png": "/static/media/Mobile login-rafiki.5d7f90db50a1f9a169da.png",
     "static/media/Analytics-amico.png": "/static/media/Analytics-amico.39b6cd3c2dc63bedcae2.png",
     "static/media/Mobile login-pana.png": "/static/media/Mobile login-pana.17a1def8aed1f79be5fe.png",
+    "static/media/delhiaiims1.jpg": "/static/media/delhiaiims1.3813a71d1030fdd7dde6.jpg",
+    "static/media/aiimsdelhi.jpg": "/static/media/aiimsdelhi.bd2bd32b0efea2707a58.jpg",
+    "static/media/location.png": "/static/media/location.ce8678d8c1426e80f6f3.png",
+    "static/media/infrastructure.png": "/static/media/infrastructure.3658f647a97124ee6351.png",
+    "static/media/hospital (1).png": "/static/media/hospital (1).9763d5b084b15b44efa6.png",
+    "static/media/hostel.png": "/static/media/hostel.2635c797653d73805399.png",
     "index.html": "/index.html",
-    "main.260a5a9c.css.map": "/static/css/main.260a5a9c.css.map",
-    "main.422838c8.js.map": "/static/js/main.422838c8.js.map"
+    "main.e341b4f3.css.map": "/static/css/main.e341b4f3.css.map",
+    "main.4ff8d0db.js.map": "/static/js/main.4ff8d0db.js.map"
   },
   "entrypoints": [
-    "static/css/main.260a5a9c.css",
-    "static/js/main.422838c8.js"
+    "static/css/main.e341b4f3.css",
+    "static/js/main.4ff8d0db.js"
   ]
 }
