@@ -9,12 +9,12 @@ import 'aos/dist/aos.css';
 //toast
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from 'react-hot-toast';
 
 // components
 import Neet from "./component/neet/Neet";
 import Home from "./component/Home/Home";
 
-// import UP from './component/Downloads'
 import UP from "./component/Downloads/UP";
 import Punjab from "./component/Downloads/Punjab";
 import Delhi from "./component/Downloads/Delhi";
@@ -28,7 +28,6 @@ import Gujrat from './component/Downloads/Gujarat'
 import Uttarakhand from './component/Downloads/Uttarakhand'
 import Maharashtra from './component/Downloads/Maharashtra'
 import Haryana from './component/Downloads/Haryana'
-// import Telangana from './component/downloads/Telangana'
 import MP from './component/Downloads/MP'
 
 import Telagana from './component/Downloads/Telangana'
@@ -46,7 +45,7 @@ import Result from "./component/neet/Result";
 import ResultBio from './component/neet/ResultBio'
 import ResultPhy from "./component/neet/ResultPhy";
 
-import AIIMSrishi from "./component/CollegeDetails/AIIMSRishikesh";
+import AIIMSRishikesh from "./component/CollegeDetails/AIIMSRishikesh";
 import AIIMSgorakpur from "./component/CollegeDetails/AIIMSGorakhpur";
 import AIIMSDelhi from "./component/CollegeDetails/AIIMSDelhi";
 import AIIMSKalyani from "./component/CollegeDetails/AIIMSKalyani";
@@ -104,13 +103,14 @@ function App() {
 
           {/* Details page routers */}
           <Route path="/Aiimsdelhi" element={<AIIMSDelhi />}></Route>
-          <Route path="/Aiimsrishi" element={<AIIMSrishi />}></Route>
+          <Route path="/AIIMSrishikesh" element={<AIIMSRishikesh />}></Route>
           <Route path="/Aiimsmadurai" element={<AIIMSMadurai />}></Route>
           <Route path="/Aimskalyani" element={<AIIMSKalyani />}></Route>
           <Route path="/Aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
 
         </Routes>
         <ToastContainer />
+        <Toaster />
       </BrowserRouter>
     </>
   );

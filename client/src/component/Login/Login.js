@@ -2,8 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react'
 import './login.css';
 import logimg from "../../images/Mobile login-rafiki.png";
-import 'react-toastify/dist/ReactToastify.css';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar';
 import SocialMedia from '../SocialMedia/SocialMedia';
@@ -33,21 +32,13 @@ const Login = () => {
         e.preventDefault();
         const { email, password } = inpval;
         if (email === "") {
-            toast("Please Enter the email", {
-                autoClose: 3000,
-            })
+            toast.error("Please Enter the email")
         } else if (!email.includes('@')) {
-            toast("Please Enter the valid email", {
-                autoClose: 3000,
-            })
+            toast.error("Please Enter the valid email")
         } else if (password === " ") {
-            toast("Please Enter  Your password", {
-                autoClose: 3000,
-            })
+            toast.error("Please Enter  Your password")
         } else if (password.length < 6) {
-            toast("Password must be 6 characters", {
-                autoClose: 3000,
-            })
+            toast.error("Password must be 6 characters")
         } else {
             const data = await fetch(`${serverhost}/login`, {
                 method: 'POST',
@@ -59,20 +50,15 @@ const Login = () => {
                 })
             });
             const res = await data.json();
-            console.log(res, "login")
             if (res.status === (200)) {
-                toast("Logged In successfully", {
-                    autoClose: 3000,
-                })
+                toast.success(res?.result?.msg)
                 localStorage.setItem('token', res.result?.token)
                 localStorage.setItem("user", res.result?.userValid.fname);
                 localStorage.setItem("Id", res.result?.userValid._id);
                 Navigate('/')
                 setInpval({ ...inpval, email: " ", password: "" })
             } else if (res.status !== (201)) {
-                toast("Please Enter correct Details", {
-                    autoClose: 3000,
-                })
+                toast.error(res.error)
             }
         }
     }

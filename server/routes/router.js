@@ -76,13 +76,13 @@ router.post("/login", async (req, res) => {
         const userValid = await userdb.findOne({ email: email });
 
         if (!userValid) {
-            return res.status(401).json({ error: "Invalid login details." });
+            return res.status(401).json({ error: "Email does not exist." });
         }
 
         const isMatch = await bcrypt.compare(password, userValid.password);
 
         if (!isMatch) {
-            return res.status(401).json({ error: "Invalid login details." });
+            return res.status(401).json({ error: "Password not correct." });
         }
 
         // Token generation
@@ -96,7 +96,8 @@ router.post("/login", async (req, res) => {
 
         const result = {
             userValid,
-            token
+            token,
+            msg: "Login Successfully"
         };
 
         return res.status(200).json({ status: 200, result });
