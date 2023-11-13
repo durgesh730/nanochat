@@ -1,21 +1,34 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./navbar.css"
 import { FaBars } from 'react-icons/fa';
+import { RiArrowDropDownLine } from 'react-icons/ri';
+import { BiLogOutCircle } from 'react-icons/bi';
+import { CgProfile } from 'react-icons/cg';
+import { FiHelpCircle } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import { BsArrowReturnLeft, BsFillPersonFill, BsBoxArrowRight } from 'react-icons/bs';
+import * as React from 'react';
 
 // for reset value of result
 import { useDispatch } from 'react-redux';
 import { resetALLAction } from '../../redux/question_reducer';
 import { resetResultAction } from '../../redux/result_reducer';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Grow from '@mui/material/Grow';
+import Paper from '@mui/material/Paper';
+import Popper from '@mui/material/Popper';
+import MenuItem from '@mui/material/MenuItem';
+import MenuList from '@mui/material/MenuList';
+import { Typography } from '@mui/material';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
   var [isShown, setIsShown] = useState(false);
-  const [dropdown, setdropdown] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
 
   const handleClick = () => {
     if (!isShown) {
@@ -27,33 +40,55 @@ const Navbar = () => {
     }
   };
 
-  function handledropdown() {
-    if (dropdown === false) {
-      document.getElementById("profileOption").style.height = "fit-content";
-      setdropdown(true);
-    } else {
-      document.getElementById("profileOption").style.height = "0px";
-      setdropdown(false);
-    }
-  }
-
   const CloseNav = () => {
     document.getElementById('SideNav').style.width = "0px"
   }
 
   const user = localStorage.getItem('user')
 
-  const handleLogout = () => {
-    localStorage.clear();
-    window.location.reload();
-    toast("You are Logged Out successfully", {
-      autoClose: 3000,
-    })
-  }
-
   const onReset = () => {
     dispatch(resetALLAction())
     dispatch(resetResultAction());
+  }
+
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  function handleListKeyDown(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      setOpen(false);
+    } else if (event.key === 'Escape') {
+      setOpen(false);
+    }
+  }
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = React.useRef(open);
+  React.useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus();
+    }
+
+    prevOpen.current = open;
+  }, [open]);
+
+  const handleLogout = () => {
+    toast.success("Logout Successfully ")
+    setInterval(function () {
+      localStorage.clear();
+      window.location.reload();
+    }, 2000)
   }
 
   return (
@@ -70,10 +105,56 @@ const Navbar = () => {
                     <Link to='/login' className='logintab' >Login</Link>
                     <Link to='/signup' className='signuptab' > Signup <BsBoxArrowRight /> </Link>
                   </>
-                  :
-                  <Link onClick={handleLogout} id='logout' className='signuptab'>Logout</Link>
+                  : ""
               }
-              <span onClick={handledropdown} className='avtar' to='/signup'><BsFillPersonFill /><small>Hi {user ? user : "No Login "} </small></span>
+              <span
+                className='avtar'
+                to='/signup'
+                ref={anchorRef}
+                id="composition-button"
+                aria-controls={open ? 'composition-menu' : undefined}
+                aria-expanded={open ? 'true' : undefined}
+                aria-haspopup="true"
+                onClick={handleToggle}
+              >
+                <BsFillPersonFill /><small>Account<RiArrowDropDownLine style={{ fontSize: "1.5rem" }} /></small>
+              </span>
+
+              <Popper
+                open={open}
+                anchorEl={anchorRef.current}
+                role={undefined}
+                placement="bottom-start"
+                transition
+                disablePortal
+                sx={{ zIndex: 100, paddingLeft: "1.5rem" }}
+              >
+                {({ TransitionProps, placement }) => (
+                  <Grow
+                    {...TransitionProps}
+                    style={{
+                      transformOrigin:
+                        placement === 'bottom-start' ? 'left top' : 'left bottom',
+                    }}
+                  >
+                    <Paper>
+                      <ClickAwayListener onClickAway={handleClose}>
+                        <MenuList
+                          autoFocusItem={open}
+                          id="composition-menu"
+                          aria-labelledby="composition-button"
+                          onKeyDown={handleListKeyDown}
+                        >
+                          <MenuItem onClick={handleClose}> <CgProfile /><Typography sx={{ padding: "7px" }}> my Profile</Typography></MenuItem>
+                          <MenuItem onClick={handleClose}><FiHelpCircle /> <Typography sx={{ padding: "7px" }}>Help</Typography></MenuItem>
+                          <MenuItem onClick={() => { handleLogout() }}><BiLogOutCircle /><Typography sx={{ padding: "7px" }} >Logout</Typography></MenuItem>
+                        </MenuList>
+                      </ClickAwayListener>
+                    </Paper>
+                  </Grow>
+                )}
+              </Popper>
+
               <span className='Bars' onClick={handleClick}><FaBars /></span>
             </div>
           </nav>

@@ -102,11 +102,11 @@ function App() {
           <Route path='/Gujrat' element={<Gujrat />} ></Route>
 
           {/* Details page routers */}
-          <Route path="/Aiimsdelhi" element={<AIIMSDelhi />}></Route>
-          <Route path="/AIIMSrishikesh" element={<AIIMSRishikesh />}></Route>
-          <Route path="/Aiimsmadurai" element={<AIIMSMadurai />}></Route>
-          <Route path="/Aimskalyani" element={<AIIMSKalyani />}></Route>
-          <Route path="/Aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
+          <Route path="/aiimsdelhi" element={<AIIMSDelhi />}></Route>
+          <Route path="/aiimsrishikesh" element={<AIIMSRishikesh />}></Route>
+          <Route path="/aiimsmadurai" element={<AIIMSMadurai />}></Route>
+          <Route path="/aimskalyani" element={<AIIMSKalyani />}></Route>
+          <Route path="/aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
 
         </Routes>
         <ToastContainer />
