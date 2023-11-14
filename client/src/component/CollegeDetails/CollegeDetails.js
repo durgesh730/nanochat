@@ -64,7 +64,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
                 <li>2.4 Ranking</li>
                 <li>2.5 Bond Detaila and Stipend</li>
                 <li>2.6 Admission Addtional Details</li>
-                <li>2.7 FeesmSturucture</li>
+                <li>2.7 Fees Sturucture</li>
               </ul>
               <li>3. Infrastructure</li>
               <li>4. Hostel</li>
@@ -244,7 +244,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
 
         <div className="feeStructure">
           <div className="feeStructuretitle">
-            <span>AIIMS New Delhi Fees Structure</span>
+            <span>Fees Structure</span>
           </div>
           <table className="tabletext">
             <tr>

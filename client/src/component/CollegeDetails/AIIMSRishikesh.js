@@ -70,18 +70,18 @@ const AIIMSRishikesh = () => {
             },
             infrastructure: {
                 img: infra,
-                paraFirst: "------",
-                paraSecond: "-------",
+                paraFirst: "The college provides many facilities for both the students and staff members. Some of the AIIMS Rishikesh facilities are the boys hostel, girls hostel, library, medical clinic, sports, auditorium, laboratories, mess and IT infrastructure. These facilities are provided with the overall development of the students. The peaceful environment of the hostels facilitates focused learning among the students. Students are comfortable in the resident-like accommodation provided in the hostels. All India Institute of Medical Sciences Rishikesh facilities also include 24X7 access to the library.",
+                paraSecond: "The library resources include textbooks, reference books, journals, periodicals, newspapers, magazines, e-books, e-journals, etc. The long-term needs of underprivileged students are also taken care of by the college library. Both indoor and outdoor games are provided by the AIIMS Rishikesh sports department.",
             },
             hostel: {
                 img: hostel,
-                paraFirst: "------",
-                paraSecond: "------",
+                paraFirst: "The hostel rooms are newly constructed, well ventilated, and furnished with furniture like a bed, table, chairs, cupboards, and bookshelf. There is a provision of electricity power backup to each room and geysers in all washroom areas, water coolers (with ROs) on each floor.All the AIIMS Rishikesh hostels have common rooms with TV, cable connections, reading rooms in UG or nursing hostels, a library with more than 250 books in boys hostel, subscription to newspapers & display on newspaper stands in all common areas of each hostel. ",
+                paraSecond: "The hostel premises are equipped with a modern C.C.T.V camera facility for round the clock monitoring, provision of canteen (24×7) in hostel area and uninterrupted power supply in common facility areas of the hostels are available.The administration is working towards making the hostels Wi-Fi enabled. There is a dedicated and safe parking facility available for the students, residents, and guests.",
             },
             hospital: {
                 img: hospital,
-                paraFirst: "------",
-                paraSecond: "------",
+                paraFirst: "AIIMS Rishikesh has 25 functional modular operating theatres, 17 functional super speciality and 18 speciality functional. AIIMS Rishikesh has collaborated with IIT Roorkee and Patanjali Yogpeeth on various research endeavors, the latter to bolster AYUSH research. It has invested considerably in intramural research grants to expand the breadth and depth of research. ",
+                paraSecond: "It has a multi-diagnostic research unit to support lab-based studies. Besides, the Advanced Center of Continuous Professional Development provides ongoing support to faculty and other medical professionals for improving clinical, research, and teaching skills. Along with a growing footfall in routine outpatient clinics, 85 specialized clinics have been added since 2018-19. ",
             },
             counselling: {
                 para: "All the NEET Under Graduate (MBBS/BDS) aspirant candidates are hereby informed that counseling for All India Quota seats/ Institutional Quota/ Domicile (internal candidates) of Central Universities (Aligarh Muslim University/ Banaras Hindu University/ University of Delhi/Faculty of Dentistry, Jamia Millia Islamia, Delhi), (wards of ESIC insured persons) seats of colleges under Employee State Insurance Corporation and Armed Forces Medical College, Pune for the Under graduate session 2023-24 will be conducted by Medical Counseling Committee/ Directorate General of Health Services, Ministry of Health and Family Welfare, Government of India",
@@ -89,7 +89,7 @@ const AIIMSRishikesh = () => {
             },
             location: {
                 img: location,
-                para: "------",
+                para: "Rishikesh doesnt have an airport of its own. Rather, the Jolly Grant Airport of Dehradun(DED), about 14 km from Rishikesh, provides the nearest air link from the city.Rishikesh has a railway station of its own. However, most people prefer Haridwar, which is 25 km from Rishikesh, since not many direct trains halt at the said station. Many trains connecting Haridwar with major cities of India, such as Delhi and Dehradun(DED), ply on a daily basis. So, one can get down at Haridwar and take a cab, auto rickshaw or bus for reaching Rishikesh.Rishikesh is well connected with all the major destinations of the region, like Delhi (227 Km), Dehradun(DED) (42 Km), Haridwar (25 Km) and so on.From Delhi, one has to take NH 58 to reach Rishikesh.On the other hand, from Dehradun(DED), it can be reached taking NH 72. Buses as well as taxis are easily available for Rishikesh, from all these places.",
                 maplink: "https://www.google.com/maps/place/All+India+Institute+of+Medical+Sciences,+Rishikesh/@30.0787546,78.2822874,17z/data=!4m10!1m2!2m1!1saiims+rishikesh!3m6!1s0x39093e1bc5e50819:0xfa6fe1f06092aa14!8m2!3d30.0793525!4d78.2861864!15sCg9haWltcyByaXNoaWtlc2haESIPYWlpbXMgcmlzaGlrZXNokgEObWVkaWNhbF9zY2hvb2yaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUXRhVFZNVTNSUlJSQULgAQA!16s%2Fg%2F11clyy4_5t?entry=ttu"
             },
         }

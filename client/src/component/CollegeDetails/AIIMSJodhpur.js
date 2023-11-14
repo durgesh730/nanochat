@@ -14,7 +14,7 @@ const AIIMSJodhpur = () => {
             title: 'AIIMS JODHPUR',
             about: {
                 collegeImgUrl: collegeImg,
-                paraFirst: "Ministry of Health & Family Welfare has established 6 NEW AIIMS including this AIIMS in Jodhpur.",
+                paraFirst: "Ministry of Health & Family Welfare has established 6 NEW AIIMS including this AIIMS in Jodhpur.AIIMS Jodhpur was established in the year 2012. It is one of the six new AIIMS established by the Ministry of Health and Family Welfare GOI under the Pradhan Mantri Swasthya Suraksha Yojna (PMSSY). AIIMS Jodhpur offers both UG and PG courses to interested candidates across the country. Many students who want to pursue medical course studies from across the country apply for admissions to the institute. ",
                 paraSecond: "Indian Government underneath the Pradhan Mantri Swasthya Suraksha Yojna holding the aim of Correcting regional imbalances in quality tertiary level healthcare in the country and attaining autonomy in PG and UG medical education.",
                 btnLink: "https://www.aiimsjodhpur.edu.in/index.php?vr=aboutjodhpur"
             },
@@ -70,17 +70,17 @@ const AIIMSJodhpur = () => {
             },
             infrastructure: {
                 img: infra,
-                paraFirst: "All India Institute of Medical Sciences Jodhpur Campus Area is spread over 180 acres",
-                paraSecond: "",
+                paraFirst: "All India Institute of Medical Sciences Jodhpur Campus Area is spread over 180 acresThe All India Institute of Medical Sciences, Jodhpur, provided many facilities for the students as well the general public to cater to their medical needs by providing 24*7 services and treatment to the patients. It consists of an OPD (Out Patient Department), Blood Bank, and Yellow Fever Vaccination Centre. The students and interns of All India Institute of Medical Sciences, Jodhpur, can also accommodate the hostels provided by the institute. The hostel premises are maintained and cleaned on a regular basis and are also provided with essential amenities.",
+                paraSecond: "The facilities provided by the All India Institute of Medical Sciences, Jodhpur:Hostels,Guest House, Staff Quarters,Faculty House,Dining Hall,Sports Facilities,Laboratories",
             },
             hostel: {
                 img: hostel,
                 paraFirst: "All India Institute of Medical Sciences Jodhpur having Hostel for both boys and girls, UG course with 250 and 125 Rooms, 196 for PG & Interns 190 Rooms for Resident.For Nurses Hostel (Nursing Students) 200 Rooms are available.",
-                paraSecond: "Separately 13 Rooms for Guest House.Canteen facilities also available inside the Campus itself.",
+                paraSecond: "Separately 13 Rooms for Guest House.Canteen facilities also available inside the Campus itself.The hostel facilities are made available to the UG, PG students as well as the interns of AIIMS, Jodhpur. The hostel buildings are segregated for boys and girls. The UG Boys Hostel consists of 250 rooms. The UG Boys Hostel consists of 250 rooms, and the UG Girls Hostels comprises 125 rooms. The hostels for PG and interns consist of 196 rooms, while for the residents, a hostel building consisting of 190 rooms is made available.UG Girls Hostels comprises 125 rooms. For nursing students, a hostel building is reserved, which can allocate 200 students. The students are facilitated with all the required amenities that are used on a daily basis and also consists of a cafeteria that provides freshly prepared snacks and food items at affordable prices. The hostel premises are under 24*7 CCTV surveillance, and a hostel warden is also provided with a room in the respective hostels.",
             },
             hospital: {
                 img: hospital,
-                paraFirst: "All India Institute of Medical Sciences, Jodhpur have OPD and IPD Services.27 Departments running are in Out-Patient Departments (OPD) Services.",
+                paraFirst: "All India Institute of Medical Sciences, Jodhpur have OPD and IPD Services.27 Departments running are in Out-Patient Departments (OPD) Services.AIIMS Jodhpur has departments of Anatomy, Anesthesiology, Critical Care, Biochemistry, Burn, Plastic Surgery, Cardiology, Family Medicine, Dentistry, Dermatology, Endocrinology, Diabetes, Metabolism, ENT, Forensic Medicine, Toxicology, Gastroenterology, General Medicine, General Surgery, Medical Oncology, Hematology, Microbiology, Neonatology, Nephrology, Neurology, Neurosurgery, Nuclear Medicine, Nursing, Obstetrics, Gynaecology, Ophthalmology, Orthopedics, Pediatrics, Pediatrics Surgery, Pharmacology, Physical Medicine, Rehabilitation, Physiology, Psychiatry, Pulmonary Medicine, Critical Care, Gastroenterology, Oncology, and Urology.",
                 paraSecond: "AIIMS Jodhpur Contains more than 5 Faculties in Each Departments.More than 550 staffs are available in AIIMS Jodhpur",
             },
             counselling: {
@@ -89,7 +89,7 @@ const AIIMSJodhpur = () => {
             },
             location: {
                 img: location,
-                para: "All India Institute of Medical Sciences Jodhpur is is located at just 15 Kms away from the city railway station.The city railway station is located at 330 Kms away from Jaipur- the state Capital of Rajasthan.It is well connected to Delhi by road and railway and it is 660 Kms away.Jodhpur is linked by Railways with Agra, Ahmedabad, Ajmer, Bikaner, Delhi, Jaipur, Kolkata, and Udaipur.Airport also Well connected from Delhi and Mumbai.",
+                para: "All India Institute of Medical Sciences Jodhpur is is located at just 15 Kms away from the city railway station.The city railway station is located at 330 Kms away from Jaipur- the state Capital of Rajasthan.It is well connected to Delhi by road and railway and it is 660 Kms away.Jodhpur is linked by Railways with Agra, Ahmedabad, Ajmer, Bikaner, Delhi, Jaipur, Kolkata, and Udaipur.Airport also Well connected from Delhi and MumbaiStudents can reach the institute by air if they are from another state or city, bus, or even train depending on the distance and their convenience. The details of the transport are as follows. Jodhpur Junction is the nearest railway junction to AIIMS Jodhpur, which is about 6 km. The nearest bus depot from the institute is only 4 km away and convenient for those traveling by bus. By air, Jodhpur Airport is about 8 km from the institute..",
                 maplink: "https://www.google.com/maps/place/All+India+Institute+of+Medical+Sciences+(AIIMS),+Jodhpur/@26.2390443,73.0046956,17z/data=!4m10!1m2!2m1!1sAIIMS+Jodhpur+!3m6!1s0x39418c082dc64515:0xaa9da8d09f2b5fc!8m2!3d26.2389604!4d73.0074086!15sCg1BSUlNUyBKb2RocHVykgEObWVkaWNhbF9zY2hvb2zgAQA!16s%2Fm%2F0n4brr1?entry=ttu"
             },
         }

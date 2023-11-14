@@ -54,34 +54,35 @@ const  AIIMSRaipur = () => {
                 stipend:"₹ 53550 /month"
             },
             fee: {
-                tutionfee: "",
-                potfundHostel: "",
-                hostelRent: "",
-                messFeeNonVeg: "",
-                gymfee: "",
-                hosteldeposit: "",
-                electricityCharge: "",
-                messDeposit: "",
-                cautionDeposit: "",
-                laboratoryfee: "",
-                registrationfee: "",
-                studentUnionFee: "",
-                messFeeVeg: "",
+                tutionfee: 1350,
+                potfundHostel: 1320,
+                hostelRent: 990,
+                messFeeNonVeg: 3500,
+                gymfee: 220,
+                hosteldeposit: 1000,
+                electricityCharge: 198,
+                messDeposit: 500,
+                cautionDeposit: 100,
+                laboratoryfee: 90,
+                registrationfee: 25,
+                studentUnionFee: 63,
+                messFeeVeg: 3200,
             },
             infrastructure: {
                 img: infra,
-                paraFirst: "------",
-                paraSecond: "-------",
+                paraFirst: "The university has a wide range of facilities for its students. The campus of the varsity has modern and upgraded infrastructure. All India Institute of Medical Sciences Raipur facilities are separate boys hostel and girls hostel, modern gym, well stocked library etc.The hospital and college complex takes up 64 acres, while the residential complex takes up the remaining 40 acres. All India Institute of Medical Sciences Raipur campus is spread out over 104 acres. The AIIMS Raipur hospital has been approved for 960 beds and 30 operating theatres. All India Institute of Medical Sciences, Raipur also includes four modular operating rooms, MGPS, CT scan, other diagnostic capabilities, and two on-campus pharmacies. In addition to the Medical College Hospital (MCH), the site is home to a number of different hospitals and institutions, including the Dental College, College of Nursing, State Virology Lab, and others. ",
+                paraSecond: "The library has an ample number of reading material for students and faculty members. AIIMS Raipur also has sports facilities at the campus for its students. The university has modern medical facilities and IT infrastructure. AIIMS Raipur facilities ensure students do not face any inconvenience during their time at the campus. ",
             },
             hostel: {
                 img: hostel,
-                paraFirst: "------",
-                paraSecond: "------",
+                paraFirst: "All India Institute of Medical Sciences Raipur facilities are separate boys hostel and girls hostel",
+                paraSecond: "The university has a hostel for boys students. It offers comfortable accommodation to students. The rooms of the boys hostel are ventilated and spacious.AIIMS Raipur has a separate hostel for girls students. The girls hostel of the university has all the basic facilities and the rooms are spacious and ventilated.",
             },
             hospital: {
                 img: hospital,
-                paraFirst: "------",
-                paraSecond: "------",
+                paraFirst: "All India Institute of Medical Sciences (AIIMS) in Raipur, Chhattisgarh was established in 2014 by the Ministry of Health & Family Welfare. The hospital has departments of Anatomy, Anesthesiology, Biochemistry, Burns, Plastic Surgery, Cardiology, Cardiothoracic Surgery, Family Medicine, Dentistry, Dermatology, ENT, Forensic Medicine, Toxicology, Gastroenterology, General Medicine, General Surgery, Medical Oncology, Haematology, Microbiology, Neonatology, Neurology, Neurosurgery, Nuclear Medicine, Obstetrics, Gynecology, Ophthalmology, Orthopaedics, Pediatrics, Pediatrics Surgery, Pharmacology, Physical Medicine, Rehabilitation, Physiology, Psychiatry, Pulmonary Medicine, Surgical Gastroenterology, Surgical Oncology, and Urology.", 
+                paraSecond:"OPD registration timing is between 8:30 am to 10:30 am from Monday to Saturday. The hospital provides 24x7 emergency care.",
+               
             },
             counselling: {
                 para: "All the NEET Under Graduate (MBBS/BDS) aspirant candidates are hereby informed that counseling for All India Quota seats/ Institutional Quota/ Domicile (internal candidates) of Central Universities (Aligarh Muslim University/ Banaras Hindu University/ University of Delhi/Faculty of Dentistry, Jamia Millia Islamia, Delhi), (wards of ESIC insured persons) seats of colleges under Employee State Insurance Corporation and Armed Forces Medical College, Pune for the Under graduate session 2023-24 will be conducted by Medical Counseling Committee/ Directorate General of Health Services, Ministry of Health and Family Welfare, Government of India",
@@ -89,7 +90,7 @@ const  AIIMSRaipur = () => {
             },
             location: {
                 img: location,
-                para: "------",
+                para: "AIIMS Raipur Location is located at Gate No.1, Great Eastern Road, opposite Gurudwara, AIIMS Campus, Tatibandh, Raipur, Chhattisgarh. The nearest airport to the varsity is Swami Vivekananda International Airport. It is located 25 km away from the campus. With a distance of 7.6 km, Raipur Junction Railway Station is the nearest railway station to the varsity. Amananka Bus Depot is the closest bus depot to All India Institute of Medical Sciences Raipur. The university is situated 3.3 km away from Amananka Bus Depot. ",
                 maplink: "https://www.google.com/maps/place/All+India+Institute+Of+Medical+Sciences,+Raipur/@21.2569612,81.5743692,16z/data=!4m10!1m2!2m1!1saiims+raipur!3m6!1s0x3a28de23ea073ba1:0x9de4d779d976c7c9!8m2!3d21.2569612!4d81.579519!15sCgxhaWltcyByYWlwdXKSAQhob3NwaXRhbOABAA!16s%2Fm%2F0n481lx?entry=ttu"
             },
         }
