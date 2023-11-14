@@ -31,7 +31,7 @@ const Tables = () => {
                             <tr><td><a href=" #"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Raipur</a></td> </tr>
                             <tr><td><a href=" #"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Rishikesh</a></td></tr>
                             <tr><td><a href=" #"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Jodhapur</a></td></tr>
-                            <tr><td><a href=" #"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Bhubneswar</a></td></tr>
+                            <tr><td><Link to="/aiimsbhubaneswar"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Bhubaneswar</Link></td></tr>
                             <tr><td><a href=" #"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Guwahati</a></td> </tr>
                             <tr><td><a href=" #"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Nagpur</a></td> </tr>
                             <tr><td><a href=" #"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Bilaspur</a></td> </tr>

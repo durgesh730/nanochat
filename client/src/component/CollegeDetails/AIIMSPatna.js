@@ -1,57 +1,57 @@
 import React from 'react'
 import CollegeDetails from './CollegeDetails'
-import collegeImg from '../../images/aiims rishikesh.jpeg'
+import collegeImg from '../../images/aiims patna.jpeg'
 import infra from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import location from '../../images/location.png'
 import hospital from '../../images/hospital (1).png'
 
 
-const AIIMSRishikesh = () => {
+const AIIMSPatna = () => {
 
     const CollegeInfo = [
         {
-            title: 'AIIMS RISHIKESH',
+            title: 'AIIMS PATNA',
             about: {
                 collegeImgUrl: collegeImg,
-                paraFirst: "Situated on the bank of sacred Ganges, amidst mountains and woods in the Yoga Capital of world-Rishikesh, All India Institute of Medical Sciences aims to serve country by imparting knowledge, providing excellent health-care at affordable cost and investing in the area of medical research. It was established under the Pradhan Mantri Swasthya Suraksha Yojna’s first phase and supported to be an autonomous body by the All India Institute of Medical Sciences (Amendment) Bill, 2012.",
-                paraSecond: " Institute follows the globally prevailing principles of education and focuses on development of skills and conceptual knowledge among its students. To achieve the same, institute has adopted newer methods of learning even at undergraduate level that pursue student as a life-long active learner.",
-                btnLink: "https://aiimsrishikesh.edu.in/a1_1/?page_id=205"
+                paraFirst: "All India Institute of Medical Sciences Patna is strategically located to address regional imbalances in healthcare services, research, and training. It was established under Pradhan Mantri Swasthya Suraksha Yojna (PMSSY) during the first phase following the- then Prime Minister Atal Bihari Vajpayee’s visionary announcement in Independence Day Speech on 15th August 2003.",
+                paraSecond: "AIIMS Patna was one amongst six hospitals along with Raipur, Bhopal, Bhubaneswar, Jodhpur, and Rishikesh, in the country to improve healthcare facilities, provide quality medical education in super-specialty disciplines, and promote healthcare inclusion in underserved areas.",
+                btnLink: "https://aiimspatna.edu.in/about/"
             },
             quickSummary: {
                 paraGraph: "",
                 established: "2012",
                 institutionType: "Govt.",
-                courses: "62",
-                address: "AIIMS, Virbhadra Road Near Barrage, Shivaji Nagar, Sturida Colony, Rishikesh, Uttarakhand 249203",
-                officialSite: "http://aiimsrishikesh.edu.in/",
-                contacts: "0135-2462929, 0135-2462503",
-                affiliatedUniversity: "N/A"
+                courses: "20",
+                address: "AIIMS, Aurangabad Road, Phulwari Sharif, Patna-801507, Bihar, India.",
+                officialSite: "http://www.aiimspatna.org/",
+                contacts: "91-612-2451070",
+                affiliatedUniversity: "Statutory Autonomous, AIIMS"
              
             },
             courses: {
                 img: collegeImg,
-                seats: "All India Institute of Medical Sciences Rishikesh is permitted with MBBS seats = 132",
-                tutionfee: "AIIMS Rishikesh MBBS fees for various quota is given as. Apart from tuition fees, you need to pay various other fees during admission. Government Fees = ₹ 5856/Year",
-                ranking: "College Ranking is based on How previous year parents Preferred All India Institute of Medical Sciences Rishikesh during NEET 2022 AIQ and State counselling. All India Ranking = 17  "
+                seats: "AIIMS Patna is permitted with MBBS seats = 125 ",
+                tutionfee: "AIIMS Patna MBBS fees for various quota is given as. Apart from tuition fees, you need to pay various other fees during admission.Government Fees = ₹ 5856 /Year",
+                ranking: "College Ranking is based on How students Preferred AIIMS Patna during all india and state level counselling. All India Ranking = 24 "
             },
             addmision: {
-                para: "Find AIIMS Rishikesh additional details given by this medical institution to Medical Counselling committee.",
+                para: "Find AIIMS Patna additional details given by medical college to Medical Counselling committee.",
                 maleHostel: "yes",
                 femaleHostel: "yes",
                 otherInfo: "-",
-                deanName: "Prof. Manoj Kumar Gupta",
-                nodalName: "Shri Rajeev Chaudhary",
+                deanName: "Dr. Saurabh Varshney",
+                nodalName: "Dr. Ayan Banerjee",
                 designation: "Reporting Official",
-                officeAddress: "Registrar office AIIMS Rishikesh",
-                phone: "0135-2460840",
-                email: "regisoff[at]aiimsrishikesh.edu.in"
+                officeAddress: "Dean Office Admin Building AIIMS Patna",
+                phone: "0612-2451006",
+                email: "drayanb[at]aiimspatna.org"
             },
             bondStipend: {
-                para: "After MBBS course completion in AIIMS Rishikesh, candidates should undergo few years of compulsary service . If they skip, they need to pay service bond penalty.",
-                totalYear: 0,
-                penalty: 0,
-                stipend:"26300 /month"
+                para: "Find AIIMS Patna PG courses few years of compulsary service and penalty below",
+                totalYear: 3,
+                penalty: "₹ 2500000",
+                stipend:"₹ 68545 /month"
             },
             fee: {
                 tutionfee: 1350,
@@ -70,7 +70,7 @@ const AIIMSRishikesh = () => {
             },
             infrastructure: {
                 img: infra,
-                paraFirst: "------",
+                paraFirst: "To Be Updated",
                 paraSecond: "-------",
             },
             hostel: {
@@ -89,8 +89,8 @@ const AIIMSRishikesh = () => {
             },
             location: {
                 img: location,
-                para: "------",
-                maplink: "https://www.google.com/maps/place/All+India+Institute+of+Medical+Sciences,+Rishikesh/@30.0787546,78.2822874,17z/data=!4m10!1m2!2m1!1saiims+rishikesh!3m6!1s0x39093e1bc5e50819:0xfa6fe1f06092aa14!8m2!3d30.0793525!4d78.2861864!15sCg9haWltcyByaXNoaWtlc2haESIPYWlpbXMgcmlzaGlrZXNokgEObWVkaWNhbF9zY2hvb2yaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUXRhVFZNVTNSUlJSQULgAQA!16s%2Fg%2F11clyy4_5t?entry=ttu"
+                para: "------------",
+                maplink: "https://www.google.com/maps/place/AIIMS+Patna/@25.5629068,85.0364629,17z/data=!3m1!4b1!4m6!3m5!1s0x39f2a9ea2ae04fd9:0xb2efd2a31008d750!8m2!3d25.562902!4d85.0413338!16s%2Fm%2F0k0n90r?entry=ttu"
             },
         }
     ]
@@ -122,4 +122,4 @@ const AIIMSRishikesh = () => {
     )
 }
 
-export default AIIMSRishikesh
+export default AIIMSPatna

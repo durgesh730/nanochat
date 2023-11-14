@@ -50,6 +50,11 @@ import AIIMSgorakpur from "./component/CollegeDetails/AIIMSGorakhpur";
 import AIIMSDelhi from "./component/CollegeDetails/AIIMSDelhi";
 import AIIMSKalyani from "./component/CollegeDetails/AIIMSKalyani";
 import AIIMSMadurai from "./component/CollegeDetails/AIIMSMadurai";
+import AIIMSBhopal from "./component/CollegeDetails/AIIMSBhopal";
+import AIIMSBhubaneswar from "./component/CollegeDetails/AIIMSBhubaneswar";
+import AIIMSJodhpur from "./component/CollegeDetails/AIIMSJodhpur";
+import AIIMSPatna from "./component/CollegeDetails/AIIMSPatna";
+import AIIMSRaipur from "./component/CollegeDetails/AIIMSRaipur";
 
 function App() {
 
@@ -107,6 +112,11 @@ function App() {
           <Route path="/aiimsmadurai" element={<AIIMSMadurai />}></Route>
           <Route path="/aimskalyani" element={<AIIMSKalyani />}></Route>
           <Route path="/aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
+          <Route path="/aiimsbhopal" element={<AIIMSBhopal />}></Route>
+          <Route path="/aiimsbhubaneswar" element={<AIIMSBhubaneswar />}></Route>
+          <Route path="/aiimsjodhpur" element={<AIIMSJodhpur />}></Route>
+          <Route path="/aiimspatna" element={<AIIMSPatna />}></Route>
+          <Route path="/aiimsraipur" element={<AIIMSRaipur />}></Route>
 
         </Routes>
         <ToastContainer />

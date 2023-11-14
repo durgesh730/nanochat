@@ -1,54 +1,54 @@
 import React from 'react'
 import CollegeDetails from './CollegeDetails'
-import collegeImg from '../../images/aiims rishikesh.jpeg'
+import collegeImg from '../../images/aiimsbhubaneswar.jpeg'
 import infra from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import location from '../../images/location.png'
 import hospital from '../../images/hospital (1).png'
 
 
-const AIIMSRishikesh = () => {
+const AIIMSBhubaneswar = () => {
 
     const CollegeInfo = [
         {
-            title: 'AIIMS RISHIKESH',
+            title: 'AIIMS BHUBANESWAR',
             about: {
                 collegeImgUrl: collegeImg,
-                paraFirst: "Situated on the bank of sacred Ganges, amidst mountains and woods in the Yoga Capital of world-Rishikesh, All India Institute of Medical Sciences aims to serve country by imparting knowledge, providing excellent health-care at affordable cost and investing in the area of medical research. It was established under the Pradhan Mantri Swasthya Suraksha Yojna’s first phase and supported to be an autonomous body by the All India Institute of Medical Sciences (Amendment) Bill, 2012.",
-                paraSecond: " Institute follows the globally prevailing principles of education and focuses on development of skills and conceptual knowledge among its students. To achieve the same, institute has adopted newer methods of learning even at undergraduate level that pursue student as a life-long active learner.",
-                btnLink: "https://aiimsrishikesh.edu.in/a1_1/?page_id=205"
+                paraFirst: "All India Institute of Medical Sciences, Bhubaneswar is one of the apex healthcare Institutes established by the Ministry of Health & Family Welfare, Government of India under the Pradhan Mantri Swasthya Suraksha Yojna (PMSSY). Under this scheme six new All India Institutes of Medical Sciences have been established at Patna, Raipur, Bhopal, Bhubaneswar, Jodhpur and Rishikesh apart from the one at New Delhi.",
+                paraSecond: "In his Independence Day Speech on August 15, 2003, then prime minister Atal Bihari Vajapayee announced opening up of 6 AIIMS Hospitals at Patna, Raipur, Bhopal, Bhubaneswar, Jaipur and Rishikesh under Pradhan Mantri Swasthya Suraksha Yojana (PMSSY) launched for up gradation of medicare facilities in underserved areas of the country besides providing quality medical education in super-specialty disciplines in these areas.",
+                btnLink: "https://aiimsbhubaneswar.nic.in/aboutAIIMS.aspx"
             },
             quickSummary: {
                 paraGraph: "",
                 established: "2012",
                 institutionType: "Govt.",
-                courses: "62",
-                address: "AIIMS, Virbhadra Road Near Barrage, Shivaji Nagar, Sturida Colony, Rishikesh, Uttarakhand 249203",
-                officialSite: "http://aiimsrishikesh.edu.in/",
-                contacts: "0135-2462929, 0135-2462503",
-                affiliatedUniversity: "N/A"
+                courses: "24",
+                address: "AIIMS, Sijua, Bhubaneswar-751019, Odisha, India.",
+                officialSite: "	https://aiimsbhubaneswar.nic.in/",
+                contacts: "0674-2476001, 2476043",
+                affiliatedUniversity: "Statutory Autonomous, AIIMS"
              
             },
             courses: {
                 img: collegeImg,
-                seats: "All India Institute of Medical Sciences Rishikesh is permitted with MBBS seats = 132",
-                tutionfee: "AIIMS Rishikesh MBBS fees for various quota is given as. Apart from tuition fees, you need to pay various other fees during admission. Government Fees = ₹ 5856/Year",
-                ranking: "College Ranking is based on How previous year parents Preferred All India Institute of Medical Sciences Rishikesh during NEET 2022 AIQ and State counselling. All India Ranking = 17  "
+                seats: "MBBS Seats available in All India Institute of Medical Sciences Bhubaneswar = 125 ",
+                tutionfee: "AIIMS Bhubaneswar MBBS fees for various quota is given as. Apart from tuition fees, you need to pay various other fees during admission.Government Fees	₹ 5856 /Year",
+                ranking: "College Ranking is based on How last year parents Preferred AIIMS Odisha during NEET 2022 counselling.All India Ranking = 9 "
             },
             addmision: {
-                para: "Find AIIMS Rishikesh additional details given by this medical institution to Medical Counselling committee.",
+                para: "Find AIIMS Bhubaneswar additional details given by college to Medical Counselling committee.",
                 maleHostel: "yes",
                 femaleHostel: "yes",
-                otherInfo: "-",
-                deanName: "Prof. Manoj Kumar Gupta",
-                nodalName: "Shri Rajeev Chaudhary",
+                otherInfo: "",
+                deanName: "Prof. Debasish Hota",
+                nodalName: "BIDHU BHUSAN MISHRA",
                 designation: "Reporting Official",
-                officeAddress: "Registrar office AIIMS Rishikesh",
-                phone: "0135-2460840",
-                email: "regisoff[at]aiimsrishikesh.edu.in"
+                officeAddress: "AIIMS BHUBANESWAR",
+                phone: "0674-2476643",
+                email: "registrar[at]aiimsbhubaneswar.edu.in"
             },
             bondStipend: {
-                para: "After MBBS course completion in AIIMS Rishikesh, candidates should undergo few years of compulsary service . If they skip, they need to pay service bond penalty.",
+                para: "After MBBS course completion in AIIMS Bhubaneswar, candidates should undergo compulsory rural service . If they skip, they need to pay penalty as per compulsary service bond.",
                 totalYear: 0,
                 penalty: 0,
                 stipend:"26300 /month"
@@ -76,7 +76,7 @@ const AIIMSRishikesh = () => {
             hostel: {
                 img: hostel,
                 paraFirst: "------",
-                paraSecond: "------",
+                paraSecond: "-----------------",
             },
             hospital: {
                 img: hospital,
@@ -90,7 +90,7 @@ const AIIMSRishikesh = () => {
             location: {
                 img: location,
                 para: "------",
-                maplink: "https://www.google.com/maps/place/All+India+Institute+of+Medical+Sciences,+Rishikesh/@30.0787546,78.2822874,17z/data=!4m10!1m2!2m1!1saiims+rishikesh!3m6!1s0x39093e1bc5e50819:0xfa6fe1f06092aa14!8m2!3d30.0793525!4d78.2861864!15sCg9haWltcyByaXNoaWtlc2haESIPYWlpbXMgcmlzaGlrZXNokgEObWVkaWNhbF9zY2hvb2yaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUXRhVFZNVTNSUlJSQULgAQA!16s%2Fg%2F11clyy4_5t?entry=ttu"
+                maplink: "https://www.google.com/maps/place/All+India+Institute+of+Medical+Sciences+Bhopal/@23.2101836,77.4570134,17.4z/data=!4m6!3m5!1s0x397c43cd5a97dbd7:0xdbdb9ed3ed5b48c0!8m2!3d23.2094476!4d77.4581713!16s%2Fm%2F0n4b4yv?entry=ttu"
             },
         }
     ]
@@ -122,4 +122,4 @@ const AIIMSRishikesh = () => {
     )
 }
 
-export default AIIMSRishikesh
+export default AIIMSBhubaneswar
