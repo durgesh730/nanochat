@@ -107,16 +107,16 @@ function App() {
           <Route path='/Gujrat' element={<Gujrat />} ></Route>
 
           {/* Details page routers */}
-          <Route path="/aiimsdelhi" element={<AIIMSDelhi />}></Route>
-          <Route path="/aiimsrishikesh" element={<AIIMSRishikesh />}></Route>
-          <Route path="/aiimsmadurai" element={<AIIMSMadurai />}></Route>
-          <Route path="/aimskalyani" element={<AIIMSKalyani />}></Route>
-          <Route path="/aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
-          <Route path="/aiimsbhopal" element={<AIIMSBhopal />}></Route>
-          <Route path="/aiimsbhubaneswar" element={<AIIMSBhubaneswar />}></Route>
-          <Route path="/aiimsjodhpur" element={<AIIMSJodhpur />}></Route>
-          <Route path="/aiimspatna" element={<AIIMSPatna />}></Route>
-          <Route path="/aiimsraipur" element={<AIIMSRaipur />}></Route>
+          <Route path="/college-details/aiimsdelhi" element={<AIIMSDelhi />}></Route>
+          <Route path="/college-details/aiimsrishikesh" element={<AIIMSRishikesh />}></Route>
+          <Route path="/college-details/aiimsmadurai" element={<AIIMSMadurai />}></Route>
+          <Route path="/college-details/aimskalyani" element={<AIIMSKalyani />}></Route>
+          <Route path="/college-details/aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
+          <Route path="/college-details/aiimsbhopal" element={<AIIMSBhopal />}></Route>
+          <Route path="/college-details/aiimsbhubaneswar" element={<AIIMSBhubaneswar />}></Route>
+          <Route path="/college-details/aiimsjodhpur" element={<AIIMSJodhpur />}></Route>
+          <Route path="/college-details/aiimspatna" element={<AIIMSPatna />}></Route>
+          <Route path="/college-details/aiimsraipur" element={<AIIMSRaipur />}></Route>
 
         </Routes>
         <ToastContainer />

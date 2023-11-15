@@ -127,7 +127,7 @@ const Navbar = () => {
                 placement="bottom-start"
                 transition
                 disablePortal
-                sx={{ zIndex: 100, paddingLeft: "1.5rem" }}
+                sx={{ zIndex: 100, paddingLeft: "20px" }}
               >
                 {({ TransitionProps, placement }) => (
                   <Grow
