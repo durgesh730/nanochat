@@ -55,6 +55,8 @@ import AIIMSBhubaneswar from "./component/CollegeDetails/AIIMSBhubaneswar";
 import AIIMSJodhpur from "./component/CollegeDetails/AIIMSJodhpur";
 import AIIMSPatna from "./component/CollegeDetails/AIIMSPatna";
 import AIIMSRaipur from "./component/CollegeDetails/AIIMSRaipur";
+import Profile from "./component/Profile/Profile";
+import Help from "./component/Help/Help";
 
 function App() {
 
@@ -70,7 +72,7 @@ function App() {
         <Routes>
 
           {/*  NEET component routers  */}
-          <Route path='/neet' element={<Neet />} ></Route>
+          <Route path='/practice-questions/neet' element={<Neet />} ></Route>
           <Route path='/chem' element={<Chemistry />} ></Route>
           <Route path='/bio' element={<Biology />} ></Route>
           <Route path='/phy' element={<Physics />} ></Route>
@@ -81,10 +83,12 @@ function App() {
           {/*  Main page routers */}
           <Route path='/' element={<Home />} ></Route>
           <Route path='/login' element={<Login />}></Route>
-          <Route path='/form' element={<Form />} ></Route>
+          <Route path='/student-counselling/form' element={<Form />} ></Route>
           <Route path='/signup' element={<Register />} ></Route>
           <Route path='/password-reset' element={<PasswordReset />}> </Route>
           <Route path='/forgotpassword/:id/:token' element={<ForgotPassword />}></Route>
+          <Route path='/user/profile' element={<Profile />}></Route>
+          <Route path='/user/help' element={<Help />}></Route>
 
           {/*  cards routers  */}
           <Route path='/UtterPradesh' element={<UP />} ></Route>

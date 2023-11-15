@@ -98,7 +98,7 @@ const Navbar = () => {
           <nav>
             <div className='logo'><Link to="/" onClick={onReset} >Nano chat</Link></div>
             <div className='RightNav'>
-              <Link to='/neet' className='neettab' >NEET</Link>
+              <Link to='/practice-questions/neet' className='neettab' >NEET</Link>
               {
                 !user ?
                   <>
@@ -127,7 +127,7 @@ const Navbar = () => {
                 placement="bottom-start"
                 transition
                 disablePortal
-                sx={{ zIndex: 100, paddingLeft: "20px" }}
+                sx={{ zIndex: 100 }}
               >
                 {({ TransitionProps, placement }) => (
                   <Grow
@@ -145,9 +145,9 @@ const Navbar = () => {
                           aria-labelledby="composition-button"
                           onKeyDown={handleListKeyDown}
                         >
-                          <MenuItem onClick={handleClose}> <CgProfile /><Typography sx={{ padding: "7px" }}> my Profile</Typography></MenuItem>
-                          <MenuItem onClick={handleClose}><FiHelpCircle /> <Typography sx={{ padding: "7px" }}>Help</Typography></MenuItem>
-                          <MenuItem onClick={() => { handleLogout() }}><BiLogOutCircle /><Typography sx={{ padding: "7px" }} >Logout</Typography></MenuItem>
+                          <MenuItem onClick={handleClose}> <CgProfile /><Link to={'/user/profile'} style={{ fontSize: "16px", color: "black" }}> my Profile</Link></MenuItem>
+                          <MenuItem onClick={handleClose}><FiHelpCircle /> <Link to={'/user/help'} style={{ fontSize: "16px", color: "black" }}>Help</Link></MenuItem>
+                          <MenuItem onClick={() => { handleLogout() }}><BiLogOutCircle /><Typography sx={{ paddingLeft: "12px", fontSize: "16px" }} >Logout</Typography></MenuItem>
                         </MenuList>
                       </ClickAwayListener>
                     </Paper>

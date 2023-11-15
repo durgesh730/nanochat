@@ -42,7 +42,7 @@ const Home = () => {
             <div className='textthird' ><small>we effort to improve the ability to think and euip them with specialized </small></div>
             <div className='textfourth' ><small>skill usefil in differentareas of medical, engineering and others</small></div>
             <div className='textButton'>
-              <Link className='btn' to="form" >Counselling Form</Link>
+              <Link className='btn' to="/student-counselling/form" >Counselling Form</Link>
             </div>
           </div>
           <div className='img' data-aos="fade-down-left">
