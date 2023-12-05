@@ -19,6 +19,13 @@ import PhyResultSchema from "../models/PhyResultSchema.js";
 import questions, { answers } from '../database/data.js'
 import Bioquestions, { Bioanswers } from '../database/Bioquestion.js'
 import Phyquestions, { Phyanswers } from '../database/Phyquestion.js'
+import {
+    GetAllUser,
+    GetPerticulerUser,
+    UserLogin,
+    UserRegister,
+    ValidUser
+} from "../controller/user.js";
 
 
 const keysecret = "durgeshchaudharydurgeshchaudhary";
@@ -32,105 +39,17 @@ const transporter = nodemailer.createTransport({
     }
 })
 
-//user sign up API
-router.post('/register', async (req, res) => {
-    const { fname, email, password, cpassword } = req.body;
-
-    if (!fname || !email || !password || !cpassword) {
-        return res.status(400).json({ error: "Please fill in all the details." });
-    }
-
-    if (password !== cpassword) {
-        return res.status(400).json({ error: "Passwords do not match." });
-    }
-
-    try {
-        const preuser = await userdb.findOne({ email: email });
-        if (preuser) {
-            return res.status(409).json({ error: "This email is already registered." });
-        }
-
-        const finalUser = new userdb({
-            fname, email, password, cpassword
-        });
-
-        const storeData = await finalUser.save();
-        return res.status(201).json({ status: 201, storeData });
-
-    } catch (error) {
-        return res.status(500).json({ error: "Internal server error." });
-    }
-});
-
-
-// user Login API and end points 
-
-router.post("/login", async (req, res) => {
-    const { email, password } = req.body;
-
-    if (!email || !password) {
-        return res.status(400).json({ error: "Please fill in all the details." });
-    }
-
-    try {
-        const userValid = await userdb.findOne({ email: email });
-
-        if (!userValid) {
-            return res.status(401).json({ error: "Email does not exist." });
-        }
-
-        const isMatch = await bcrypt.compare(password, userValid.password);
-
-        if (!isMatch) {
-            return res.status(401).json({ error: "Password not correct." });
-        }
-
-        // Token generation
-        const token = await userValid.generateAuthtoken();
-
-        // Generate cookie
-        res.cookie("usercookie", token, {
-            expires: new Date(Date.now() + 9000000),
-            httpOnly: true
-        });
-
-        const result = {
-            userValid,
-            token,
-            msg: "Login Successfully"
-        };
-
-        return res.status(200).json({ status: 200, result });
-
-    } catch (error) {
-        return res.status(500).json({ error: "Internal server error." });
-    }
-});
-
-// user validation 
-
-router.get("/validuser", authenticate, async (req, res) => {
-    try {
-        const ValidUserOne = await userdb.findOne({ _id: req.userId });
-        res.status(201).json({ status: 201, ValidUserOne });
-    } catch (error) {
-        res.status(401).json({ status: 401, error });
-    }
-});
-
-// Get Users data 
-
-router.get("/users/", authenticate, async (req, res) => {
-    try {
-        const user = await userdb.findOne({ _id: req.userId });
-        res.status(201).json({ status: 201, user });
-    } catch (error) {
-        res.status(401).json({ status: 401, error });
-    }
-});
-
-// logout API and endl point
-
+// Register
+router.post('/register', UserRegister);
+// Login
+router.post("/login", UserLogin);
+// Validate user
+router.get("/validuser", authenticate, ValidUser);
+// Get particular Users data 
+router.get("/users/", authenticate, GetPerticulerUser);
+// Get all user 
+router.get('/get/all/user', GetAllUser)
+// Logout
 router.get("/logout", authenticate, async (req, res) => {
     try {
         req.rootUser.tokens = req.rootUser.tokens.filter((curelem) => {

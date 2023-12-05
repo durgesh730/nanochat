@@ -13,6 +13,12 @@ import { Link } from 'react-router-dom';
 import Navbar from "../Navbar/Navbar";
 import SocialMedia from '../SocialMedia/SocialMedia';
 import '../../style/video.css'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActions } from '@mui/material';
+import kgmu from '../../images/Lucknow, KGMU.jfif'
 
 const Home = () => {
 
@@ -34,20 +40,18 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className='container'>
-        <div className='imgpara' >
-          <div className='Text' data-aos="fade-down-right">
-            <div className='textone' ><span>Our Objective is to provide</span></div>
-            <div className='textsecond' ><span>Quality Education</span></div>
-            <div className='textthird' ><small>we effort to improve the ability to think and euip them with specialized </small></div>
-            <div className='textfourth' ><small>skill usefil in differentareas of medical, engineering and others</small></div>
-            <div className='textButton'>
-              <Link className='btn' to="/student-counselling/form" >Counselling Form</Link>
-            </div>
+      <div className='imgpara'>
+        <div className='Text' data-aos="fade-down-right">
+          <div className='textone' ><span>Our Objective is to provide</span></div>
+          <div className='textsecond' ><span>Quality Education</span></div>
+          <div className='textthird' ><small>we effort to improve the ability to think and euip them with specialized </small></div>
+          <div className='textfourth' ><small>skill usefil in differentareas of medical, engineering and others</small></div>
+          <div className='textButton'>
+            <Link className='btn' to="/student-counselling/form" >Counselling Form</Link>
           </div>
-          <div className='img' data-aos="fade-down-left">
-            <img src={imgaes} alt="images" ></img></div>
         </div>
+        <div className='img' data-aos="fade-down-left">
+          <img src={imgaes} alt="images" ></img></div>
       </div>
 
       <div className='chennels '>
@@ -91,8 +95,8 @@ const Home = () => {
           })}
         </div>
       </div>
-      <Footer />
 
+      <Footer />
     </>
   )
 }

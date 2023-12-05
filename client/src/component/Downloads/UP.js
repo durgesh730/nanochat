@@ -30,7 +30,7 @@ export default function BasicTable() {
 
                <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Utter Pradesh Medical Colleges List </Typography>
 
-               <TableContainer component={Paper} sx={{ margin: "auto", marginBottom: "4rem", border: "none" }} >
+               <TableContainer component={Paper} sx={{ margin: "auto", marginBottom: "4rem", border: "none" , width:"80%"}} >
 
                     <Table sx={{ minWidth: 650, border: "none" }} aria-label="simple table">
                          <TableHead>

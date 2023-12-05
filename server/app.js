@@ -1,17 +1,15 @@
 import express from "express";
 const app = express();
 import connect from "./db/conn.js";
-import router from "./routes/router.js";
 import cors from 'cors';
 import cookieParser from "cookie-parser";
-// import * as dotenv from 'dotenv'
-// dotenv.config()
+import user from "./routes/user.js";
 const port = 8009
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
-app.use(router);
+app.use(user);
 
 connect().then(() => {
     try {
