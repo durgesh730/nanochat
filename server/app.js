@@ -1,15 +1,21 @@
 import express from "express";
 const app = express();
-import connect from "./db/conn.js";
 import cors from 'cors';
 import cookieParser from "cookie-parser";
+
 import user from "./routes/user.js";
+import connect from "./db/conn.js";
+import Student from "./routes/students.js";
+import Neet from "./routes/neet.js";
 const port = 8009
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+
 app.use(user);
+app.use(Neet)
+app.use(Student)
 
 connect().then(() => {
     try {
