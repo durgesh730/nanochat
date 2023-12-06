@@ -50,8 +50,8 @@ const AIIMSPatna = () => {
             bondStipend: {
                 para: "Find AIIMS Patna PG courses few years of compulsary service and penalty below",
                 totalYear: 3,
-                penalty: "₹ 2500000",
-                stipend:"₹ 68545 /month"
+                penalty: "2500000",
+                stipend:"68545 /month"
             },
             fee: {
                 tutionfee: 1350,

@@ -14,43 +14,43 @@ const AIIMSBhatinda = () => {
             title: 'AIIMS BHATINDA',
             about: {
                 collegeImgUrl: collegeImg,
-                paraFirst: "AIIMS was created in 1956 to serve as a nucleus for nurturing excellence in all aspects of health care.Creating a country imbued with a scientific culture was Jawaharlal Nehru's dream, and immediately after independence he prepared a grand design to achieve it. Among the temples of modern India which he designed, was a centre of excellence in the medical sciences.",
-                paraSecond: "Objectives -  To develop a pattern of teaching in undergraduate and postgraduate medical education in all its branches so as to demonstrate high standard of medical education to all medical colleges and other allied institutions in India.To bring together in one place educational facilities of the highest order for the training of the personnel in all important branches of the health activity.to attain self sufficiency in postgraduate in medical education.",
-                btnLink: "https://aiims.edu/index.php?option=com_content&view=article&id=682&Itemid=3711&lang=en"
+                paraFirst: "AIIMS, Bathinda is one of the premier healthcare institution established by the Ministry of Health & Family Welfare, Government of India under the Pradhan Mantri Swasthya Suraksha Yojna (PMSSY).",
+                paraSecond: "All India Institute of Medical Sciences, Bathinda (AIIMS Bathinda) is a medical college and medical research public university based in Bathinda, Punjab, India.[1] As one of the All India Institutes of Medical Sciences, it operates autonomously under the Ministry of Health and Family Welfare. AIIMS Bathinda spreads over a large area of about 177 Acres and is surrounded by lush green parks. It became operational in 2019, one of the six AIIMS to do so in 2019.",
+                btnLink: "https://aiimsbathinda.edu.in/"
             },
             quickSummary: {
-                paraGraph: "The health survey and development committee, chaired by Sir Joseph Bhore, an Indian government official, recommended as early as 1946 the establishment of a national medical center that would concentrate on meeting the need for a highly-skilled workforce to support healthcare activities country.AIIMS was finally created in 1956 as an autonomous institution under a parliamentary act, serving as a center to support excellence in all aspects of care health.",
-                established: "1956",
+                paraGraph: "",
+                established: "2019",
                 institutionType: "Govt.",
                 courses: "33",
-                address: "AIIMS, Ansari Nagar, New Delhi-110029, India",
-                officialSite: "https://www.aiims.edu/",
-                contacts: "91-11-26588663 / 26588641",
+                address: "AIIMS, Jodhpur Romana, near Giani Zail Singh College, Mandi Dabwali Road, Bathinda-151001, Punjab, India.",
+                officialSite: "http://aiimsbathinda.edu.in/",
+                contacts: "-",
                 affiliatedUniversity: "Statutory Autonomous, AIIMS"
             },
             courses: {
                 img: collegeImg,
-                seats: "All India Institute of Medical Sciences Delhi is permitted with MBBS seats = 132",
-                tutionfee: "AIIMS New Delhi MBBS fees for various quota is given as. Apart from tuition fees, you need to pay various other fees during admission. Government Fees = ₹ 5856 /Year, NRI/OCI Fees	$ 75000 /Year",
-                ranking: "College Ranking is based on How Parents Preferred AIIMS New Delhi during last year AIQ and SQ counselling. All India Ranking	= 1 "
+                seats: "AIIMS Punjab contains below mentioned MBBS seats= 132",
+                tutionfee: "AIIMS Bathinda MBBS fees for various quota is given below. Apart from tuition fees, you need to pay various other fees during admission. Government Fees = ₹ 5856 /Year",
+                ranking: "College Ranking is based on How last year candidates Preferred AIIMS Bathinda during AIQ and SQ of NEET 2022 counselling.	= 31 "
             },
             addmision: {
-                para: "Find AIIMS New Delhi additional details given by this medical college to Medical Counselling committee.",
+                para: "Find AIIMS Bathinda additional details given by this institution to Medical Counselling committee..",
                 maleHostel: "yes",
                 femaleHostel: "yes",
                 otherInfo: "Academic Fee and Hostel fee is one time fee for the entire course",
-                deanName: "DR NEENA KHANNA",
-                nodalName: "DR ASHOK KUMAR JARYAL",
-                designation: "Dean",
-                officeAddress: "ACADEMIC SECTION AIIMS NEW DELHI 110029",
-                phone: "011-26594365",
-                email: "durgeshchoudary@gmail.com"
+                deanName: "	Dr DK Singh",
+                nodalName: "Dr Bhola Nath",
+                designation: "Professor",
+                officeAddress: "Jodhpur Romana near Giani Zail Singh College Mandi Dabwali RoadBathinda Punjab",
+                phone: "0164-2867670",
+                email: "ugcounselling2021aiimsbti[at]gmail.com"
             },
             bondStipend: {
-                para: "After MBBS course completion in All India Institute of Medical Sciences Delhi, candidates should undergo rural service . If they skip, they need to pay bond penalty.",
+                para: "After MBBS course completion in All India Institute of Medical Sciences Bathinda, candidates should undergo compulsory rural service . If they skip, they need to pay penalty as per compulsary service bond.",
                 totalYear: 0,
                 penalty: 0,
-                stipend:"₹ 26300 /month"
+                stipend:"26300 /month"
             },
             fee: {
                 tutionfee: 1350,
@@ -69,13 +69,13 @@ const AIIMSBhatinda = () => {
             },
             infrastructure: {
                 img: infra,
-                paraFirst: "AIIMS campus is divided into 5 locations, the East Campus Includes OPD ward, main hospital ward, infirmary, medical school, research department, convergence ward, BB Dixit library, administration wing, student dormitories, central lawn, Jawaharlal auditorium, and staff room. This eastern city also has 4 centers specializing in cardiac carcinoma and neurology, an Oncology Center, an Ophthalmic Science Center, and a Dental Education and Research Center. The library is open 24 hours a day, 7 days a week (356 days) and has more than 1,50,257 books and other documents such as bound newspapers, pamphlets, etc.and employees, technicians and non-technicians. An average of 320 readers visit the library every day.",
-                paraSecond: "The library is well equipped with modern facilities to support biomedical teaching and research.;A library has predominantly electronic resources (80%) that are provided with anytime, anywhere access to physicians and faculty members for their academic activities. Access Medicine Books, Oxford Medicine Online (53 textbooks), OVID",
+                paraFirst: "All India Institute of Medical Sciences Bathinda offers many facilities for the students and faculty members. The AIIMS Bathinda facilities include a library, medical facilities, sports, laboratories, and many more. The library of AIIMS Bathinda has useful textbooks and reference books for students and staff. The college also provides medical facilities in case of emergency. Other AIIMS Bathinda facilities include the auditorium and transportation facilities.",
+                paraSecond: "The college has laboratory facilities for the students. The AIIMS Bathinda has a department-based laboratory to improve their practical knowledge.The college provides library facilities for the students and staff. The AIIMS Bathinda library has a collection of books, journals and many more that are useful for students. The college provides medical facilities for all the students and staff. The AIIMS Bathinda medical facilities include a health centre with a first aid facility.The college offers sports facilities for the students. The  AIIMS Bathinda facilities improve the physical health of the students",
             },
             hostel: {
                 img: hostel,
-                paraFirst: "AIIMS has more than one accommodation section with all sorts of facilities. Twelve male and 26 female office attendants are posted in different hostels. AIIMS has several halls of residence with a capacity of over 1990 accommodation facilities with single/double rooms, 418 accommodations for nursing students and staff nurses and 24 guest rooms furnished with all facilities.",
-                paraSecond: "These are spread over different hostels and residences in the AIIMS Main Campus, Masjid Moth, Ayurvigyan Nagar, and JPNA Trauma Centre Hostel available in Raj Nagar. Male hostels have a total of more than 1350 student accommodation facilities. Female hostel has 650 accommodation facilities, Staff Hostel 400 accommodation, and also Guest rooms are available here. All residences have common rooms, sports clubs, Gymnasium, reading rooms, and recreational facilities.",
+                paraFirst: "AIIMS Bathinda has all adequate accommodation facilities for Both Boys and Girls pursuing studies in campus.The Authorities are extremely helpful and hear the demands of students with utmost priority. There are 2 Hostels for MBBS Students + Residential Area.Each Hostel is a 5 Floored Building.",
+                paraSecond: "Each Hostel have 2 Elevators and 3 Staircases including Proper Fire Exits Paths. As of Now, the rooms are double occupancy, and the students get common washrooms (2 Big Well Equipped Common Washrooms), and also a washroom for PwD Students.",
             },
             hospital: {
                 img: hospital,
@@ -88,8 +88,8 @@ const AIIMSBhatinda = () => {
             },
             location: {
                 img: location,
-                para: "New Delhi Bus Stand and Inter State Bus Terminal to AIIMS Medical college is 20 km distance. We can reach within 40 min from NH 44 and Baba Banda Singh Bahadur Setu road. Ajmeri Gate Railway station in Delhi is located 10.5 km away from this college, we can reach here within 30 min through Prithviraj Road and Sri Aurobindo Marg. Indira Gandhi International Airport, Delhi is the nearest airport of this medical college, which is located 9.8 km away from Medical College. Through Mahatma Gandhi Road and NH 48, we can reach the Airport within 20 min to this Medical College.",
-                maplink: "https://www.google.com/maps/d/viewer?mid=1nZR5sCwoJYYzenaIHvOlbViiYck&hl=en&ll=28.567677432266798%2C77.20968476679552&z=20"
+                para: "The distance between Bathinda and Aiims is 286 km. The road distance is 354.8 km.he driving distance between Bathinda to Aiims is 355 km. It takes approximately 5h 11m to drive from Bathinda to Aiims.The quickest flight from Bhatinda Airport to Delhi Airport is the direct flight which takes 1h 10m.",
+                maplink: "https://www.google.com/maps/place/All+India+Institute+of+Medical+Sciences,+Bathinda/@30.1608913,74.9290558,17z/data=!3m1!4b1!4m6!3m5!1s0x39173232102154af:0x38c03cd69ea6d821!8m2!3d30.1608913!4d74.9290558!16s%2Fg%2F11v60dtc6m?entry=ttu"
             },
         }
     ]

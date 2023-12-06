@@ -14,43 +14,43 @@ const AIIMSMadurai = () => {
             title: 'AIIMS MADURAI',
             about: {
                 collegeImgUrl: collegeImg,
-                paraFirst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc.",
-                paraSecond: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc. Pellentesque sit amet porttitor eget dolor morbi non.",
-                btnLink: "https://www.writeCollgelink.in"
+                paraFirst: "All India Institute of Medical Sciences, Madurai is an ‘Institute of National Importance’ established under the Pradhan Mantri Swasthya Suraksha Yojna (PMSSY) of the Ministry of Health and Family Welfare, Government of India. The AIIMS Madurai provides only one course which is M.B.B.S. ",
+                paraSecond: "The AIIMS Madurai admissions are offered in the stream of Medicine and Allied Science based on NEET scores obtained by the students. AIIMS Madurai also provides many facilities for the benefit of the students and staff.",
+                btnLink: "https://jipmer.edu.in/aiims-madurai"
             },
             quickSummary: {
-                paraGraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc.",
-                established: "1920",
+                paraGraph: "",
+                established: "2021",
                 institutionType: "Govt.",
-                courses: "33",
-                address: "AIIMS, Ansari Nagar, New Delhi-110029, India",
-                officialSite: "Click here",
-                contacts: "91-11-26588663 / 26588641",
-                affiliatedUniversity: "Self Funded"
+                courses: "-",
+                address: "V2M4+PFH, Madurai, Tamil Nadu 625006",
+                officialSite: "	http://www.aiimsmadurai.edu.in/",
+                contacts: "	(+91-11-26562122/25/33/44, 26567373, 26962819).",
+                affiliatedUniversity: "Statutory Autonomous, AIIMS"
             },
             courses: {
                 img: collegeImg,
-                seats: "There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely.",
-                tutionfee: "There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely.",
-                ranking: "There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely."
+                seats: " AIIMS Madurai contains below mentioned MBBS seats = 50",
+                tutionfee: "All India Institute of Medical Sciences Madurai MBBS fees for various quota is given below. Apart from tuition fees, you need to pay various other fees during admission.Government Fees ₹ 5856 /Year",
+                ranking: " College Ranking is based on How Parents Preferred AIIMS Madurai during all india and state level counselling.Ranking = 82 "
             },
             addmision: {
-                para: "Find AIIMS New Delhi additional details given by this medical college to Medical Counselling committee.",
+                para: "Find AIIMS Madurai additional details given by college to Medical Counselling committee.",
                 maleHostel: "yes",
                 femaleHostel: "yes",
-                otherInfo: "Academic Fee and Hostel fee is one time fee for the entire course",
-                deanName: "DR NEENA KHANNA",
-                nodalName: "DR ASHOK KUMAR JARYAL",
+                otherInfo: "The MBBS classes for AIIMS Madurai will be temporarily conducted from State or Union govt medical college till the main campus comes up.",
+                deanName: "Prof Dr M Hanumantha Rao",
+                nodalName: "Dr Kusa Kumar Shaha",
                 designation: "Dean",
-                officeAddress: "ACADEMIC SECTION AIIMS NEW DELHI 110029",
-                phone: "011-26594365",
-                email: "durgeshchoudary@gmail.com"
+                officeAddress: "JIPMER Puducherry",
+                phone: "0755-2672355",
+                email: "aiimsmadurai2020[at]gmail.com"
             },
             bondStipend: {
-                para: "After MBBS course completion in All India Institute of Medical Sciences Delhi, candidates should undergo rural service . If they skip, they need to pay bond penalty.",
+                para: "After MBBS course completion in AIIMS Madurai, candidates should undergo few years of compulsary service . If they skip, they need to pay penalty as per compulsary service bond.",
                 totalYear: 0,
                 penalty: 0,
-                stipend: 3546545
+                stipend: "26300 /month"
             },
             fee: {
                 tutionfee: 1350,
@@ -63,33 +63,29 @@ const AIIMSMadurai = () => {
                 messDeposit: 500,
                 cautionDeposit: 100,
                 laboratoryfee: 90,
-                registrationfee: 20,
-                studentUnionFee: 53,
+                registrationfee: 25,
+                studentUnionFee: 63,
                 messFeeVeg: 3200,
             },
             infrastructure: {
                 img: infra,
-                paraFirst: "AIIMS campus is divided into 5 locations, the East Campus Includes OPD ward, main hospital ward, infirmary, medical school, research department, convergence ward, BB Dixit library, administration wing, student dormitories, central lawn, Jawaharlal auditorium, and staff room. This eastern city also has 4 centers specializing in cardiac carcinoma and neurology, an Oncology Center, an Ophthalmic Science Center, and a Dental Education and Research Center. The library is open 24 hours a day, 7 days a week (356 days) and has more than 1,50,257 books and other documents such as bound newspapers, pamphlets, etc.and employees, technicians and non-technicians. An average of 320 readers visit the library every day.",
-                paraSecond: "The library is well equipped with modern facilities to support biomedical teaching and research.;A library has predominantly electronic resources (80%) that are provided with anytime, anywhere access to physicians and faculty members for their academic activities. Access Medicine Books, Oxford Medicine Online (53 textbooks), OVID",
+                paraFirst: "All India Institute of Medical Sciences, Madurai offers many facilities for the students, faculty and staff members. The AIIMS Madurai facilities include a library, medical facilities, gym, laboratories, and many more. The library of AIIMS Madurai has useful textbooks and reference books for students and staff. The college offers separate hostels for boys and girls. The AIIMS Madurai gym facilities help students to relax between their busy schedules.",
+                paraSecond: "The college provides library facilities for the students and staff. The AIIMS Madurai library has a collection of books, journals and many more that are useful for students.The AIIMS Madurai offers excellent IT infrastructural facilities for all the students, staff and faculty.  ",
             },
             hostel: {
                 img: hostel,
-                paraFirst: "AIIMS has more than one accommodation section with all sorts of facilities. Twelve male and 26 female office attendants are posted in different hostels. AIIMS has several halls of residence with a capacity of over 1990 accommodation facilities with single/double rooms, 418 accommodations for nursing students and staff nurses and 24 guest rooms furnished with all facilities.",
-                paraSecond: "These are spread over different hostels and residences in the AIIMS Main Campus, Masjid Moth, Ayurvigyan Nagar, and JPNA Trauma Centre Hostel available in Raj Nagar. Male hostels have a total of more than 1350 student accommodation facilities. Female hostel has 650 accommodation facilities, Staff Hostel 400 accommodation, and also Guest rooms are available here. All residences have common rooms, sports clubs, Gymnasium, reading rooms, and recreational facilities.",
+                paraFirst: "Boys Hostel = The AIIMS Madurai offers separate hostels for boys. The hostels are well-furnished and are equipped with modern appliances",
+                paraSecond: "Girls Hostel = The college offers separate hostels for girls. The AIIMS Madurai provides good accommodation facilities and is safe and secure for the hostel students.",
             },
-            hospital: {
-                img: infra,
-                paraFirst: "AIIMS is currently not a single hospital, but a conglomerate of facilities. It has over 1,500 units located in the main hospital, the Ophthalmological Center of dr.Rajendra Prasad, Cardiac Surgery Center, Neuroscience Center, Hospital Center, Rotary Institute, and Detox Center. This facility complex serves approximately 1.5 million outpatients and 80,000 inpatients annually.",
-                paraSecond: "The number of surgical operations performed at AIIMS last year amounted to over 100,000. The total number of beds available at Major Hospital and Dr.B.R. Ambedkar Institute Rotary Cancer Hospital, Dr.RP Center, NDDTC, CCM, NCI Jhajjar has 2,792 beds, including 288 private sector beds. Rural/Urban Health Training Centres Ballabgarh 35 km distance from the college",
-            },
+            
             counselling: {
                 para: "All the NEET Under Graduate (MBBS/BDS) aspirant candidates are hereby informed that counseling for All India Quota seats/ Institutional Quota/ Domicile (internal candidates) of Central Universities (Aligarh Muslim University/ Banaras Hindu University/ University of Delhi/Faculty of Dentistry, Jamia Millia Islamia, Delhi), (wards of ESIC insured persons) seats of colleges under Employee State Insurance Corporation and Armed Forces Medical College, Pune for the Under graduate session 2023-24 will be conducted by Medical Counseling Committee/ Directorate General of Health Services, Ministry of Health and Family Welfare, Government of India",
                 link: "https://www.nanochat.in"
             },
             location: {
                 img: location,
-                para: "New Delhi Bus Stand and Inter State Bus Terminal to AIIMS Medical college is 20 km distance. We can reach within 40 min from NH 44 and Baba Banda Singh Bahadur Setu road. Ajmeri Gate Railway station in Delhi is located 10.5 km away from this college, we can reach here within 30 min through Prithviraj Road and Sri Aurobindo Marg. Indira Gandhi International Airport, Delhi is the nearest airport of this medical college, which is located 9.8 km away from Medical College. Through Mahatma Gandhi Road and NH 48, we can reach the Airport within 20 min to this Medical College.",
-                maplink:"www.map.com"
+                para: "The college is located in Madurai, Tamil Nadu. The distance between Tirumangalam Railway Station and AIIMS Madurai is 10.4 kilometres. The Madurai Airport is 25.8 km away from the college. Mullai Nagar Bus Stop is one of the closest bus stops to AIIMS Madurai. Students can reach the college by taxi or cab.",
+                maplink: "https://www.google.com/maps/place/AIIMS+Madurai/@9.8829375,78.0060625,17z/data=!3m1!4b1!4m6!3m5!1s0x3b00cdf57921fbad:0x4fb83ab41a3eaad2!8m2!3d9.8829375!4d78.0060625!16s%2Fg%2F11l22t2g8p?entry=ttu"
             },
         }
     ]

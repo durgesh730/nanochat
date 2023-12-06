@@ -50,7 +50,7 @@ const AIIMSDelhi = () => {
                 para: "After MBBS course completion in All India Institute of Medical Sciences Delhi, candidates should undergo rural service . If they skip, they need to pay bond penalty.",
                 totalYear: 0,
                 penalty: 0,
-                stipend:"₹ 26300 /month"
+                stipend:"26300 /month"
             },
             fee: {
                 tutionfee: 1350,

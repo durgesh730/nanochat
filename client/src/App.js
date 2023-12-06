@@ -77,6 +77,13 @@ import Help from "./component/Help/Help";
 import AIIMSBilaspur from "./component/CollegeDetails/AIIMSBilaspur";
 import AIIMSBibinagar from "./component/CollegeDetails/AIIMSBibinagar";
 import AIIMSDeonagar from "./component/CollegeDetails/AIIMSDeonagar";
+import AIIMSDeoghar from "./component/CollegeDetails/AIIMSDeonagar";
+import AIIMSGuwahati from "./component/CollegeDetails/AIIMSGuwahati";
+import AIIMSNagpur from "./component/CollegeDetails/AIIMSNagpur";
+import AIIMSRaebrali from "./component/CollegeDetails/AIIMSRaebrali";
+import AIIMSRajkot from "./component/CollegeDetails/AIIMSRajkot";
+import AIIMSDJammu from "./component/CollegeDetails/AIIMSJammu";
+import AIIMSJammu from "./component/CollegeDetails/AIIMSJammu";
 
 function App() {
 
@@ -150,8 +157,9 @@ function App() {
           <Route path="/college-details/aiimsdelhi" element={<AIIMSDelhi />}></Route>
           <Route path="/college-details/aiimsrishikesh" element={<AIIMSRishikesh />}></Route>
           <Route path="/college-details/aiimsmadurai" element={<AIIMSMadurai />}></Route>
-          <Route path="/college-details/aimskalyani" element={<AIIMSKalyani />}></Route>
+          <Route path="/college-details/aiimskalyani" element={<AIIMSKalyani />}></Route>
           <Route path="/college-details/aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
+          <Route path="/college-details/aiimsguwahati" element={<AIIMSGuwahati />}></Route>
           <Route path="/college-details/aiimsbhopal" element={<AIIMSBhopal />}></Route>
           <Route path="/college-details/aiimsbhatinda" element={<AIIMSBhatinda />}></Route>
           <Route path="/college-details/aiimsbhubaneswar" element={<AIIMSBhubaneswar />}></Route>
@@ -160,7 +168,11 @@ function App() {
           <Route path="/college-details/aiimsraipur" element={<AIIMSRaipur />}></Route>
           <Route path="/college-details/aiimsbilaspur" element={<AIIMSBilaspur />}></Route>
           <Route path="/college-details/aiimsbibinagar" element={<AIIMSBibinagar />}></Route>
-          <Route path="/college-details/aiimsdeonagar" element={<AIIMSDeonagar />}></Route>
+          <Route path="/college-details/aiimsnagpur" element={<AIIMSNagpur />}></Route>
+          <Route path="/college-details/aiimsraebrali" element={<AIIMSRaebrali />}></Route>
+          <Route path="/college-details/aiimsrajkot" element={<AIIMSRajkot />}></Route>
+          <Route path="/college-details/aiimsjammu" element={<AIIMSJammu/>}></Route>
+          <Route path="/college-details/aiimsdeoghar" element={<AIIMSDeoghar />}></Route>
         </Routes>
         <ToastContainer />
         <Toaster />
