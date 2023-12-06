@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import './ragister.css';
 import ragimg from "../../images/Mobile login-pana.png"
 import Footer from '../Footer/Footer'
@@ -6,13 +6,15 @@ import { toast } from 'react-toastify';
 import Navbar from '../Navbar/Navbar';
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { serverhost } from '../../host';
+import UseFormValidation from '../../hooks/UseFormValidation';
 
 const Register = () => {
     const [passShow, setPassshow] = useState(false);
     const [cpassShow, setCPassshow] = useState(false);
+    const { errors, handleValidation } = UseFormValidation();
 
     const [inpval, setInpval] = useState({
-        fname:'',
+        fname: '',
         email: '',
         password: '',
         cpassword: ''
@@ -31,42 +33,9 @@ const Register = () => {
 
     const addUserdata = async (e) => {
         e.preventDefault();
-
-        const { fname, email, password, cpassword } = inpval;
-
-        if (!fname.trim()) {
-            toast("Enter Your Name", {
-                autoClose: 1500,
-            })
-        } else if (!email.trim()) {
-            toast("Enter Your Email Id", {
-                autoClose: 1500,
-            })
-        } else if (!email.includes('@')) {
-            toast("Please Enter valid email", {
-                autoClose: 1500,
-            })
-        } else if (!password.trim()) {
-            toast("Enter Your Password", {
-                autoClose: 1500,
-            })
-        } else if (password.length < 6) {
-            toast("Password must be 6 characters", {
-                autoClose: 1500,
-            })
-        } else if (!cpassword.trim()) {
-            toast("Please Enter Your Confirm password", {
-                autoClose: 1500,
-            })
-        } else if (cpassword.length < 6) {
-            toast("Password must be 6 characters", {
-                autoClose: 1500,
-            })
-        } else if (password !== cpassword) {
-            toast("Password no match", {
-                autoClose: 1500,
-            })
-        } else {
+        const { fname, email, password, cpassword } = inpval
+        const isValid = handleValidation(inpval);
+        if (isValid) {
             const data = await fetch(`${serverhost}/register`, {
                 method: 'POST',
                 headers: {
@@ -76,9 +45,7 @@ const Register = () => {
                     fname, email, password, cpassword
                 })
             });
-
             const res = await data.json();
-            console.log(res, "res")
             if (res.status === (201)) {
                 toast(res.msg, {
                     autoClose: 1500,
@@ -92,6 +59,7 @@ const Register = () => {
                     autoClose: 1500,
                 })
             }
+
         }
     }
 
@@ -103,7 +71,7 @@ const Register = () => {
 
                 <div className='ragisterimg'>
                     <h2>Looks like you're <br></br> new here!</h2>
-                    <span>Sign up with your Email <br/> to get started</span> <br/> <br/>
+                    <span>Sign up with your Email <br /> to get started</span> <br /> <br />
                     <img src={ragimg} alt="img" ></img>
                 </div>
 
