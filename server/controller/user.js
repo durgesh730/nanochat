@@ -14,28 +14,39 @@ const transporter = nodemailer.createTransport({
     }
 })
 
+
 export const UserRegister = async (req, res) => {
     const { fname, email, password } = req.body;
 
-    if (!fname || !email || !password) {
-        return res.status(400).json({ error: "Please fill all details." });
-    }
     try {
-        const preuser = await Userdb.findOne({ email: email });
+        // Check if the email is already registered
+        const preuser = await Userdb.findOne({ email });
         if (preuser) {
             return res.status(409).json({ error: "This email is already registered." });
         }
 
-        const finalUser = new Userdb({
-            fname, email, password
+        // Create a new user instance using the Userdb model
+        const newUser = new Userdb({
+            fname,
+            email,
+            password // Ensure password hashing if necessary before saving
         });
-        const storeData = await finalUser.save();
-        return res.status(201).json({ status: 201, storeData });
 
+        // Save the new user to the database
+        const savedUser = await newUser.save();
+
+        // Return a success response with the saved user data
+        return res.status(201).json({
+            status: 201,
+            data: savedUser,
+            msg:"Registration Successfull"
+        });
     } catch (error) {
+        console.error(error); // Log the error for debugging purposes
         return res.status(500).json({ error: "Internal server error." });
     }
-}
+};
+
 
 export const UserLogin = async (req, res) => {
     const { email, password } = req.body;

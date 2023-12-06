@@ -12,7 +12,7 @@ const Register = () => {
     const [cpassShow, setCPassshow] = useState(false);
 
     const [inpval, setInpval] = useState({
-        fname: '',
+        fname:'',
         email: '',
         password: '',
         cpassword: ''
@@ -34,11 +34,11 @@ const Register = () => {
 
         const { fname, email, password, cpassword } = inpval;
 
-        if (fname === '') {
+        if (!fname.trim()) {
             toast("Enter Your Name", {
                 autoClose: 1500,
             })
-        } else if (email === "") {
+        } else if (!email.trim()) {
             toast("Enter Your Email Id", {
                 autoClose: 1500,
             })
@@ -46,7 +46,7 @@ const Register = () => {
             toast("Please Enter valid email", {
                 autoClose: 1500,
             })
-        } else if (password === " ") {
+        } else if (!password.trim()) {
             toast("Enter Your Password", {
                 autoClose: 1500,
             })
@@ -54,8 +54,7 @@ const Register = () => {
             toast("Password must be 6 characters", {
                 autoClose: 1500,
             })
-        } else if (cpassword === " ") {
-            alert('')
+        } else if (!cpassword.trim()) {
             toast("Please Enter Your Confirm password", {
                 autoClose: 1500,
             })
@@ -79,13 +78,17 @@ const Register = () => {
             });
 
             const res = await data.json();
+            console.log(res, "res")
             if (res.status === (201)) {
-                toast("Registration done successfully", {
+                toast(res.msg, {
                     autoClose: 1500,
                 })
-                setInpval({ ...inpval, fname: " ", email: " ", password: "", cpassword: "" })
+                localStorage.setItem('token', res.data?.token)
+                localStorage.setItem("user", res.data?.userValid.fname);
+                localStorage.setItem("id", res.data?.userValid._id);
+                setInpval({ ...inpval, fname: "", email: "", password: "", cpassword: "" })
             } else {
-                toast("Please Enter Correct Details!", {
+                toast(res.error, {
                     autoClose: 1500,
                 })
             }
