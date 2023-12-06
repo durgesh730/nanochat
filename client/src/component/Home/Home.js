@@ -44,8 +44,8 @@ const Home = () => {
         <div className='Text' data-aos="fade-down-right">
           <div className='textone' ><span>Our Objective is to provide</span></div>
           <div className='textsecond' ><span>Quality Education</span></div>
-          <div className='textthird' ><small>we effort to improve the ability to think and euip them with specialized </small></div>
-          <div className='textfourth' ><small>skill usefil in differentareas of medical, engineering and others</small></div>
+          <div className='textthird' ><small>we effort to improve the ability to think and equip them with specialized </small></div>
+          <div className='textfourth' ><small>skill useful in different areas of medical, engineering and others</small></div>
           <div className='textButton'>
             <Link className='btn' to="/student-counselling/form" >Counselling Form</Link>
           </div>
@@ -57,23 +57,23 @@ const Home = () => {
       <div className='chennels '>
         <div className='container'>
           <div>
-            <h1>5000K</h1>
+            <h1>5.2k</h1>
             <small>Subscribers</small><br />
-            <a href=''> on Youtube</a>
+            <a href='https://www.youtube.com/@nanochat'target='black'> on Youtube</a>
           </div>
 
           <div class="vl"></div>
           <div>
-            <h1>2090K</h1>
+            <h1>k</h1>
             <small>Followers</small><br />
-            <a href=''> on Instagram </a>
+            <a href='https://www.instagram.com/_durgesh.chaudhary/'target='black'> on Instagram </a>
           </div>
 
           <div class="vl"></div>
           <div>
-            <h1>3876K</h1>
+            <h1>k</h1>
             <span> Followers </span><br />
-            <a href=''> on Twiter </a>
+            <a href='https://www.linkedin.com/in/durgesh-chaudhary-535a76211/' target='black'> on Linkdin</a>
           </div>
         </div>
       </div>

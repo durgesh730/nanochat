@@ -6,8 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Footer from "../../component/Footer/Footer"
-import Navbar from '../../component/Navbar/Navbar'
+import Footer from "../Footer/Footer"
+import Navbar from '../Navbar/Navbar'
 import { Typography } from '@mui/material';
 
 function createData(name, year, option) {
@@ -15,14 +15,17 @@ function createData(name, year, option) {
 }
 
 const rows = [
-     createData('All India Institute of Medical Sciences, New Delhi', 2023, "Download"),
-     createData('Lady Hardinge Medical College, New Delhi', 2023, "Download"),
-     createData('Maulana Azad Medical College, New Delhi', 2023, "Download"),
-     createData('University College of Medical Sciences & GTB Hospital, New Delhi', 2023, "Download"),
-     createData('Vardhman Mahavir Medical College & Safdarjung Hospital, New Delhi', 2023, "Download"),
-     createData('Atal Bihari Vajpayee Institute of Medical Sciences and Dr. RML Hospital, New Delhi', 2023, "Download"),
-     createData('Dr. Baba Saheb Ambedkar Medical College, Delhi', 2023, "Download"),
-     createData('North Delhi Muncipal Corporation Medical College, Delhi', 2023, "Download"),
+     createData('AIIMS- Mangalagiri, Mangalagiri, Vijayawada', 2023, "Download"),
+     createData('Andhra Medical College, Vishakapatnam', 2023, "Download"),
+     createData('Guntur Medical College, Guntur', 2023, "Download"),
+     createData('GMC Ongole (Rajiv Gandhi Institute of Medical Sciences), Ongole', 2023, "Download"),
+     createData('Rajiv Gandhi Institute of Medical Sciences, Srikakulam', 2023, "Download"),
+     createData('Rangaraya Medical College, Kakinada', 2023, "Download"),
+     createData('Govt. Siddhartha Medical College, Vijaywada', 2023, "Download"),
+     createData('ACSR Government Medical College, Nellore', 2023, "Download"),
+     createData('Government Medical College, Ananthapuram', 2023, "Download"),
+     createData('Kurnool Medical College, Kurnool', 2023, "Download"),
+
 ];
 
 export default function Download() {
@@ -30,7 +33,7 @@ export default function Download() {
           <>
                <Navbar />
 
-               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Delhi Medical Colleges List </Typography>
+               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >AndhraPradesh Medical Colleges List </Typography>
 
                <TableContainer component={Paper} sx={{ width: "70%", margin: "auto", marginBottom: "4rem" }} >
 

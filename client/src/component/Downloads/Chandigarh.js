@@ -15,13 +15,12 @@ function createData(name, year, option) {
 }
 
 const rows = [
-     createData('AUTONOMOUS MEDICAL COLLEGE, BAHRAICH', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, BASTI', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, AYODHYA', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, DEORIA', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, ETAH', 2023, "Download"),
+     createData('PGIMER, Chandigarh', 2023, "Download"),
+     createData('Government Medical College and Hospital', 2023, "Download"),
+     createData('Dr. Harvansh Singh Judge Institute of Dental Sciences and Hospital, Chandigarh', 2023, "Download"),
+     createData('Government Rehabilitation Institute for Intellectual Disabilities, Chandigarh- GRIIDC', 2023, "Download"),
+     createData('PUCHD – Panjab University, Chandigarh', 2023, "Download"),
 
-     createData('AUTONOMOUS MEDICAL COLLEGE, FATEHPUR', 2023, "Download"),
 ];
 
 export default function Download() {

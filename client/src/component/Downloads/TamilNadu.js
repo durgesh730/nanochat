@@ -15,14 +15,17 @@ function createData(name, year, option) {
 }
 
 const rows = [
-     createData('All India Institute of Medical Sciences, New Delhi', 2023, "Download"),
-     createData('Lady Hardinge Medical College, New Delhi', 2023, "Download"),
-     createData('Maulana Azad Medical College, New Delhi', 2023, "Download"),
-     createData('University College of Medical Sciences & GTB Hospital, New Delhi', 2023, "Download"),
-     createData('Vardhman Mahavir Medical College & Safdarjung Hospital, New Delhi', 2023, "Download"),
-     createData('Atal Bihari Vajpayee Institute of Medical Sciences and Dr. RML Hospital, New Delhi', 2023, "Download"),
-     createData('Dr. Baba Saheb Ambedkar Medical College, Delhi', 2023, "Download"),
-     createData('North Delhi Muncipal Corporation Medical College, Delhi', 2023, "Download"),
+     createData('AIIMS Madurai', 2023, "Download"),
+     createData('Annamalai University', 2023, "Download"),
+     createData('GKMC Chennai', 2023, "Download"),
+     createData('GMKMC Salem', 2023, "Download"),
+     createData('GTVMMC Tiruvannamalai', 2023, "Download"),
+     createData('MMC Chennai', 2023, "Download"),
+     createData('TMC Thiruvarur', 2023, "Download"),
+     createData('Coimbatore Medical College, Coimbatore', 2023, "Download"),
+     createData('Government Dharmapuri Medical College, Dharmapuri', 2023, "Download"),
+
+     createData('GVMC Vellore', 2023, "Download"),
 ];
 
 export default function Download() {
@@ -30,7 +33,7 @@ export default function Download() {
           <>
                <Navbar />
 
-               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Delhi Medical Colleges List </Typography>
+               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Tamil Nadu Medical Colleges List </Typography>
 
                <TableContainer component={Paper} sx={{ width: "70%", margin: "auto", marginBottom: "4rem" }} >
 
