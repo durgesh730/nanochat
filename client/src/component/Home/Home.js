@@ -82,7 +82,7 @@ const Home = () => {
       <Cards />
       <Notification />
       <Tables />
-      <Myself />
+      {/* <Myself /> */}
       <div className='homeTabVideos' >
         <div className='text-center counsellingInfo'>
           <span className='font-weight-bold'>Counselling Information</span>

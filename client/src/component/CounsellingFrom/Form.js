@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { serverhost } from '../../host';
+import  Modal from '../Modal/Modal'
 
 
 const Form = () => {
@@ -37,70 +38,70 @@ const Form = () => {
     })
   }
 
-  const handleform = async (e) => {
-    e.preventDefault();
+  // const handleform = async (e) => {
+  //   e.preventDefault();
 
-    const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category,
-      choice1, choice2, choice3, choice4, question, state } = inVal;
+  //   const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category,
+  //     choice1, choice2, choice3, choice4, question, state } = inVal;
 
-    if (fname === '') {
-      toast("Enter Your Name", {
-        autoClose: 3000,
-      })
-    } else if (phonenumber.length < 10) {
-      toast("Enter Your Correct Phone number", {
-        autoClose: 3000,
-      })
-    } else if (AIQRank === "") {
-      toast("Enter Your AIQ Rank", {
-        autoClose: 3000,
-      })
-    } else if (category === "") {
-      toast("Enter Your Category", {
-        autoClose: 3000,
-      })
-    } else {
-      const data = await fetch(`${serverhost}/studentform`, {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          fname, lastname, DOB, AIQRank, CRank, phonenumber,
-          category, choice1, choice2, choice3, choice4, question, state
-        })
-      });
-      const res = await data.json();
+  //   if (fname === '') {
+  //     toast("Enter Your Name", {
+  //       autoClose: 3000,
+  //     })
+  //   } else if (phonenumber.length < 10) {
+  //     toast("Enter Your Correct Phone number", {
+  //       autoClose: 3000,
+  //     })
+  //   } else if (AIQRank === "") {
+  //     toast("Enter Your AIQ Rank", {
+  //       autoClose: 3000,
+  //     })
+  //   } else if (category === "") {
+  //     toast("Enter Your Category", {
+  //       autoClose: 3000,
+  //     })
+  //   } else {
+  //     const data = await fetch(`${serverhost}/studentform`, {
+  //       method: 'POST',
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify({
+  //         fname, lastname, DOB, AIQRank, CRank, phonenumber,
+  //         category, choice1, choice2, choice3, choice4, question, state
+  //       })
+  //     });
+  //     const res = await data.json();
 
-      if (res.status === (201)) {
-        toast("Your form submitted successfully", {
-          autoClose: 3000,
-        })
-        setInpval({
-          ...inVal,
-          fname: '',
-          lastname: "",
-          DOB: "",
-          AIQRank: "",
-          CRank: "",
-          phonenumber: "",
-          category: "",
-          choice1: "",
-          choice2: "",
-          choice3: "",
-          choice4: "",
-          question: "",
-          state: ""
-        })
+  //     if (res.status === (201)) {
+  //       toast("Your form submitted successfully", {
+  //         autoClose: 3000,
+  //       })
+  //       setInpval({
+  //         ...inVal,
+  //         fname: '',
+  //         lastname: "",
+  //         DOB: "",
+  //         AIQRank: "",
+  //         CRank: "",
+  //         phonenumber: "",
+  //         category: "",
+  //         choice1: "",
+  //         choice2: "",
+  //         choice3: "",
+  //         choice4: "",
+  //         question: "",
+  //         state: ""
+  //       })
 
-      } else {
-        toast("Please Enter Correct Details!", {
-          autoClose: 3000,
-        })
-      }
-    }
+  //     } else {
+  //       toast("Please Enter Correct Details!", {
+  //         autoClose: 3000,
+  //       })
+  //     }
+  //   }
 
-  }
+  // }
 
   return (
     <>
@@ -179,7 +180,7 @@ const Form = () => {
           </div>
 
           <div className='formbutton my-4'>
-            <button type="submit" onClick={handleform} className="btn">Submit</button></div>
+            <button type="submit"  className="btn"><Modal/></button></div>
         </form>
       </div>
 
