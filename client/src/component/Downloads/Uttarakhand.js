@@ -20,8 +20,6 @@ const rows = [
      createData('Government Medical College Haldwani', 2023, "Download"),
      createData('Soban Singh Jeena Government IMS', 2023, "Download"),
      createData('Veer Chandra Singh Garhwali Government Medical College', 2023, "Download"),
-
-    
 ];
 
 export default function BasicTable() {

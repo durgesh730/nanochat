@@ -24,6 +24,7 @@ const rows = [
      createData('Government Dental College and Hospital, Patiala', 2023, "Download"),
      createData('Punjab Government Dental College and Hospital, Amritsar', 2023, "Download"),
      createData('Giani Kartar Singh Memorial Government College, Hoshiarpur', 2023, "Download"),
+
 ];
 
 export default function Download() {

@@ -2,6 +2,7 @@ import React from 'react'
 import "../../style/CollegeDetails.css";
 import CollegeDetails from './CollegeDetails';
 import collegeImg from '../../images/aiimskalyani.jpeg'
+
 import infra from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import location from '../../images/location.png'
@@ -11,6 +12,7 @@ const AIIMSKalyani = () => {
     const CollegeInfo = [
         {
             title: 'AIIMS KALYANI',
+
             about: {
                 collegeImgUrl: collegeImg,
                 paraFirst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc.",

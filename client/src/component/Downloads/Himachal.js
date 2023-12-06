@@ -23,6 +23,7 @@ const rows = [
      createData('Pt Jawaharlal Nehru Government Medical College and Hospital', 2023, "Download"),
      createData('Dr Yashwant Singh Parmar Government Medical College', 2023, "Download"),
      createData('RPGMC Kangra', 2023, "Download"),
+
 ];
 
 export default function Download() {

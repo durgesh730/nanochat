@@ -21,8 +21,9 @@ const rows = [
      createData('DCRUST Murthal', 2023, "Download"),
      createData('CCSHAU Hisar', 2023, "Download"),
      createData('MDU Rohtak', 2023, "Download"),
-
+     
      createData('KUK Kurukshetra', 2023, "Download"),
+
 ];
 
 export default function Download() {

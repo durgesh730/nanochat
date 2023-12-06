@@ -20,7 +20,6 @@ const rows = [
      createData('Malda Medical College and Hospital, Malda', 2023, "Download"),
      createData('Coochbehar Government Medical College and Hospital, Coochbehar', 2023, "Download"),
      createData('Midnapore Medical College, Midnapore', 2023, "Download"),
-
 ];
 
 export default function BasicTable() {

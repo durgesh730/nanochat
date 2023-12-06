@@ -34,7 +34,7 @@ export default function BasicTable() {
           <>
                <Navbar />
 
-               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Uttar Pradesh Medical Colleges List </Typography>
+               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Utter Pradesh Medical Colleges List </Typography>
 
                <TableContainer component={Paper} sx={{ margin: "auto", marginBottom: "4rem", border: "none" , width:"80%"}} >
 

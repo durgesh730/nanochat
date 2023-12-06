@@ -28,7 +28,7 @@ const Tables = () => {
                     <table class="table borderless ">
                         <thead class="thead"> <tr><th scope="col">AIIMS NEET Cut-Off</th></tr></thead> <br />
                         <tbody>
-                            <tr><td><Link to="/college-details/aiimsbhatinda"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS batinda</Link></td></tr>
+                           <tr><td><Link to="/college-details/aiimsbhatinda"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS batinda</Link></td></tr>
                             <tr><td><Link to="/college-details/aiimsraipur"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Raipur</Link></td> </tr>
                             <tr><td><Link to="/college-details/aiimsbhopal"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Bhopal</Link></td></tr>
                             <tr><td><Link to="/college-details/aiimsjodhpur"> <span style={{ fontSize: ".8rem", color: "#232354" }} ><BsFillCheckCircleFill /></span> AIIMS Jodhapur</Link></td></tr>

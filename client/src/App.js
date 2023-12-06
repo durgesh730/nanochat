@@ -48,8 +48,6 @@ import Uttarakhand from './component/Downloads/Uttarakhand'
 import WestBengal from './component/Downloads/WestBengal'
 
 
-
-
 import Login from "./component/Login/Login";
 import ForgotPassword from "./component/ForgetPassword/ForgotPassword";
 import Register from "./component/Register/Register";

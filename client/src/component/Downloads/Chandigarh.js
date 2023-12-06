@@ -20,7 +20,6 @@ const rows = [
      createData('Dr. Harvansh Singh Judge Institute of Dental Sciences and Hospital, Chandigarh', 2023, "Download"),
      createData('Government Rehabilitation Institute for Intellectual Disabilities, Chandigarh- GRIIDC', 2023, "Download"),
      createData('PUCHD – Panjab University, Chandigarh', 2023, "Download"),
-
 ];
 
 export default function Download() {

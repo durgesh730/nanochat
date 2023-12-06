@@ -23,8 +23,8 @@ const rows = [
      createData('MGMMC Indore', 2023, "Download"),
      createData('NSCBMC Jabalpur', 2023, "Download"),
      createData('RDVV Jabalpur', 2023, "Download"),
-
      createData('GMC Ratlam', 2023, "Download"),
+
 ];
 
 export default function Download() {

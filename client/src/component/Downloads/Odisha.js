@@ -27,6 +27,7 @@ const rows = [
      createData('Pandit Raghunath Murmu Medical College and Hospital', 2023, "Download"),
      createData('SCB Medical College Cuttack', 2023, "Download"),
      createData('SLN Medical College and Hospital Koraput', 2023, "Download"),
+
 ];
 
 export default function Download() {

@@ -1,10 +1,11 @@
 import React from 'react'
 import "../../style/CollegeDetails.css";
 import CollegeDetails from './CollegeDetails';
-import collegeImg from '../../images/aiims madurai.jpeg'
+import collegeImg from '../../images/aiimsdelhi.jpg'
 import infra from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import location from '../../images/location.png'
+import collegeImg from '../../images/aiims madurai.jpeg'
 
 const AIIMSMadurai = () => {
 
