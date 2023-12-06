@@ -5,12 +5,13 @@ import collegeImg from '../../images/aiimsdelhi.jpg'
 import infra from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import location from '../../images/location.png'
+import collegeImg from '../../images/aiims madurai.jpeg'
 
 const AIIMSMadurai = () => {
 
     const CollegeInfo = [
         {
-            title: 'College Name',
+            title: 'AIIMS MADURAI',
             about: {
                 collegeImgUrl: collegeImg,
                 paraFirst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc.",

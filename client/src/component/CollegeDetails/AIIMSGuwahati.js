@@ -1,37 +1,38 @@
 import React from 'react'
-import "../../style/CollegeDetails.css";
-import CollegeDetails from './CollegeDetails';
-import collegeImg from '../../images/aiims gorakhpur.jpeg'
+import CollegeDetails from './CollegeDetails'
+import collegeImg from '../../images/aiimsguwahati.png'
 import infra from '../../images/infrastructure.png'
 import hostel from '../../images/hostel.png'
 import location from '../../images/location.png'
+import hospital from '../../images/hospital (1).png'
 
-const AIIMSGorakhpur = () => {
+
+const AIIMSDelhi = () => {
 
     const CollegeInfo = [
         {
-            title: 'AIIMS GORAKHPUR',
+            title: 'AIIMS DELHI',
             about: {
                 collegeImgUrl: collegeImg,
-                paraFirst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc.",
-                paraSecond: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc. Pellentesque sit amet porttitor eget dolor morbi non.",
-                btnLink: "https://www.writeCollgelink.in"
+                paraFirst: "AIIMS was created in 1956 to serve as a nucleus for nurturing excellence in all aspects of health care.Creating a country imbued with a scientific culture was Jawaharlal Nehru's dream, and immediately after independence he prepared a grand design to achieve it. Among the temples of modern India which he designed, was a centre of excellence in the medical sciences.",
+                paraSecond: "Objectives -  To develop a pattern of teaching in undergraduate and postgraduate medical education in all its branches so as to demonstrate high standard of medical education to all medical colleges and other allied institutions in India.To bring together in one place educational facilities of the highest order for the training of the personnel in all important branches of the health activity.to attain self sufficiency in postgraduate in medical education.",
+                btnLink: "https://aiims.edu/index.php?option=com_content&view=article&id=682&Itemid=3711&lang=en"
             },
             quickSummary: {
-                paraGraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Vitae ultricies leo integer malesuada nunc.",
-                established: "1920",
+                paraGraph: "The health survey and development committee, chaired by Sir Joseph Bhore, an Indian government official, recommended as early as 1946 the establishment of a national medical center that would concentrate on meeting the need for a highly-skilled workforce to support healthcare activities country.AIIMS was finally created in 1956 as an autonomous institution under a parliamentary act, serving as a center to support excellence in all aspects of care health.",
+                established: "1956",
                 institutionType: "Govt.",
                 courses: "33",
                 address: "AIIMS, Ansari Nagar, New Delhi-110029, India",
-                officialSite: "Click here",
+                officialSite: "https://www.aiims.edu/",
                 contacts: "91-11-26588663 / 26588641",
-                affiliatedUniversity: "Self Funded"
+                affiliatedUniversity: "Statutory Autonomous, AIIMS"
             },
             courses: {
                 img: collegeImg,
-                seats: "There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely.",
-                tutionfee: "There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely.",
-                ranking: "There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely."
+                seats: "All India Institute of Medical Sciences Delhi is permitted with MBBS seats = 132",
+                tutionfee: "AIIMS New Delhi MBBS fees for various quota is given as. Apart from tuition fees, you need to pay various other fees during admission. Government Fees = ₹ 5856 /Year, NRI/OCI Fees	$ 75000 /Year",
+                ranking: "College Ranking is based on How Parents Preferred AIIMS New Delhi during last year AIQ and SQ counselling. All India Ranking	= 1 "
             },
             addmision: {
                 para: "Find AIIMS New Delhi additional details given by this medical college to Medical Counselling committee.",
@@ -49,7 +50,7 @@ const AIIMSGorakhpur = () => {
                 para: "After MBBS course completion in All India Institute of Medical Sciences Delhi, candidates should undergo rural service . If they skip, they need to pay bond penalty.",
                 totalYear: 0,
                 penalty: 0,
-                stipend: 3546545
+                stipend:"₹ 26300 /month"
             },
             fee: {
                 tutionfee: 1350,
@@ -63,7 +64,7 @@ const AIIMSGorakhpur = () => {
                 cautionDeposit: 100,
                 laboratoryfee: 90,
                 registrationfee: 20,
-                studentUnionFee: 53,
+                studentUnionFee: 63,
                 messFeeVeg: 3200,
             },
             infrastructure: {
@@ -77,7 +78,7 @@ const AIIMSGorakhpur = () => {
                 paraSecond: "These are spread over different hostels and residences in the AIIMS Main Campus, Masjid Moth, Ayurvigyan Nagar, and JPNA Trauma Centre Hostel available in Raj Nagar. Male hostels have a total of more than 1350 student accommodation facilities. Female hostel has 650 accommodation facilities, Staff Hostel 400 accommodation, and also Guest rooms are available here. All residences have common rooms, sports clubs, Gymnasium, reading rooms, and recreational facilities.",
             },
             hospital: {
-                img: infra,
+                img: hospital,
                 paraFirst: "AIIMS is currently not a single hospital, but a conglomerate of facilities. It has over 1,500 units located in the main hospital, the Ophthalmological Center of dr.Rajendra Prasad, Cardiac Surgery Center, Neuroscience Center, Hospital Center, Rotary Institute, and Detox Center. This facility complex serves approximately 1.5 million outpatients and 80,000 inpatients annually.",
                 paraSecond: "The number of surgical operations performed at AIIMS last year amounted to over 100,000. The total number of beds available at Major Hospital and Dr.B.R. Ambedkar Institute Rotary Cancer Hospital, Dr.RP Center, NDDTC, CCM, NCI Jhajjar has 2,792 beds, including 288 private sector beds. Rural/Urban Health Training Centres Ballabgarh 35 km distance from the college",
             },
@@ -88,7 +89,7 @@ const AIIMSGorakhpur = () => {
             location: {
                 img: location,
                 para: "New Delhi Bus Stand and Inter State Bus Terminal to AIIMS Medical college is 20 km distance. We can reach within 40 min from NH 44 and Baba Banda Singh Bahadur Setu road. Ajmeri Gate Railway station in Delhi is located 10.5 km away from this college, we can reach here within 30 min through Prithviraj Road and Sri Aurobindo Marg. Indira Gandhi International Airport, Delhi is the nearest airport of this medical college, which is located 9.8 km away from Medical College. Through Mahatma Gandhi Road and NH 48, we can reach the Airport within 20 min to this Medical College.",
-                maplink:"www.map.com",
+                maplink: "https://www.google.com/maps/d/viewer?mid=1nZR5sCwoJYYzenaIHvOlbViiYck&hl=en&ll=28.567677432266798%2C77.20968476679552&z=20"
             },
         }
     ]
@@ -120,4 +121,4 @@ const AIIMSGorakhpur = () => {
     )
 }
 
-export default AIIMSGorakhpur
+export default AIIMSDelhi

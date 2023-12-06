@@ -15,13 +15,11 @@ function createData(name, year, option) {
 }
 
 const rows = [
-     createData('AUTONOMOUS MEDICAL COLLEGE, BAHRAICH', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, BASTI', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, AYODHYA', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, DEORIA', 2023, "Download"),
-     createData('AUTONOMOUS MEDICAL COLLEGE, ETAH', 2023, "Download"),
-
-     createData('AUTONOMOUS MEDICAL COLLEGE, FATEHPUR', 2023, "Download"),
+     createData('AIIMS Rishikesh', 2023, "Download"),
+     createData('Government Doon Medical College Dehradun', 2023, "Download"),
+     createData('Government Medical College Haldwani', 2023, "Download"),
+     createData('Soban Singh Jeena Government IMS', 2023, "Download"),
+     createData('Veer Chandra Singh Garhwali Government Medical College', 2023, "Download"),
 ];
 
 export default function BasicTable() {

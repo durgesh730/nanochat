@@ -15,14 +15,15 @@ function createData(name, year, option) {
 }
 
 const rows = [
-     createData('All India Institute of Medical Sciences, New Delhi', 2023, "Download"),
-     createData('Lady Hardinge Medical College, New Delhi', 2023, "Download"),
-     createData('Maulana Azad Medical College, New Delhi', 2023, "Download"),
-     createData('University College of Medical Sciences & GTB Hospital, New Delhi', 2023, "Download"),
-     createData('Vardhman Mahavir Medical College & Safdarjung Hospital, New Delhi', 2023, "Download"),
-     createData('Atal Bihari Vajpayee Institute of Medical Sciences and Dr. RML Hospital, New Delhi', 2023, "Download"),
-     createData('Dr. Baba Saheb Ambedkar Medical College, Delhi', 2023, "Download"),
-     createData('North Delhi Muncipal Corporation Medical College, Delhi', 2023, "Download"),
+     createData('Assam Medical College, Dibrugarh', 2023, "Download"),
+     createData('Fakruddin Ali Ahmed Medical College, Barpeta', 2023, "Download"),
+     createData('Guwahati Medical College, Guwahati', 2023, "Download"),
+     createData('Jorhat Medical College & Hospital, Jorhat', 2023, "Download"),
+     createData('Silchar Medical College, Silchar', 2023, "Download"),
+
+     createData('Tezpur Medical College & Hospital, Tezpur', 2023, "Download"),
+     createData('Diphu Medical College & Hospital, Diphu', 2023, "Download"),
+     createData('Lakhimpur Medical College, North Lakhimpur', 2023, "Download"),
 ];
 
 export default function Download() {
@@ -30,7 +31,7 @@ export default function Download() {
           <>
                <Navbar />
 
-               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Delhi Medical Colleges List </Typography>
+               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Assam Medical Colleges List </Typography>
 
                <TableContainer component={Paper} sx={{ width: "70%", margin: "auto", marginBottom: "4rem" }} >
 

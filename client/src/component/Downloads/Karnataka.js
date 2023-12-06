@@ -15,14 +15,13 @@ function createData(name, year, option) {
 }
 
 const rows = [
-     createData('All India Institute of Medical Sciences, New Delhi', 2023, "Download"),
-     createData('Lady Hardinge Medical College, New Delhi', 2023, "Download"),
-     createData('Maulana Azad Medical College, New Delhi', 2023, "Download"),
-     createData('University College of Medical Sciences & GTB Hospital, New Delhi', 2023, "Download"),
-     createData('Vardhman Mahavir Medical College & Safdarjung Hospital, New Delhi', 2023, "Download"),
-     createData('Atal Bihari Vajpayee Institute of Medical Sciences and Dr. RML Hospital, New Delhi', 2023, "Download"),
-     createData('Dr. Baba Saheb Ambedkar Medical College, Delhi', 2023, "Download"),
-     createData('North Delhi Muncipal Corporation Medical College, Delhi', 2023, "Download"),
+     createData('Bangalore Medical College & Research Institute, Bangalore', 2023, "Download"),
+     createData('Belagavi Institute of Medical Sciences, Belagavi', 2023, "Download"),
+     createData('Bidar Institute of Medical Sciences, Bidar', 2023, "Download"),
+     createData('Karnataka Institute of Medical Sciences, Hubli', 2023, "Download"),
+     createData('Shimoga Institute of Medical Sciences, Shimoga', 2023, "Download"),
+
+     createData('Chitradurga Medical College and Research Institute', 2023, "Download"),
 ];
 
 export default function Download() {
@@ -30,7 +29,7 @@ export default function Download() {
           <>
                <Navbar />
 
-               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Delhi Medical Colleges List </Typography>
+               <Typography sx={{ textAlign: "center", fontSize: "2rem", alignItems: "center", marginBottom: "2rem", marginTop: "5rem" }} >Karnataka Medical Colleges List </Typography>
 
                <TableContainer component={Paper} sx={{ width: "70%", margin: "auto", marginBottom: "4rem" }} >
 

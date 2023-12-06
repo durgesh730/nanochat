@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Courgette&family=Fira+Sans&family=Fredoka+One&family=Inter:wght@300&family=Leckerli+One&family=Montez&family=Pacifico&family=Philosopher&family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&family=Rubik&family=Signika+Negative:wght@300&family=Source+Sans+Pro&family=Ubuntu:wght@300;400&family=Varela+Round&family=Yanone+Kaffeesatz&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Courgette&family=Fira+Sans&family=Fredoka+One&family=Inter:wght@300&family=Leckerli+One&family=Montez&family=Pacifico&family=Philosopher&family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&family=Rubik&family=Signika+Negative:wght@300&family=Source+Sans+Pro&family=Ubuntu:wght@300;400&family=Varela+Round&family=Yanone+Kaffeesatz&display=swap");
 
 body {
   transition: all 400ms ease;
@@ -8,7 +8,7 @@ body {
   display: grid;
   grid-gap: 4.5rem;
   grid-template-columns: repeat(2, 1fr);
-  font-family: 'Philosopher';
+  font-family: "Philosopher";
   text-align: center;
   align-items: center;
   padding-top: 4rem;
@@ -34,11 +34,11 @@ body {
 }
 
 .Text .textthird {
-  margin-top: -10px;
+  margin-top: 6px;
 }
 
 .Text .textthird small {
-  opacity: .8;
+  opacity: 0.8;
   color: #232354;
 }
 
@@ -48,7 +48,7 @@ body {
 
 .Text .textfourth small {
   color: #232354;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .imgpara .img img {
@@ -84,11 +84,10 @@ body {
   justify-content: center;
 }
 
-
 .textButton a {
-  margin-top: .5rem;
-  margin-left: 4rem;
-  padding: .7rem 1.2rem;
+  margin-top: 2rem;
+  margin-left: 10rem;
+  padding: 0.7rem 1.2rem;
   font-size: 1.3rem;
   border-width: 2px;
   border-style: solid;
@@ -110,69 +109,76 @@ body {
   z-index: 1;
   top: 14rem;
   left: 0;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   padding-top: 1rem;
   overflow-x: hidden;
   transition: 0.5s;
   background-color: #232354;
-  border-bottom-right-radius: .7rem;
-  border-top-right-radius: .7rem;
+  border-bottom-right-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
 }
 
 .socialMediaLogo .youtube a {
-  color: #FF0000;
+  color: #ff0000;
   background-color: white;
   font-size: 1.7rem;
   border-radius: 5rem;
-  padding-top: .26rem;
-  padding-bottom: .5rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-top: 0.26rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .socialMediaLogo .linkdin {
   margin-right: 1rem;
-  margin-top: .7rem;
+  margin-top: 0.7rem;
 }
 
 .socialMediaLogo .linkdin a {
   background-color: white;
   font-size: 1.6rem;
   border-radius: 4rem;
-  padding-top: .3rem;
-  padding-bottom: .6rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   color: #0e76a8;
 }
 
 .socialMediaLogo .instagram {
-  margin-top: .7rem;
+  margin-top: 0.7rem;
 }
 
 .socialMediaLogo .instagram a {
   font-size: 1.7rem;
   color: white;
   border-radius: 4rem;
-  padding-top: .26rem;
-  padding-bottom: .6rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  padding-top: 0.26rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 
 .socialMediaLogo .gmail {
-  margin-top: .7rem;
+  margin-top: 0.7rem;
 }
 
 .socialMediaLogo .gmail a {
   background-color: white;
   font-size: 1.7rem;
   border-radius: 4rem;
-  padding-top: .26rem;
-  padding-bottom: .4rem;
-  padding-left: .4rem;
-  padding-right: .4rem;
+  padding-top: 0.26rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
   color: #0e76a8;
   transition: all 400ms ease;
 }
@@ -213,7 +219,7 @@ body {
   }
 
   .textButton a {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-left: 10rem;
   }
 
@@ -224,7 +230,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   .textButton a {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-left: 5rem;
   }
 
@@ -255,7 +261,7 @@ body {
   }
 
   .Text .textthird small {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   .Text .textfourth {
@@ -263,7 +269,7 @@ body {
   }
 
   .Text .textfourth small {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   .imgpara {
@@ -280,7 +286,6 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-
   .Text .textone span {
     font-size: 1.5rem;
   }
@@ -294,7 +299,7 @@ body {
   }
 
   .Text .textthird small {
-    font-size: .55rem;
+    font-size: 0.55rem;
   }
 
   .Text .textfourth {
@@ -302,7 +307,7 @@ body {
   }
 
   .Text .textfourth small {
-    font-size: .56rem;
+    font-size: 0.56rem;
   }
 
   .imgpara {
@@ -317,7 +322,6 @@ body {
     width: 16rem;
   }
 }
-
 
 .chennels {
   background-color: #232354;
@@ -345,16 +349,16 @@ body {
 .vl {
   border-left: 1px solid white;
   height: 100px;
+  margin: auto;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .chennels .container {
     padding: 0rem 5rem;
   }
 }
 
-
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .chennels .container {
     padding: 0rem 0rem;
     grid-template-columns: repeat(4, 1fr);
@@ -363,7 +367,7 @@ body {
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   .chennels .container {
     padding: 0rem 0rem;
     grid-template-columns: repeat(2, 1fr);
@@ -373,7 +377,7 @@ body {
   }
 }
 
-.homeTabVideos{
+.homeTabVideos {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }

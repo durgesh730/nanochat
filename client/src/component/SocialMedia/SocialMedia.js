@@ -8,9 +8,9 @@ const SocialMedia = () => {
             <section>
                 <div className='socialMediaLogo' id='phonemedia'>
                     <div className='youtube'><a href='https://www.youtube.com/@nanochat' target='black'><BsYoutube /></a></div>
-                    <div className='linkdin'><a href='/' target='black'><BsLinkedin /></a></div>
+                    <div className='linkdin'><a href='https://www.linkedin.com/in/durgesh-chaudhary-535a76211/' target='black'><BsLinkedin /></a></div>
                     <div className='instagram'><a href='https://www.instagram.com/_durgesh.chaudhary/' target='black'><SiInstagram /></a></div>
-                    <div className='gmail'><a href='/' target='black'><BsTwitter /></a></div>
+                    <div className='gmail'><a href='#' target='black'><BsTwitter /></a></div>
                 </div>
             </section>
         </>

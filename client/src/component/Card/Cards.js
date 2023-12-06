@@ -14,11 +14,15 @@ const Cards = () => {
                         <div class="card ">
                             <div class="card-body d-grid ">
                                 <div className='cardsheading'><span>States</span></div> <hr />
-                                <Link to={"Panjab"}>Panjab</Link>
-                                <Link to={"Delhi"}>Delhi</Link>
-                                <Link to={"HimanchalPradesh"}>Himachal Pradesh</Link>
+                                <Link to={"Andhra Pradesh"}>Andhra Pradesh</Link>
+                                <Link to={"Arunachal Pradesh"}>	Arunachal Pradesh</Link>
+                                <Link to={"Assam"}>Assam</Link>
                                 <Link to={'Bihar'}>Bihar</Link>
+                                <Link to={"Chhattisgarh"}>Chhattisgarh</Link>
                                 <Link to={"Chandigarh"}>Chandigarh</Link>
+                                <Link to={"Delhi"}>Delhi</Link>
+                                <Link to={"Goa"}>Goa</Link>
+                              
                             </div>
                         </div>
                     </div>
@@ -27,11 +31,14 @@ const Cards = () => {
                         <div class="card container">
                             <div class="card-body d-grid ">
                                 <div className='cardsheading'><span>States</span></div><hr />
-                                <Link to={"Rajasthan"}>Rajasthan</Link>
-                                <Link to={"UtterPradesh"}>Uttar Pradesh</Link>
-                                <Link to={"Maharashtra"}>Maharashtra</Link>
-                                <Link to={"MadhyaPradesh"}>Madhya Pradesh</Link>
+                                <Link to={"Gujarat"}>Gujarat</Link>
                                 <Link to={"Haryana"}>Haryana</Link>
+                                <Link to={"Himachal Pradesh"}>Himachal Pradesh</Link>
+                                <Link to={"Jharkhand"}>Jharkhand</Link>
+                                <Link to={"Karnataka"}>Karnataka</Link>
+                                <Link to={"Kerala"}>Kerala</Link>
+                                <Link to={"Madhya Pradesh"}>Madhya Pradesh</Link>
+                                <Link to={"Maharashtra"}>Maharashtra</Link>
                             </div>
                         </div>
                     </div>
@@ -45,11 +52,14 @@ const Cards = () => {
                         <div class="card container">
                             <div class="card-body d-grid ">
                                 <div className='cardsheading'><span>States</span></div><hr />
-                                <Link to={"WestBengal"}>West Bengal</Link>
+                                
+                                <Link to={"Manipur"}>Manipur</Link>
+                                <Link to={"Meghalaya<"}>Meghalaya</Link>
+                                <Link to={"Mizoram"}>Mizoram</Link>
+                                <Link to={"Nagaland"}>Nagaland</Link>
                                 <Link to={"Odisha"}>Odisha</Link>
-                                <Link to={"Gujrat"}>Gujarat</Link>
-                                <Link to={"Uttarakhand"}>Uttarakhand</Link>
-                                <Link to={"Telangana"}>Telangana</Link>
+                                <Link to={"Punjab"}>Punjab</Link>
+                                <Link to={"Rajasthan"}>Rajasthan</Link>
                             </div>
                         </div>
                     </div>
@@ -58,11 +68,15 @@ const Cards = () => {
                         <div class="card container">
                             <div class="card-body d-grid ">
                                 <div className='cardsheading'><span>States</span></div><hr />
-                                <Link to={"WestBengal"}>West Bengal</Link>
-                                <Link to={"Odisha"}>Odisha</Link>
-                                <Link to={"Gujrat"}>Gujarat</Link>
-                                <Link to={"Uttarakhand"}>Uttarakhand</Link>
+                                
+                                <Link to={"Sikkim<"}>Sikkim</Link>
+                                <Link to={"Tamil Nadu"}>Tamil Nadu</Link>
                                 <Link to={"Telangana"}>Telangana</Link>
+                                <Link to={"Tripura"}>Tripura</Link>
+                                <Link to={"Uttar Pradesh"}>Uttar Pradesh</Link>
+                                <Link to={"Uttarakhand"}>Uttarakhand</Link>
+                                <Link to={"West Bengal"}>West Bengal</Link>
+
                             </div>
                         </div>
                     </div>

@@ -15,22 +15,38 @@ import { Toaster } from 'react-hot-toast';
 import Neet from "./component/neet/Neet";
 import Home from "./component/Home/Home";
 
-import UP from "./component/Downloads/UP";
-import Punjab from "./component/Downloads/Punjab";
-import Delhi from "./component/Downloads/Delhi";
-import Himachal from "./component/Downloads/Himachal";
-import Chandigarh from "./component/Downloads/Chandigarh";
-import Bihar from './component/Downloads/Bihar'
-import Rajasthan from './component/Downloads/Rajasthan'
-import WestBengal from './component/Downloads/WestBengal'
-import Odisha from './component/Downloads/Odisha'
-import Gujrat from './component/Downloads/Gujarat'
-import Uttarakhand from './component/Downloads/Uttarakhand'
-import Maharashtra from './component/Downloads/Maharashtra'
-import Haryana from './component/Downloads/Haryana'
-import MP from './component/Downloads/MP'
 
-import Telagana from './component/Downloads/Telangana'
+import AndhraPradesh from "./component/Downloads/AndhraPradesh";
+import ArunachalPradesh from "./component/Downloads/ArunachalPradesh";
+import Assam from "./component/Downloads/Assam";
+import Bihar from "./component/Downloads/Bihar";
+import Chhattisgarh from "./component/Downloads/Chhattisgarh";
+import Chandigarh from "./component/Downloads/Chandigarh";
+import Delhi from "./component/Downloads/Delhi";
+import Goa from "./component/Downloads/Goa";
+import Gujarat from "./component/Downloads/Gujarat";
+import Haryana from "./component/Downloads/Haryana";
+import HimachalPradesh from "./component/Downloads/Himachal";
+import Jharkhand from './component/Downloads/Jharkhand'
+import Karnataka from './component/Downloads/Karnataka'
+import Kerala from './component/Downloads/Kerala'
+import MadhyaPradesh from './component/Downloads/MP'
+import Maharashtra from './component/Downloads/Maharashtra'
+import Manipur from './component/Downloads/Manipur'
+import Meghalaya from './component/Downloads/Meghalaya'
+import Mizoram from './component/Downloads/Mizoram'
+import Nagaland from './component/Downloads/Nagaland'
+import Odisha from './component/Downloads/Odisha'
+import Punjab from './component/Downloads/Punjab'
+import Rajasthan from './component/Downloads/Rajasthan'
+import Sikkim from './component/Downloads/Sikkim'
+import TamilNadu from './component/Downloads/TamilNadu'
+import Telangana from './component/Downloads/Telangana'
+import Tripura from './component/Downloads/Tripura'
+import UttarPradesh from './component/Downloads/UP'
+import Uttarakhand from './component/Downloads/Uttarakhand'
+import WestBengal from './component/Downloads/WestBengal'
+
 
 import Login from "./component/Login/Login";
 import ForgotPassword from "./component/ForgetPassword/ForgotPassword";
@@ -51,12 +67,16 @@ import AIIMSDelhi from "./component/CollegeDetails/AIIMSDelhi";
 import AIIMSKalyani from "./component/CollegeDetails/AIIMSKalyani";
 import AIIMSMadurai from "./component/CollegeDetails/AIIMSMadurai";
 import AIIMSBhopal from "./component/CollegeDetails/AIIMSBhopal";
+import AIIMSBhatinda from "./component/CollegeDetails/AIIMSBhatinda";
 import AIIMSBhubaneswar from "./component/CollegeDetails/AIIMSBhubaneswar";
 import AIIMSJodhpur from "./component/CollegeDetails/AIIMSJodhpur";
 import AIIMSPatna from "./component/CollegeDetails/AIIMSPatna";
 import AIIMSRaipur from "./component/CollegeDetails/AIIMSRaipur";
 import Profile from "./component/Profile/Profile";
 import Help from "./component/Help/Help";
+import AIIMSBilaspur from "./component/CollegeDetails/AIIMSBilaspur";
+import AIIMSBibinagar from "./component/CollegeDetails/AIIMSBibinagar";
+import AIIMSDeonagar from "./component/CollegeDetails/AIIMSDeonagar";
 
 function App() {
 
@@ -91,24 +111,40 @@ function App() {
           <Route path='/user/help' element={<Help />}></Route>
 
           {/*  cards routers  */}
-          <Route path='/UtterPradesh' element={<UP />} ></Route>
-          <Route path='/Panjab' element={<Punjab />} ></Route>
-          <Route path='/Delhi' element={<Delhi />} ></Route>
-          <Route path='/HimanchalPradesh' element={<Himachal />} ></Route>
+          <Route path='/Andhra Pradesh' element={<AndhraPradesh/>} ></Route>
+          <Route path='/Arunachal Pradesh' element={<ArunachalPradesh/>} ></Route>
+          <Route path='/Assam' element={<Assam />} ></Route>
+          <Route path='/Bihar' element={<Bihar />} ></Route>
+          <Route path='/Chhattisgarh' element={<Chhattisgarh />} ></Route>
           <Route path='/Chandigarh' element={<Chandigarh />} ></Route>
+          <Route path='/Delhi' element={<Delhi />} ></Route>
 
-          <Route path='/MadhyaPradesh' element={<MP />} ></Route>
-          <Route path='/Odisha' element={<Odisha />} ></Route>
-          <Route path='/WestBengal' element={<WestBengal />} ></Route>
-          <Route path='/Rajasthan' element={<Rajasthan />} ></Route>
-          <Route path='/Bihar' element={<Bihar />} ></Route>
-
-          <Route path='/Telangana' element={<Telagana />} ></Route>
+          <Route path='/Goa' element={<Goa />} ></Route>
+          <Route path='/Gujarat' element={<Gujarat />} ></Route>
           <Route path='/Haryana' element={<Haryana />} ></Route>
+          <Route path='/Himachal Pradesh' element={<HimachalPradesh />} ></Route>
+          <Route path='/Jharkhand' element={<Jharkhand />} ></Route>
+
+          <Route path='/Karnataka' element={<Karnataka />} ></Route>
+          <Route path='/Kerala' element={<Kerala />} ></Route>
+          <Route path='/Madhya Pradesh' element={<MadhyaPradesh />} ></Route>
           <Route path='/Maharashtra' element={<Maharashtra />} ></Route>
+          <Route path='/Manipur' element={<Manipur />} ></Route>
+          <Route path='/Meghalaya' element={<Meghalaya />} ></Route>
+
+          <Route path='/Mizoram' element={<Mizoram/>} ></Route>
+          <Route path='/Nagaland' element={<Nagaland />} ></Route>
+          <Route path='/Odisha' element={<Odisha/>} ></Route>
+          <Route path='/Punjab' element={<Punjab/>} ></Route>
+          <Route path='/Rajasthan' element={<Rajasthan/>} ></Route>
+          <Route path='/Sikkim' element={<Sikkim />} ></Route>
+
+          <Route path='/Tamil Nadu' element={<TamilNadu />} ></Route>
+          <Route path='/Telangana' element={<Telangana/>} ></Route>
+          <Route path='/Tripura' element={<Tripura/>} ></Route>
+          <Route path='/Uttar Pradesh' element={<UttarPradesh />} ></Route>
           <Route path='/Uttarakhand' element={<Uttarakhand />} ></Route>
-          <Route path='/Bihar' element={<Bihar />} ></Route>
-          <Route path='/Gujrat' element={<Gujrat />} ></Route>
+          <Route path='/West Bengal' element={<WestBengal />} ></Route>
 
           {/* Details page routers */}
           <Route path="/college-details/aiimsdelhi" element={<AIIMSDelhi />}></Route>
@@ -117,11 +153,14 @@ function App() {
           <Route path="/college-details/aimskalyani" element={<AIIMSKalyani />}></Route>
           <Route path="/college-details/aiimsgorakpur" element={<AIIMSgorakpur />}></Route>
           <Route path="/college-details/aiimsbhopal" element={<AIIMSBhopal />}></Route>
+          <Route path="/college-details/aiimsbhatinda" element={<AIIMSBhatinda />}></Route>
           <Route path="/college-details/aiimsbhubaneswar" element={<AIIMSBhubaneswar />}></Route>
           <Route path="/college-details/aiimsjodhpur" element={<AIIMSJodhpur />}></Route>
           <Route path="/college-details/aiimspatna" element={<AIIMSPatna />}></Route>
           <Route path="/college-details/aiimsraipur" element={<AIIMSRaipur />}></Route>
-
+          <Route path="/college-details/aiimsbilaspur" element={<AIIMSBilaspur />}></Route>
+          <Route path="/college-details/aiimsbibinagar" element={<AIIMSBibinagar />}></Route>
+          <Route path="/college-details/aiimsdeonagar" element={<AIIMSDeonagar />}></Route>
         </Routes>
         <ToastContainer />
         <Toaster />
