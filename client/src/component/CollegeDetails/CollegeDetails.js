@@ -360,7 +360,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
           </div>
         </div>
 
-        <div className="Infrastructure">
+        {/* <div className="Infrastructure">
           <div className="infrastructureTitle">
             <span> Affilliated Hospitals</span>
             <img src={info?.hospital?.img} alt="Infrastructure img" />
@@ -369,7 +369,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
             &#x2022;{info?.hospital?.paraFirst} <br /> <br />
             &#x2022; {info?.hospital?.paraSecond}
           </p>
-        </div>
+        </div> */}
 
         <div>
           <div className='text-center counsellingInfo'>

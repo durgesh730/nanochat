@@ -50,8 +50,8 @@ const  AIIMSRaipur = () => {
             bondStipend: {
                 para: "Find All India Institute of Medical Sciences Raipur PG courses compulsory rural service and bond penalty amount below.",
                 totalYear: 2,
-                penalty: "₹5000000",
-                stipend:"₹ 53550 /month"
+                penalty: "5000000",
+                stipend:"53550 /month"
             },
             fee: {
                 tutionfee: 1350,
