@@ -1,0 +1,28 @@
+.about{
+    margin-top: 4rem;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.abouthead{
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: midnightblue;
+    
+}
+.abouthead2{
+font-family: cursive;
+  margin-top: 1rem;
+ 
+}
+
+.para p {
+    margin-left: 21rem;
+    margin-right: 21rem;
+    margin-top: 2rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.homeTabVideos{
+    margin-top: 3rem;
+}

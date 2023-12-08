@@ -5,6 +5,7 @@ import { BsLinkedin } from 'react-icons/bs'
 import { FiInstagram } from 'react-icons/fi'
 import { GrYoutube } from 'react-icons/gr'
 import { FaTwitter } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const BottomNav = () => {
   return (
@@ -12,10 +13,10 @@ const BottomNav = () => {
          <div className="Main_page-bottomNav">
             <h2>Nano chat</h2>
             <ul className='nav_item-list'>
-               <li><a href='#'>Home</a></li>
-               <li><a href='#about'>About</a></li>
-               <li><a href='#experiance'>Experience</a></li>
-               <li><a href='#contact'>Contact</a></li>
+               <li><Link to='/'>Home</Link></li>
+               <li><Link to ='/About'>About</Link></li>
+               <li><Link to ='/Experience'>Experience</Link></li>
+               <li><Link to ='/Help'>Contact</Link></li>
             </ul>
 
             <div className='footer_socials_MainPage'>
