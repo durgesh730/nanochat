@@ -13,7 +13,10 @@
   margin-top: 0.5rem;
 }
 
-
+ .btn:hover {
+  background-color: white;
+  color: #232354;
+}
 .councelling {
   margin-bottom: 2rem;
   text-align: center;
