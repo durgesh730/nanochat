@@ -21,7 +21,7 @@ const Experience = () => {
         },
         {
             title: "AIIMS Raebareli NEET Cut Off 2023 | AIIMS Raebareli NEET Cut Off Marks & Rank 2023",
-            videoUrl: "https://www.youtube.com/embed/aNF_cUxMSxs?si=vRXHmZuiA2M_IGfr" 
+            videoUrl: "https://www.youtube.com/embed/aNF_cUxMSxs?si=vRXHmZuiA2M_IGfr"
         },
         {
             title: "PMCH Patna MBBS Cut off 2023 | PMCH Patna NEET Cut off Rank & Marks 2023",
@@ -29,7 +29,7 @@ const Experience = () => {
         },
         {
             title: "AIIMS Gorakhpur NEET Cut Off 2023 | MBBS Cut Off Ranks & Marks 2023",
-            videoUrl:"https://www.youtube.com/embed/fEUVjBeeCl8?si=DZ72YZPEodABtKua"
+            videoUrl: "https://www.youtube.com/embed/fEUVjBeeCl8?si=DZ72YZPEodABtKua"
         },
     ]
 
@@ -38,19 +38,19 @@ const Experience = () => {
         <>
             <Navbar />
             <div className='exp'>
-               <div className='exphead1'>
-               <div className='exphead'><span>INFORMATION RELATED TO COUNSELLING </span></div>
-                <div className='exphead2'><p>Our objective is to provide quality education and guidance</p></div>
-            </div>
+                <div className='exphead1'>
+                    <div className='exphead'><span>INFORMATION RELATED TO COUNSELLING </span></div>
+                    <div className='exphead2'><p>Our objective is to provide quality education and guidance</p></div>
+                </div>
 
-            
+            </div>
             <div className='exppara'>
-               
+
                 <div className='expparadata'><p> We provide free and paid counselling. Please fill this counselling form for counselling guidance. Once you fill this form and choose required option, further details will be sent to your email. Feel free to reach out to us through the 'Contact Us' page for any inquiries or assistance.</p></div>
 
                 <div className='councelling'>
-                <Link className='btn' to="/student-counselling/form">Counselling Form</Link>
-            </div>
+                    <Link className='btn' to="/student-counselling/form">Counselling Form</Link>
+                </div>
             </div>
 
             <div className='homeTabVideos' >
@@ -66,7 +66,6 @@ const Experience = () => {
                 </div>
             </div>
             <Footer />
-
         </>
     )
 }
