@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './form.css'
-import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { serverhost } from '../../host';
 import FormModal from '../FormModal/FormModal';
 import axios from "axios"
+import { CounsellingForm, CounsellingPayment } from '../API/api';
 
 const Form = () => {
 
@@ -41,101 +41,46 @@ const Form = () => {
     })
   }
 
-  // const handleform = async (e) => {
-  //   e.preventDefault();
-
-  //   const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category,
-  //     choice1, choice2, choice3, choice4, question, state } = inVal;
-
-  //   if (fname === '') {
-  //     toast("Enter Your Name", {
-  //       autoClose: 3000,
-  //     })
-  //   } else if (phonenumber.length < 10) {
-  //     toast("Enter Your Correct Phone number", {
-  //       autoClose: 3000,
-  //     })
-  //   } else if (AIQRank === "") {
-  //     toast("Enter Your AIQ Rank", {
-  //       autoClose: 3000,
-  //     })
-  //   } else if (category === "") {
-  //     toast("Enter Your Category", {
-  //       autoClose: 3000,
-  //     })
-  //   } else {
-  //     const data = await fetch(`${serverhost}/studentform`, {
-  //       method: 'POST',
-  //       headers: {
-  //         "Content-Type": "application/json"
-  //       },
-  //       body: JSON.stringify({
-  //         fname, lastname, DOB, AIQRank, CRank, phonenumber,
-  //         category, choice1, choice2, choice3, choice4, question, state
-  //       })
-  //     });
-  //     const res = await data.json();
-
-  //     if (res.status === (201)) {
-  //       toast("Your form submitted successfully", {
-  //         autoClose: 3000,
-  //       })
-  //       setInpval({
-  //         ...inVal,
-  //         fname: '',
-  //         lastname: "",
-  //         DOB: "",
-  //         AIQRank: "",
-  //         CRank: "",
-  //         phonenumber: "",
-  //         category: "",
-  //         choice1: "",
-  //         choice2: "",
-  //         choice3: "",
-  //         choice4: "",
-  //         question: "",
-  //         state: ""
-  //       })
-
-  //     } else {
-  //       toast("Please Enter Correct Details!", {
-  //         autoClose: 3000,
-  //       })
-  //     }
-  //   }
-
-  // }
+  const handleSubmit = () => {
+    if (!data.fname.trim()) {
+      toast("Enter Your Name", {
+        autoClose: 3000,
+      })
+    } else if (phonenumber.length < 10) {
+      toast("Enter Your Correct Phone number", {
+        autoClose: 3000,
+      })
+    } else if (!data.AIQRank.trim()) {
+      toast("Enter Your AIQ Rank", {
+        autoClose: 3000,
+      })
+    } else if (!data.category.trim()) {
+      toast("Enter Your Category", {
+        autoClose: 3000,
+      })
+    } else {
+      CounsellingForm(inVal)
+      setInpval({
+        ...inVal,
+        fname: '',
+        lastname: "",
+        DOB: "",
+        AIQRank: "",
+        CRank: "",
+        phonenumber: "",
+        category: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        question: "",
+        state: ""
+      })
+    }
+  }
 
   const handleOpen = async () => {
-    console.log("button clicked")
-
-    const { data: { order } } = await axios.post(`${serverhost}/checkout`, {
-      amount: 200
-    })
-    const options = {
-      key: "rzp_test_tRFotIAhLlWm3v", // Enter the Key ID generated from the Dashboard
-      amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
-      name: "Durgesh chaudhary",
-      description: "Test Transaction",
-      image: "https://example.com/your_logo",
-      order_id: order.id, // This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: `${serverhost}/paymentverification`,
-      prefill: {
-        name: "Gaurav Kumar", // logged in user name
-        email: "gaurav.kumar@example.com",
-        contact: "9000090000"
-      },
-      notes: {
-        address: "Razorpay Corporate Office"
-      },
-      theme: {
-        color: "#3399cc"
-      }
-    };
-
-    const rzp1 = new window.Razorpay(options);
-    rzp1.open();
+    CounsellingPayment()
   }
 
   return (
