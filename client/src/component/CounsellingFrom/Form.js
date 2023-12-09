@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import './form.css'
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { serverhost } from '../../host';
-import  Modal from '../Modal/Modal'
+import FormModal from '../FormModal/FormModal';
 
 
 const Form = () => {
@@ -26,6 +25,8 @@ const Form = () => {
     question: "",
     state: ""
   })
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
 
   const setVal = (e) => {
     const { name, value } = e.target;
@@ -107,7 +108,7 @@ const Form = () => {
     <>
 
       <Navbar />
-      <SocialMedia/>
+      <SocialMedia />
       <div className='container formfields '>
         <form >
           <h2 className='text-center my-4'>Counselling Form</h2>
@@ -174,19 +175,20 @@ const Form = () => {
 
             <div className="form-group p-3 ">
               <label htmlfor="DOB">Enter Your State Name</label>
-              <input type="state" className="form-control" value={inVal.state} id="state" name="state" placeholder="State Name" onChange={setVal} required />
+              <input type="state" className="form-control" value={inVal.state} id="state" name="state" placeholder="State Name" onChange={setVal} />
             </div>
 
           </div>
 
           <div className='formbutton my-4'>
-            <button type="submit"  className="btn"><Modal/></button></div>
+            <button type="button" onClick={handleOpen} className="btn">
+              Submit
+            </button></div>
         </form>
       </div>
-
+      
+      <FormModal setOpen={setOpen} open={open} />
       <Footer />
-
-      <ToastContainer />
     </>
   )
 }
