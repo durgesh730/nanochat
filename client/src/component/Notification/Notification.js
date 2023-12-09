@@ -9,7 +9,7 @@ const Notification = () => {
                     <div className='column'>
                         {/* <img src={PIC} alt="..." className="img" /> */}
                         <div class="row">
-                            <span>Let's see the Letest Notifications Pdf's</span>
+                            <span>Let's see the Latest Notifications Pdf's</span>
                         </div>
                     </div>
 
@@ -17,16 +17,16 @@ const Notification = () => {
                         <div className='aiimsnote'>
                             <h4 className='text-center' >AIIMS</h4>
                             <div className='notenames'>
-                                <a href='/' >Download plz again!</a>
-                                <a href='/' >Download plz again!</a>
-                                <a href='/' >Download plz again!</a></div>
+                                <a href='/' >Download please again!</a>
+                                <a href='/' >Download please again!</a>
+                                <a href='/' >Download please again!</a></div>
                         </div>
                         <div className='Others'>
                             <h4 className='text-center' >Others</h4>
                             <div className='notenames'>
-                                <a href='/' >Download plz again!</a>
-                                <a href='/' >Download plz again!</a>
-                                <a href='/' >Download plz again!</a></div>
+                                <a href='/' >Download please again!</a>
+                                <a href='/' >Download please again!</a>
+                                <a href='/' >Download please again!</a></div>
                         </div>
                     </div>
                 </div>

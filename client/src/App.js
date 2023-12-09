@@ -84,6 +84,8 @@ import AIIMSRaebrali from "./component/CollegeDetails/AIIMSRaebrali";
 import AIIMSRajkot from "./component/CollegeDetails/AIIMSRajkot";
 import AIIMSDJammu from "./component/CollegeDetails/AIIMSJammu";
 import AIIMSJammu from "./component/CollegeDetails/AIIMSJammu";
+import About from "./component/About/About"
+import Experience from "./component/Experience/Experience"
 
 function App() {
 
@@ -152,7 +154,11 @@ function App() {
           <Route path='/Uttar Pradesh' element={<UttarPradesh />} ></Route>
           <Route path='/Uttarakhand' element={<Uttarakhand />} ></Route>
           <Route path='/West Bengal' element={<WestBengal />} ></Route>
-
+        
+        {/* footer routes */}
+          <Route path='/About' element={<About/>} ></Route>
+          <Route path='/Experience' element={<Experience/>} ></Route>
+          <Route path='/Help' element={<Help/>} ></Route>
           {/* Details page routers */}
           <Route path="/college-details/aiimsdelhi" element={<AIIMSDelhi />}></Route>
           <Route path="/college-details/aiimsrishikesh" element={<AIIMSRishikesh />}></Route>
