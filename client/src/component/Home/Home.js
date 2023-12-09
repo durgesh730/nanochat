@@ -19,22 +19,23 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions } from '@mui/material';
 import kgmu from '../../images/Lucknow, KGMU.jfif'
+import Latestcutoff from '../Latestcutoff/Latestcutoff';
 
 const Home = () => {
 
   const Videosdata = [
     {
-      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
-    },
-    {
-      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
-    },
-    {
-      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
-    },
+      title: "AIIMS Nagpur NEET Cut Off 2023 | AIIMS Nagpur NEET Cut Off Marks & Rank 2023 ",
+      videoUrl: "https://www.youtube.com/embed/NfhnsH_JDEk?si=79liYbxRvKgYa33Y"
+  },
+  {
+      title: "VMMC Delhi NEET Cut Off 2023 | VMMC Delhi NEET Cut Off Rank & Marks 2023 ",
+      videoUrl: "https://www.youtube.com/embed/qA_xdnHtKQE?si=OhyBUvXHwWZy1DMK"
+  },
+  {
+      title: "MAMC New Delhi NEET Cut Off 2023 | NEET Cut Off Marks & Rank 2023",
+      videoUrl: "https://www.youtube.com/embed/XWqx4lXDBcg?si=-2sPAYGqEb9Irxd8"
+  },
   ]
 
   return (
@@ -82,6 +83,7 @@ const Home = () => {
       <Cards />
       <Notification />
       <Tables />
+      <Latestcutoff/>
       {/* <Myself /> */}
       <div className='homeTabVideos' >
         <div className='text-center counsellingInfo'>

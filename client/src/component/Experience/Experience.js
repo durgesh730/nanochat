@@ -8,28 +8,28 @@ import './Experience.css'
 const Experience = () => {
     const Videosdata = [
         {
-            title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-            videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+            title: "AIIMS Nagpur NEET Cut Off 2023 | AIIMS Nagpur NEET Cut Off Marks & Rank 2023 ",
+            videoUrl: "https://www.youtube.com/embed/NfhnsH_JDEk?si=79liYbxRvKgYa33Y"
         },
         {
-            title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-            videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+            title: "VMMC Delhi NEET Cut Off 2023 | VMMC Delhi NEET Cut Off Rank & Marks 2023 ",
+            videoUrl: "https://www.youtube.com/embed/qA_xdnHtKQE?si=OhyBUvXHwWZy1DMK"
         },
         {
-            title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-            videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+            title: "MAMC New Delhi NEET Cut Off 2023 | NEET Cut Off Marks & Rank 2023",
+            videoUrl: "https://www.youtube.com/embed/XWqx4lXDBcg?si=-2sPAYGqEb9Irxd8"
         },
         {
-            title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-            videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+            title: "AIIMS Raebareli NEET Cut Off 2023 | AIIMS Raebareli NEET Cut Off Marks & Rank 2023",
+            videoUrl: "https://www.youtube.com/embed/aNF_cUxMSxs?si=vRXHmZuiA2M_IGfr" 
         },
         {
-            title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-            videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
+            title: "PMCH Patna MBBS Cut off 2023 | PMCH Patna NEET Cut off Rank & Marks 2023",
+            videoUrl: "https://www.youtube.com/embed/CPECNx-dvz8?si=eCxVj4xdppAFwRht"
         },
         {
-            title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-            videoUrl:"https://www.youtube.com/embed/vd5RSAzgV5g?si=Zzm4fReF34UpYroD"
+            title: "AIIMS Gorakhpur NEET Cut Off 2023 | MBBS Cut Off Ranks & Marks 2023",
+            videoUrl:"https://www.youtube.com/embed/fEUVjBeeCl8?si=DZ72YZPEodABtKua"
         },
     ]
 
@@ -38,15 +38,18 @@ const Experience = () => {
         <>
             <Navbar />
             <div className='exp'>
-                <div className='exphead'><h1>INFORMATION RELATED TO COUNSELLING </h1></div>
+               <div className='exphead1'>
+               <div className='exphead'><span>INFORMATION RELATED TO COUNSELLING </span></div>
                 <div className='exphead2'><p>Our objective is to provide quality education and guidance</p></div>
             </div>
 
             
             <div className='exppara'>
-                <div className='expparadata'><p> We provide free and paid counselling. Please fill this councelling form for counselling guidance.Once you fill the form and choose required option ,further information will be provided on your email id</p></div>
+               
+                <div className='expparadata'><p> We provide free and paid counselling. Please fill this counselling form for counselling guidance. Once you fill this form and choose required option, further details will be sent to your email. Feel free to reach out to us through the 'Contact Us' page for any inquiries or assistance.</p></div>
+
                 <div className='councelling'>
-                <Link className='btn' to="/student-counselling/form">Councelling Form</Link>
+                <Link className='btn' to="/student-counselling/form">Counselling Form</Link>
             </div>
             </div>
 

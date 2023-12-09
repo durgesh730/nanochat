@@ -34,12 +34,17 @@
 
 .yotubeVideo .Youtube .Button {
   padding-top: 1rem;
+
 }
 
 .yotubeVideo .Youtube .Button a {
   border: 1px solid #232354;
   border-radius: .2rem;
+  padding: 1rem 1rem;
+  font-size: 14px;
+
 }
+
 
 .yotubeVideo .Youtube .Button a:hover {
   background-color: #232354;

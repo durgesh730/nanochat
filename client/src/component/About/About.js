@@ -8,17 +8,17 @@ import Videos from '../CounellingVideos/Videos';
  const About = () => {
   const Videosdata = [
     {
-      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
-    },
-    {
-      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
-    },
-    {
-      title: "AIIMS Rishikesh NEET Cut Off Marks & Rank 2021",
-      videoUrl: "https://www.youtube.com/embed/7CLzzaN0fis"
-    },
+      title: "AIIMS Raebareli NEET Cut Off 2023 | AIIMS Raebareli NEET Cut Off Marks & Rank 2023",
+      videoUrl: "https://www.youtube.com/embed/aNF_cUxMSxs?si=vRXHmZuiA2M_IGfr" 
+  },
+  {
+      title: "PMCH Patna MBBS Cut off 2023 | PMCH Patna NEET Cut off Rank & Marks 2023",
+      videoUrl: "https://www.youtube.com/embed/CPECNx-dvz8?si=eCxVj4xdppAFwRht"
+  },
+  {
+      title: "AIIMS Gorakhpur NEET Cut Off 2023 | MBBS Cut Off Ranks & Marks 2023",
+      videoUrl:"https://www.youtube.com/embed/fEUVjBeeCl8?si=DZ72YZPEodABtKua"
+  },
   ]
   return (
     <>
