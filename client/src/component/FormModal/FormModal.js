@@ -19,15 +19,18 @@ const style = {
   borderRadius: '.3rem',
 };
 
-const FormModal = ({ setOpen, open }) => {
-
-  const [unpaidChecked, setUnpaidChecked] = useState(false);
-  const [paidChecked, setPaidChecked] = useState(false);
+const FormModal = ({
+  setUnpaidChecked,
+  setOpen,
+  unpaidChecked,
+  paidChecked,
+  setPaidChecked,
+  open
+}) => {
 
   const handleUnpaidChange = (e) => {
     setUnpaidChecked(e.target.checked);
     if (!unpaidChecked) {
-      setUnpaidChecked(true);
       setPaidChecked(false);
     }
   };
@@ -35,7 +38,6 @@ const FormModal = ({ setOpen, open }) => {
   const handlePaidChange = (event) => {
     setPaidChecked(event.target.checked);
     if (!paidChecked) {
-      setPaidChecked(true);
       setUnpaidChecked(false);
     }
   };
@@ -70,8 +72,8 @@ const FormModal = ({ setOpen, open }) => {
               />
               <br />
               <FormControlLabel control={<Checkbox
-                onChange={handlePaidChange}
                 checked={paidChecked}
+                onChange={handlePaidChange}
                 sx={{
                   color: "#232354",
                   '&.Mui-checked': {
