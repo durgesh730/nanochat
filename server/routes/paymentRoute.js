@@ -7,4 +7,4 @@ payment.post('/checkout', check)
 
 payment.post('/paymentverification', paymentVerification)
 
-export default payment
+export default payment  

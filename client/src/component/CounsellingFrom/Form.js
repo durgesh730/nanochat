@@ -3,10 +3,9 @@ import './form.css'
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import SocialMedia from '../SocialMedia/SocialMedia';
-import { serverhost } from '../../host';
 import FormModal from '../FormModal/FormModal';
-import axios from "axios"
-import { CounsellingForm, CounsellingPayment } from '../API/api';
+import toast from 'react-hot-toast';
+import { CounsellingPayment } from '../API/paymentapi';
 
 const Form = () => {
 
@@ -42,24 +41,23 @@ const Form = () => {
   }
 
   const handleSubmit = () => {
-    if (!data.fname.trim()) {
+    if (!inVal.fname.trim()) {
       toast("Enter Your Name", {
         autoClose: 3000,
       })
-    } else if (phonenumber.length < 10) {
+    } else if (inVal.phonenumber.length < 10) {
       toast("Enter Your Correct Phone number", {
         autoClose: 3000,
       })
-    } else if (!data.AIQRank.trim()) {
+    } else if (!inVal.AIQRank.trim()) {
       toast("Enter Your AIQ Rank", {
         autoClose: 3000,
       })
-    } else if (!data.category.trim()) {
+    } else if (!inVal.category.trim()) {
       toast("Enter Your Category", {
         autoClose: 3000,
       })
     } else {
-      CounsellingForm(inVal)
       setInpval({
         ...inVal,
         fname: '',
@@ -79,8 +77,16 @@ const Form = () => {
     }
   }
 
-  const handleOpen = async () => {
-    CounsellingPayment()
+  const handleOpen = async (e) => {
+    e.preventDefault()
+    const amount = 1000
+    CounsellingPayment(amount)
+      .then((res) => {
+        console.log(res, "payment response")
+      })
+      .catch((err) => {
+        console.log(err, "payment response")
+      })
   }
 
   return (

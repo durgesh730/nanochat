@@ -86,6 +86,7 @@ import AIIMSDJammu from "./component/CollegeDetails/AIIMSJammu";
 import AIIMSJammu from "./component/CollegeDetails/AIIMSJammu";
 import About from "./component/About/About"
 import Experience from "./component/Experience/Experience"
+import PaymentSuccess from "./component/PaymentSuccess/PaymentSuccess";
 
 function App() {
 
@@ -118,7 +119,8 @@ function App() {
           <Route path='/forgotpassword/:id/:token' element={<ForgotPassword />}></Route>
           <Route path='/user/profile' element={<Profile />}></Route>
           <Route path='/user/help' element={<Help />}></Route>
-
+          <Route path='/paymentsuccess' element={<PaymentSuccess />}></Route>
+           
           {/*  cards routers  */}
           <Route path='/Andhra Pradesh' element={<AndhraPradesh/>} ></Route>
           <Route path='/Arunachal Pradesh' element={<ArunachalPradesh/>} ></Route>
@@ -159,6 +161,7 @@ function App() {
           <Route path='/About' element={<About/>} ></Route>
           <Route path='/Experience' element={<Experience/>} ></Route>
           <Route path='/Help' element={<Help/>} ></Route>
+          
           {/* Details page routers */}
           <Route path="/college-details/aiimsdelhi" element={<AIIMSDelhi />}></Route>
           <Route path="/college-details/aiimsrishikesh" element={<AIIMSRishikesh />}></Route>
