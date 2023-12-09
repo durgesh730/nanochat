@@ -12,6 +12,7 @@ import payment from "./routes/paymentRoute.js";
 import Razorpay from "razorpay";
 const port = 8009
 
+config('dotenv')
 config({ path: "./config/config.env" })
 app.use(express.json());
 app.use(cookieParser());
