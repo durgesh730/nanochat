@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar'
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { serverhost } from '../../host';
 import FormModal from '../FormModal/FormModal';
-
+import axios from "axios"
 
 const Form = () => {
 
@@ -26,7 +26,9 @@ const Form = () => {
     state: ""
   })
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
+  // const handleOpen = () => setOpen(true);
+  const [unpaidChecked, setUnpaidChecked] = useState(false);
+  const [paidChecked, setPaidChecked] = useState(false);
 
   const setVal = (e) => {
     const { name, value } = e.target;
@@ -104,11 +106,53 @@ const Form = () => {
 
   // }
 
+  const handleOpen = async () => {
+    console.log("button clicked")
+
+    const { data: { order } } = await axios.post(`${serverhost}/checkout`, {
+      amount: 200
+    })
+    const options = {
+      key: "rzp_test_tRFotIAhLlWm3v", // Enter the Key ID generated from the Dashboard
+      amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "Durgesh chaudhary",
+      description: "Test Transaction",
+      image: "https://example.com/your_logo",
+      order_id: order.id, // This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      callback_url: `${serverhost}/paymentverification`,
+      prefill: {
+        name: "Gaurav Kumar", // logged in user name
+        email: "gaurav.kumar@example.com",
+        contact: "9000090000"
+      },
+      notes: {
+        address: "Razorpay Corporate Office"
+      },
+      theme: {
+        color: "#3399cc"
+      }
+    };
+
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
+  }
+
   return (
     <>
 
       <Navbar />
       <SocialMedia />
+
+      <FormModal
+        setOpen={setOpen}
+        open={open}
+        unpaidChecked={unpaidChecked}
+        setUnpaidChecked={setUnpaidChecked}
+        paidChecked={paidChecked}
+        setPaidChecked={setPaidChecked}
+      />
+
       <div className='container formfields '>
         <form >
           <h2 className='text-center my-4'>Counselling Form</h2>
@@ -186,8 +230,7 @@ const Form = () => {
             </button></div>
         </form>
       </div>
-      
-      <FormModal setOpen={setOpen} open={open} />
+
       <Footer />
     </>
   )

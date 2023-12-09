@@ -7,15 +7,26 @@ import user from "./routes/user.js";
 import connect from "./db/conn.js";
 import Student from "./routes/students.js";
 import Neet from "./routes/neet.js";
+import { config } from "dotenv";
+import payment from "./routes/paymentRoute.js";
+import Razorpay from "razorpay";
 const port = 8009
 
+config('dotenv')
+config({ path: "./config/config.env" })
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
+export const instance = new Razorpay({
+    key_id: process.env.RAZORPAY_API_KEY,
+    key_secret: process.env.RAZORPAY_APT_SECRET,
+})
+
 app.use(user);
 app.use(Neet)
 app.use(Student)
+app.use(payment)
 
 connect().then(() => {
     try {

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer'
 import Videos from '../CounellingVideos/Videos';
 import './Experience.css'
+
 const Experience = () => {
     const Videosdata = [
         {
@@ -40,14 +41,13 @@ const Experience = () => {
                <div className='exphead1'>
                <div className='exphead'><span>INFORMATION RELATED TO COUNSELLING </span></div>
                 <div className='exphead2'><p>Our objective is to provide quality education and guidance</p></div>
-                </div> 
-
             </div>
 
             
             <div className='exppara'>
                
                 <div className='expparadata'><p> We provide free and paid counselling. Please fill this counselling form for counselling guidance. Once you fill this form and choose required option, further details will be sent to your email. Feel free to reach out to us through the 'Contact Us' page for any inquiries or assistance.</p></div>
+
                 <div className='councelling'>
                 <Link className='btn' to="/student-counselling/form">Counselling Form</Link>
             </div>
