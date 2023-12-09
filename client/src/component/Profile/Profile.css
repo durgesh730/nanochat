@@ -1,0 +1,44 @@
+
+.account{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background: #fff;
+  width: 500px;
+  padding: 60px 30px 60px 30px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.1);
+}
+.account .accountsetting{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.my-4 .myprofile-btn {
+ 
+  border: 1.3px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  background-color: white;
+  padding: 8px 25px;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 1rem;
+}
+
+btn:hover {
+  background-color: white;
+  color: #232354;
+}
+
+.infoProfile{
+  margin-top: 2rem;
+  margin-left: auto;
+}
+
+.my-2{
+  text-align: left;
+  margin-left: 5rem;
+  padding-bottom: 1.1rem;
+}

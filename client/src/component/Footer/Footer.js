@@ -15,7 +15,7 @@ const BottomNav = () => {
             <ul className='nav_item-list'>
                <li><Link to='/'>Home</Link></li>
                <li><Link to ='/About'>About</Link></li>
-               <li><Link to ='/Experience'>Councelling</Link></li>
+               <li><Link to ='/Experience'>Counselling</Link></li>
                <li><Link to ='/Help'>Contact</Link></li>
             </ul>
 

@@ -83,7 +83,7 @@ const FormModal = ({ setOpen, open }) => {
           </div>
 
           <div style={{ paddingTop: "0rem", paddingBottom: "1rem" }}>
-            Note:- The services will provide you according to your choosing plain
+            Note:- The services will be provided to you according to your chosen plan.
           </div>
           <Divider />
           <div style={{ display: "flex", justifyContent: "space-between", paddingTop: "1rem" }} >
