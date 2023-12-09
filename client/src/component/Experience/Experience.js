@@ -45,9 +45,9 @@ const Experience = () => {
             
             <div className='exppara'>
                
-                <div className='expparadata'><p> We provide free and paid counselling. Please fill this councelling form for counselling guidance.Once you fill the form and choose required option ,further information will be provided on your email id</p></div>
+                <div className='expparadata'><p> We provide free and paid counselling. Please fill this councelling form for counselling guidance. Once you fill this form and choose required option, further details will be sent to your email. Feel free to reach out to us through the 'Contact Us' page for any inquiries or assistance.</p></div>
                 <div className='councelling'>
-                <Link className='btn' to="/student-counselling/form">Councelling Form</Link>
+                <Link className='btn' to="/student-counselling/form">Counselling Form</Link>
             </div>
             </div>
 
