@@ -1,8 +1,9 @@
 import axios from 'axios'
 import { serverhost } from '../../host'
-const token = localStorage.getItem('token')
+import toast from 'react-hot-toast'
 
 export const CounsellingPayment = async (amount) => {
+
     const { data: { order } } = await axios.post(`${serverhost}/checkout`, {
         amount
     })
@@ -16,12 +17,9 @@ export const CounsellingPayment = async (amount) => {
         order_id: order.id,
         handler: async function (response) {
             try {
-                const verifyResponse = await axios.post(`${serverhost}/paymentverification`, response);
-                console.log(verifyResponse, "verifyResponse");
-                if (verifyResponse.data.success) {
-                    alert("successulff")
-                }
+               await axios.post(`${serverhost}/paymentverification`, response);
             } catch (error) {
+                toast.error('Payment Failed')
                 console.log(error, "error");
             }
         },

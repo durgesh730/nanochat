@@ -76,13 +76,11 @@ import Profile from "./component/Profile/Profile";
 import Help from "./component/Help/Help";
 import AIIMSBilaspur from "./component/CollegeDetails/AIIMSBilaspur";
 import AIIMSBibinagar from "./component/CollegeDetails/AIIMSBibinagar";
-import AIIMSDeonagar from "./component/CollegeDetails/AIIMSDeonagar";
 import AIIMSDeoghar from "./component/CollegeDetails/AIIMSDeonagar";
 import AIIMSGuwahati from "./component/CollegeDetails/AIIMSGuwahati";
 import AIIMSNagpur from "./component/CollegeDetails/AIIMSNagpur";
 import AIIMSRaebrali from "./component/CollegeDetails/AIIMSRaebrali";
 import AIIMSRajkot from "./component/CollegeDetails/AIIMSRajkot";
-import AIIMSDJammu from "./component/CollegeDetails/AIIMSJammu";
 import AIIMSJammu from "./component/CollegeDetails/AIIMSJammu";
 import About from "./component/About/About"
 import Experience from "./component/Experience/Experience"
@@ -102,13 +100,13 @@ function App() {
         <Routes>
 
           {/*  NEET component routers  */}
-          <Route path='/practice-questions/neet' element={<Neet />} ></Route>
-          <Route path='/chem' element={<Chemistry />} ></Route>
-          <Route path='/bio' element={<Biology />} ></Route>
-          <Route path='/phy' element={<Physics />} ></Route>
-          <Route path='/result' element={<Result />} ></Route>
-          <Route path='/bioresult' element={<ResultBio />} ></Route>
-          <Route path='/phyresult' element={<ResultPhy />} ></Route>
+          <Route path='/practice-questions/neet' element={<Neet />}></Route>
+          <Route path='/chem' element={<Chemistry />}></Route>
+          <Route path='/bio' element={<Biology />}></Route>
+          <Route path='/phy' element={<Physics />}></Route>
+          <Route path='/result' element={<Result />}></Route>
+          <Route path='/bioresult' element={<ResultBio/>} ></Route>
+          <Route path='/phyresult' element={<ResultPhy/>} ></Route>
 
           {/*  Main page routers */}
           <Route path='/' element={<Home />} ></Route>

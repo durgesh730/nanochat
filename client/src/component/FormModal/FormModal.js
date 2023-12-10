@@ -25,7 +25,8 @@ const FormModal = ({
   unpaidChecked,
   paidChecked,
   setPaidChecked,
-  open
+  open,
+  handleSubmit
 }) => {
 
   const handleUnpaidChange = (e) => {
@@ -42,7 +43,7 @@ const FormModal = ({
     }
   };
 
-  const handleClose = () => setOpen(false);
+  const handleClose = () => setOpen(false)
 
   return (
     <>
@@ -90,7 +91,7 @@ const FormModal = ({
           <Divider />
           <div style={{ display: "flex", justifyContent: "space-between", paddingTop: "1rem" }} >
             <Button onClick={() => setOpen(false)} variant="outlined" size="medium" >Close</Button>
-            <Button sx={{ backgroundColor: "#232354" }} variant="contained" size="medium" >Submit</Button>
+            <Button onClick={handleSubmit} sx={{ backgroundColor: "#232354" }} variant="contained" size="medium" >Submit</Button>
           </div>
         </Box>
       </Modal>

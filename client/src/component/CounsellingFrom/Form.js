@@ -6,6 +6,7 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 import FormModal from '../FormModal/FormModal';
 import toast from 'react-hot-toast';
 import { CounsellingPayment } from '../API/paymentapi';
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
 
@@ -25,9 +26,9 @@ const Form = () => {
     state: ""
   })
   const [open, setOpen] = useState(false);
-  // const handleOpen = () => setOpen(true);
   const [unpaidChecked, setUnpaidChecked] = useState(false);
   const [paidChecked, setPaidChecked] = useState(false);
+  const navigate = useNavigate()
 
   const setVal = (e) => {
     const { name, value } = e.target;
@@ -40,54 +41,40 @@ const Form = () => {
     })
   }
 
-  const handleSubmit = () => {
+  const handleOpen = (e) => {
+    e.preventDefault()
     if (!inVal.fname.trim()) {
-      toast("Enter Your Name", {
+      toast.error("Enter Your Name", {
         autoClose: 3000,
       })
     } else if (inVal.phonenumber.length < 10) {
-      toast("Enter Your Correct Phone number", {
+      toast.error("Enter Your Correct Phone number", {
         autoClose: 3000,
       })
     } else if (!inVal.AIQRank.trim()) {
-      toast("Enter Your AIQ Rank", {
+      toast.error("Enter Your AIQ Rank", {
         autoClose: 3000,
       })
     } else if (!inVal.category.trim()) {
-      toast("Enter Your Category", {
+      toast.error("Enter Your Category", {
         autoClose: 3000,
       })
     } else {
-      setInpval({
-        ...inVal,
-        fname: '',
-        lastname: "",
-        DOB: "",
-        AIQRank: "",
-        CRank: "",
-        phonenumber: "",
-        category: "",
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: "",
-        question: "",
-        state: ""
-      })
+      setOpen(true);
     }
   }
 
-  const handleOpen = async (e) => {
-    e.preventDefault()
-    const amount = 1000
-    CounsellingPayment(amount)
-      .then((res) => {
-        console.log(res, "payment response")
-      })
-      .catch((err) => {
-        console.log(err, "payment response")
-      })
+  const handleSubmit = (e) => {
+    if (paidChecked) {
+      const amount = 1000
+      CounsellingPayment(amount)
+      setOpen(false)
+    } else {
+      toast.success('your form will submitted successsully')
+      navigate('/')
+    }
   }
+
 
   return (
     <>
@@ -102,6 +89,7 @@ const Form = () => {
         setUnpaidChecked={setUnpaidChecked}
         paidChecked={paidChecked}
         setPaidChecked={setPaidChecked}
+        handleSubmit={handleSubmit}
       />
 
       <div className='container formfields '>
@@ -133,12 +121,7 @@ const Form = () => {
             <div className="form-group p-3 ">
               <input type="phonenumber" className="form-control" name="phonenumber" value={inVal.phonenumber} id="phonenumber" placeholder="Phone Number" onChange={setVal} minlength="10" />
             </div>
-
-            <div className="form-group p-3 ">
-              <input type="category" className="form-control" name="category" value={inVal.category} id="category" placeholder="Category" onChange={setVal} />
-            </div>
           </div>
-
 
           <div className='px-4 ' style={{ fontSize: "1.5rem", padding: "1rem" }} ><small className='text-center my-4'>Enter Your Desired College Choices </small></div>
 
