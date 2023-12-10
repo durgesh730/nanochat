@@ -9,7 +9,7 @@ const Videos = ({ item }) => {
                     <div className='Youtube' >
                         <div class="embed-responsive embed-responsive-4by3"><iframe class="embed-responsive-item " src={item?.videoUrl}></iframe>
                             <div> <a href="">{item?.title}</a></div>
-                            <div className="Button"><a href='#' className='  btn '>More Videos</a></div></div>
+                            <div className="Button"><a href='https://www.youtube.com/@nanochat' className='  btn '>More Videos</a></div></div>
                     </div>
                 </div>
             </div>

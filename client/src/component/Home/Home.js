@@ -65,14 +65,14 @@ const Home = () => {
 
           <div class="vl"></div>
           <div>
-          <h1>k</h1>
+          <h1>_k</h1>
             <small>Followers</small><br />
             <a href='https://www.instagram.com/_durgesh.chaudhary/'target='black'> on Instagram </a>
           </div>
 
           <div class="vl"></div>
           <div>
-          <h1>k</h1>
+          <h1>_k</h1>
             <span> Followers </span><br />
             <a href='https://www.linkedin.com/in/durgesh-chaudhary-535a76211/' target='black'> on Linkdin</a>
           </div>

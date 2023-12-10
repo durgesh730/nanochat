@@ -20,7 +20,7 @@ const Latestcutoff = () => {
                                 <a href='https://vanukuru.files.wordpress.com/2022/11/ug-medical-top-35-colleges-orcr-2022-01.jpg' >AIIMS Delhi</a>
                                 <a href='/' >AIIMS Rishikesh</a>
                                 <a href='/' >AIIMS Raebareli</a>
-                                <a href='/' >AIIMS AIIMS Bhubaneswar</a>
+                                <a href='/' >AIIMS Bhubaneswar</a>
                                 <a href='/' >AIIMS Kalyani</a></div>
                         </div>
                         <div className='Others'>
