@@ -67,7 +67,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     if (paidChecked) {
       const amount = 1000
-      CounsellingPayment(amount)
+      CounsellingPayment(amount, inVal)
       setOpen(false)
     } else {
       toast.success('your form will submitted successsully')
