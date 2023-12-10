@@ -25,7 +25,7 @@ const About = () => {
       <Navbar />
       <div className='about1'>
         <div className='aboutfirst'>
-          <div className='aboutspan'><span>NANOCHAT</span></div>
+          <div className='aboutspan'><span>NANO CHAT</span></div>
           <div className='aboutpara'><p>Our objective is to provide quality education and guidance</p></div>
         </div>
       </div>
