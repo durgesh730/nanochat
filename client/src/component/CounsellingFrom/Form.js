@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './form.css'
-import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import SocialMedia from '../SocialMedia/SocialMedia';
-import { serverhost } from '../../host';
 import FormModal from '../FormModal/FormModal';
-import axios from "axios"
+import toast from 'react-hot-toast';
+import { CounsellingPayment } from '../API/paymentapi';
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
 
@@ -26,9 +26,9 @@ const Form = () => {
     state: ""
   })
   const [open, setOpen] = useState(false);
-  // const handleOpen = () => setOpen(true);
   const [unpaidChecked, setUnpaidChecked] = useState(false);
   const [paidChecked, setPaidChecked] = useState(false);
+  const navigate = useNavigate()
 
   const setVal = (e) => {
     const { name, value } = e.target;
@@ -41,102 +41,40 @@ const Form = () => {
     })
   }
 
-  // const handleform = async (e) => {
-  //   e.preventDefault();
-
-  //   const { fname, lastname, DOB, AIQRank, CRank, phonenumber, category,
-  //     choice1, choice2, choice3, choice4, question, state } = inVal;
-
-  //   if (fname === '') {
-  //     toast("Enter Your Name", {
-  //       autoClose: 3000,
-  //     })
-  //   } else if (phonenumber.length < 10) {
-  //     toast("Enter Your Correct Phone number", {
-  //       autoClose: 3000,
-  //     })
-  //   } else if (AIQRank === "") {
-  //     toast("Enter Your AIQ Rank", {
-  //       autoClose: 3000,
-  //     })
-  //   } else if (category === "") {
-  //     toast("Enter Your Category", {
-  //       autoClose: 3000,
-  //     })
-  //   } else {
-  //     const data = await fetch(`${serverhost}/studentform`, {
-  //       method: 'POST',
-  //       headers: {
-  //         "Content-Type": "application/json"
-  //       },
-  //       body: JSON.stringify({
-  //         fname, lastname, DOB, AIQRank, CRank, phonenumber,
-  //         category, choice1, choice2, choice3, choice4, question, state
-  //       })
-  //     });
-  //     const res = await data.json();
-
-  //     if (res.status === (201)) {
-  //       toast("Your form submitted successfully", {
-  //         autoClose: 3000,
-  //       })
-  //       setInpval({
-  //         ...inVal,
-  //         fname: '',
-  //         lastname: "",
-  //         DOB: "",
-  //         AIQRank: "",
-  //         CRank: "",
-  //         phonenumber: "",
-  //         category: "",
-  //         choice1: "",
-  //         choice2: "",
-  //         choice3: "",
-  //         choice4: "",
-  //         question: "",
-  //         state: ""
-  //       })
-
-  //     } else {
-  //       toast("Please Enter Correct Details!", {
-  //         autoClose: 3000,
-  //       })
-  //     }
-  //   }
-
-  // }
-
-  const handleOpen = async () => {
-    console.log("button clicked")
-
-    const { data: { order } } = await axios.post(`${serverhost}/checkout`, {
-      amount: 200
-    })
-    const options = {
-      key: "rzp_test_tRFotIAhLlWm3v", // Enter the Key ID generated from the Dashboard
-      amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
-      name: "Durgesh chaudhary",
-      description: "Test Transaction",
-      image: "https://example.com/your_logo",
-      order_id: order.id, // This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: `${serverhost}/paymentverification`,
-      prefill: {
-        name: "Gaurav Kumar", // logged in user name
-        email: "gaurav.kumar@example.com",
-        contact: "9000090000"
-      },
-      notes: {
-        address: "Razorpay Corporate Office"
-      },
-      theme: {
-        color: "#3399cc"
-      }
-    };
-
-    const rzp1 = new window.Razorpay(options);
-    rzp1.open();
+  const handleOpen = (e) => {
+    e.preventDefault()
+    if (!inVal.fname.trim()) {
+      toast.error("Enter Your Name", {
+        autoClose: 3000,
+      })
+    } else if (inVal.phonenumber.length < 10) {
+      toast.error("Enter Your Correct Phone number", {
+        autoClose: 3000,
+      })
+    } else if (!inVal.AIQRank.trim()) {
+      toast.error("Enter Your AIQ Rank", {
+        autoClose: 3000,
+      })
+    } else if (!inVal.category.trim()) {
+      toast.error("Enter Your Category", {
+        autoClose: 3000,
+      })
+    } else {
+      setOpen(true);
+    }
   }
+
+  const handleSubmit = (e) => {
+    if (paidChecked) {
+      const amount = 1000
+      CounsellingPayment(amount)
+      setOpen(false)
+    } else {
+      toast.success('your form will submitted successsully')
+      navigate('/')
+    }
+  }
+
 
   return (
     <>
@@ -151,6 +89,7 @@ const Form = () => {
         setUnpaidChecked={setUnpaidChecked}
         paidChecked={paidChecked}
         setPaidChecked={setPaidChecked}
+        handleSubmit={handleSubmit}
       />
 
       <div className='container formfields '>
@@ -182,12 +121,7 @@ const Form = () => {
             <div className="form-group p-3 ">
               <input type="phonenumber" className="form-control" name="phonenumber" value={inVal.phonenumber} id="phonenumber" placeholder="Phone Number" onChange={setVal} minlength="10" />
             </div>
-
-            <div className="form-group p-3 ">
-              <input type="category" className="form-control" name="category" value={inVal.category} id="category" placeholder="Category" onChange={setVal} />
-            </div>
           </div>
-
 
           <div className='px-4 ' style={{ fontSize: "1.5rem", padding: "1rem" }} ><small className='text-center my-4'>Enter Your Desired College Choices </small></div>
 

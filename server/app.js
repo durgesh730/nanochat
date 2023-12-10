@@ -3,10 +3,10 @@ const app = express();
 import cors from 'cors';
 import cookieParser from "cookie-parser";
 
-import user from "./routes/user.js";
+import user from "./routes/userRoute.js";
 import connect from "./db/conn.js";
-import Student from "./routes/students.js";
-import Neet from "./routes/neet.js";
+import Student from "./routes/studentRoute.js";
+import Neet from "./routes/neetRoute.js";
 import { config } from "dotenv";
 import payment from "./routes/paymentRoute.js";
 import Razorpay from "razorpay";

@@ -76,16 +76,15 @@ import Profile from "./component/Profile/Profile";
 import Help from "./component/Help/Help";
 import AIIMSBilaspur from "./component/CollegeDetails/AIIMSBilaspur";
 import AIIMSBibinagar from "./component/CollegeDetails/AIIMSBibinagar";
-import AIIMSDeonagar from "./component/CollegeDetails/AIIMSDeonagar";
 import AIIMSDeoghar from "./component/CollegeDetails/AIIMSDeonagar";
 import AIIMSGuwahati from "./component/CollegeDetails/AIIMSGuwahati";
 import AIIMSNagpur from "./component/CollegeDetails/AIIMSNagpur";
 import AIIMSRaebrali from "./component/CollegeDetails/AIIMSRaebrali";
 import AIIMSRajkot from "./component/CollegeDetails/AIIMSRajkot";
-import AIIMSDJammu from "./component/CollegeDetails/AIIMSJammu";
 import AIIMSJammu from "./component/CollegeDetails/AIIMSJammu";
 import About from "./component/About/About"
 import Experience from "./component/Experience/Experience"
+import PaymentSuccess from "./component/PaymentSuccess/PaymentSuccess";
 
 function App() {
 
@@ -101,13 +100,13 @@ function App() {
         <Routes>
 
           {/*  NEET component routers  */}
-          <Route path='/practice-questions/neet' element={<Neet />} ></Route>
-          <Route path='/chem' element={<Chemistry />} ></Route>
-          <Route path='/bio' element={<Biology />} ></Route>
-          <Route path='/phy' element={<Physics />} ></Route>
-          <Route path='/result' element={<Result />} ></Route>
-          <Route path='/bioresult' element={<ResultBio />} ></Route>
-          <Route path='/phyresult' element={<ResultPhy />} ></Route>
+          <Route path='/practice-questions/neet' element={<Neet />}></Route>
+          <Route path='/chem' element={<Chemistry />}></Route>
+          <Route path='/bio' element={<Biology />}></Route>
+          <Route path='/phy' element={<Physics />}></Route>
+          <Route path='/result' element={<Result />}></Route>
+          <Route path='/bioresult' element={<ResultBio/>} ></Route>
+          <Route path='/phyresult' element={<ResultPhy/>} ></Route>
 
           {/*  Main page routers */}
           <Route path='/' element={<Home />} ></Route>
@@ -118,7 +117,8 @@ function App() {
           <Route path='/forgotpassword/:id/:token' element={<ForgotPassword />}></Route>
           <Route path='/user/profile' element={<Profile />}></Route>
           <Route path='/user/help' element={<Help />}></Route>
-
+          <Route path='/paymentsuccess' element={<PaymentSuccess />}></Route>
+           
           {/*  cards routers  */}
           <Route path='/Andhra Pradesh' element={<AndhraPradesh/>} ></Route>
           <Route path='/Arunachal Pradesh' element={<ArunachalPradesh/>} ></Route>
@@ -159,6 +159,7 @@ function App() {
           <Route path='/About' element={<About/>} ></Route>
           <Route path='/Experience' element={<Experience/>} ></Route>
           <Route path='/Help' element={<Help/>} ></Route>
+          
           {/* Details page routers */}
           <Route path="/college-details/aiimsdelhi" element={<AIIMSDelhi />}></Route>
           <Route path="/college-details/aiimsrishikesh" element={<AIIMSRishikesh />}></Route>
