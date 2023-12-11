@@ -145,9 +145,9 @@ const Navbar = () => {
                           aria-labelledby="composition-button"
                           onKeyDown={handleListKeyDown}
                         >
-                          <MenuItem onClick={handleClose}> <CgProfile /><Link to={'/user/profile'} style={{ fontSize: "16px", color: "black" }}> my Profile</Link></MenuItem>
+                          {user && <MenuItem onClick={handleClose}> <CgProfile /><Link to={'/user/profile'} style={{ fontSize: "16px", color: "black" }}> my Profile</Link></MenuItem>}
                           <MenuItem onClick={handleClose}><FiHelpCircle /> <Link to={'/user/help'} style={{ fontSize: "16px", color: "black" }}>Help</Link></MenuItem>
-                          <MenuItem onClick={() => { handleLogout() }}><BiLogOutCircle /><Typography sx={{ paddingLeft: "12px", fontSize: "16px" }} >Logout</Typography></MenuItem>
+                          {user && <MenuItem onClick={() => { handleLogout() }}><BiLogOutCircle /><Typography sx={{ paddingLeft: "12px", fontSize: "16px" }} >Logout</Typography></MenuItem>}
                         </MenuList>
                       </ClickAwayListener>
                     </Paper>
