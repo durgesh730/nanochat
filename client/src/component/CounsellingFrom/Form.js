@@ -7,7 +7,6 @@ import FormModal from '../FormModal/FormModal';
 import toast from 'react-hot-toast';
 import { CounsellingPayment } from '../API/paymentapi';
 import { useNavigate } from 'react-router-dom';
-import { CounsellingForm } from '../API/api';
 import { useValidation } from '../../hooks/FormValidation';
 
 const Form = () => {
