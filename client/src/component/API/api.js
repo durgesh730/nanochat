@@ -18,7 +18,7 @@ export const fetchUsersData = async () => {
         })
 }
 
-export const CounsellingForm = async (inputVal, id) => {
+export const CounsellingForm = async (inputVal, id, navigate) => {
 
     const { DOB, AIQRank, CRank, phonenumber,
         category, choice1, choice2, choice3, choice4, question, state } = inputVal
@@ -39,12 +39,11 @@ export const CounsellingForm = async (inputVal, id) => {
         toast.success("Your form submitted successfully", {
             autoClose: 3000,
         })
-        return true;
+        navigate('/')
     } else {
         toast.error("Please Enter Correct Details!", {
             autoClose: 3000,
         })
-        return false;
     }
 }
 
