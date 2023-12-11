@@ -55,6 +55,8 @@ const Form = () => {
       const amount = 1000
       CounsellingPayment(amount, inVal, id, navigate)
       setOpen(false)
+    }else{
+      CounsellingForm(inVal, id, navigate)
     }
   }
 
