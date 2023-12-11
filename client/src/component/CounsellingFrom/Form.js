@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { CounsellingPayment } from '../API/paymentapi';
 import { useNavigate } from 'react-router-dom';
 import { useValidation } from '../../hooks/FormValidation';
+import { CounsellingForm } from '../API/api';
 
 const Form = () => {
   const user = localStorage.getItem('user')
@@ -55,7 +56,7 @@ const Form = () => {
       const amount = 1000
       CounsellingPayment(amount, inVal, id, navigate)
       setOpen(false)
-    }else{
+    } else {
       CounsellingForm(inVal, id, navigate)
     }
   }
@@ -147,22 +148,22 @@ const Form = () => {
 
           </div>
           <div className='upload'>
-          <label className='uploadhead'>Upload your scorecard</label>
-         
-            <input type="file" id="myFile" name="filename"></input>
-             
-              </div>
+            <label className='uploadhead'>Upload your scorecard</label>
 
-              <div className='formbutton my-4'>
-                <button type="button" onClick={handleOpen} className="btn">
-                  Submit
-                </button></div>
-            </form>
+            <input type="file" id="myFile" name="filename"></input>
+
           </div>
 
-          <Footer />
-        </>
-        )
+          <div className='formbutton my-4'>
+            <button type="button" onClick={handleOpen} className="btn">
+              Submit
+            </button></div>
+        </form>
+      </div>
+
+      <Footer />
+    </>
+  )
 }
 
-        export default Form
+export default Form
