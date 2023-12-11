@@ -43,8 +43,8 @@ const PasswordReset = () => {
 
                 <div className='form_data'>
                     <div className='form_heading'><h1>Enter Your Email</h1> </div>
-                    <div className='my-2' ><p style={{ textAlign: "center" }} >We are glad that your data have been be saved and <br /> Protected. We hope that you will get like it.</p></div>
-                    {message ? <p style={{ color: "green", fontweight: "bold" }} >Passsword reset link send Successfully in Your Email</p> : " "}
+                    <div className='resetpara' ><p  >We are glad that your data have been be saved and <br /> Protected. We hope that you will get like it.</p></div>
+                    {message ? <p style={{ color: "green", fontweight: "bold",textAlign:"center" }} >Passsword reset link send Successfully in Your Email</p> : " "}
                     <form>
                         <div className='form_input'>
                             <label htmlFor='email'>Email</label>

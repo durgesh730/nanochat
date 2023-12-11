@@ -72,3 +72,12 @@
         display: block;
    }
 }
+.upload{
+    text-align: center;
+   
+}
+
+.uploadhead{
+    font-size:1.5rem ;
+    margin: 1.2rem;
+}

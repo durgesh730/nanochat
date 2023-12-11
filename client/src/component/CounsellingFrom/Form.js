@@ -82,7 +82,7 @@ const Form = () => {
       <div className='container formfields '>
         <form >
           <h2 className='text-center my-4'>Counselling Form</h2>
-          
+
           <div className=' inputs'>
             <div className="form-group p-3 ">
               <input type="fname" className="form-control" value={inVal.fname} name="fname" id="name" aria-describedby="emailHelp" placeholder="First Name" onChange={setVal} minlength="3" />
@@ -149,17 +149,23 @@ const Form = () => {
             </div>
 
           </div>
+          <div className='upload'>
+          <label className='uploadhead'>Upload your scorecard</label>
+         
+            <input type="file" id="myFile" name="filename"></input>
+             
+              </div>
 
-          <div className='formbutton my-4'>
-            <button type="button" onClick={handleOpen} className="btn">
-              Submit
-            </button></div>
-        </form>
-      </div>
+              <div className='formbutton my-4'>
+                <button type="button" onClick={handleOpen} className="btn">
+                  Submit
+                </button></div>
+            </form>
+          </div>
 
-      <Footer />
-    </>
-  )
+          <Footer />
+        </>
+        )
 }
 
-export default Form
+        export default Form
