@@ -17,7 +17,7 @@ export const CounsellingPayment = async (amount, user, id) => {
         order_id: order.id,
         handler: async function (response) {
             try {
-                await axios.post(`${serverhost}/paymentverification`, { response, id });
+                await axios.post(`${serverhost}/paymentverification`, {response, id});
             } catch (error) {
                 toast.error('Payment Failed')
                 console.log(error, "error");

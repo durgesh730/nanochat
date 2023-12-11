@@ -55,7 +55,7 @@ const Form = () => {
     if (paidChecked) {
       const amount = 1000
       CounsellingPayment(amount, inVal, id)
-      CounsellingForm(inVal, id)
+      CounsellingForm(inVal, id, navigate)
       setOpen(false)
     } else {
       toast.success('your form will submitted successsully')
@@ -82,7 +82,7 @@ const Form = () => {
       <div className='container formfields '>
         <form >
           <h2 className='text-center my-4'>Counselling Form</h2>
-          
+
           <div className=' inputs'>
             <div className="form-group p-3 ">
               <input type="fname" className="form-control" value={inVal.fname} name="fname" id="name" aria-describedby="emailHelp" placeholder="First Name" onChange={setVal} minlength="3" />

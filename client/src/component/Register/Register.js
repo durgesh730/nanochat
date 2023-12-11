@@ -46,20 +46,19 @@ const Register = () => {
                 })
             });
             const res = await data.json();
+            console.log(res, "res, ragister")
             if (res.status === (201)) {
                 toast(res.msg, {
                     autoClose: 1500,
                 })
-                localStorage.setItem('token', res.data?.token)
-                localStorage.setItem("user", res.data?.userValid.fname);
-                localStorage.setItem("id", res.data?.userValid._id);
+                localStorage.setItem("user", res.data?.fname);
+                localStorage.setItem("id", res.data?._id);
                 setInpval({ ...inpval, fname: "", email: "", password: "", cpassword: "" })
             } else {
                 toast(res.error, {
                     autoClose: 1500,
                 })
             }
-
         }
     }
 
