@@ -17,12 +17,15 @@
     border-radius: .1em;
     font-size: 1.2em;
     color: white;
+    background-color: #232354;
 }
 
 .allquestion .btn:hover {
     cursor: pointer;
-    background-color: #232354;
-    color: white;
+    background-color: white;
+    color:#232354;
+    border: 1px solid #232354;
+   
 }
 
 .next {
