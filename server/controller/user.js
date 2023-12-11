@@ -3,8 +3,6 @@ import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken"
 import bcrypt from 'bcryptjs';
 
-const keysecret = "durgeshchaudharydurgeshchaudhary";
-
 // email config
 const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -13,7 +11,6 @@ const transporter = nodemailer.createTransport({
         pass: "lqfxwpogsaocehjc"
     }
 })
-
 
 export const UserRegister = async (req, res) => {
     const { fname, email, password } = req.body;
@@ -39,7 +36,7 @@ export const UserRegister = async (req, res) => {
         return res.status(201).json({
             status: 201,
             data: savedUser,
-            msg:"Registration Successfull"
+            msg: "Registration Successfull"
         });
     } catch (error) {
         console.error(error); // Log the error for debugging purposes
@@ -146,7 +143,7 @@ export const SendPasswordLink = async (req, res) => {
         const userfind = await Userdb.findOne({ email: email });
 
         // token generate for reset password
-        const token = jwt.sign({ _id: userfind._id }, keysecret,
+        const token = jwt.sign({ _id: userfind._id }, process.env.KEY_SECRET,
             {
                 expiresIn: "1d"
             })
@@ -182,7 +179,7 @@ export const VerfiyUser = async (req, res) => {
         const validuser = await Userdb.findOne({ _id: id, verifytoken: token });
 
         // verify user token 
-        const verifyToken = jwt.verify(token, keysecret);
+        const verifyToken = jwt.verify(token, process.env.KEY_SECRET);
 
         if (validuser && verifyToken._id) {
             res.status(201).json({ status: 201, validuser })
@@ -206,7 +203,7 @@ export const ChangePassword = async (req, res) => {
         const validuser = await Userdb.findOne({ _id: id, verifytoken: token });
 
         // verify user token 
-        const verifyToken = jwt.verify(token, keysecret);
+        const verifyToken = jwt.verify(token, process.env.KEY_SECRET);
 
         if (validuser && verifyToken._id) {
             const newpassword = await bcrypt.hash(password, 12)

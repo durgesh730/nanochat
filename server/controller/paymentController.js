@@ -1,6 +1,6 @@
 import { instance } from "../app.js";
 import crypto from 'crypto'
-import Studentform from "../models/formSchema.js";
+import { Payment } from "../models/paymentSchema.js";
 
 export const check = async (req, res) => {
     var options = {
@@ -30,14 +30,13 @@ export const paymentVerification = async (req, res) => {
 
     if (isAuthentic) {
         // Database comes here
-        await Studentform.put({
-            userId: id,
+        await Payment.create({
             razorpay_order_id,
             razorpay_payment_id,
             razorpay_signature,
         });
 
-        res.send(200).json({
+        res.status(200).json({
             msg: "Counselling Fee Paid Successfull",
             success: true,
             razorpay_payment_id: razorpay_payment_id

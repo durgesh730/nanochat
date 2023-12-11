@@ -7,7 +7,6 @@ import FormModal from '../FormModal/FormModal';
 import toast from 'react-hot-toast';
 import { CounsellingPayment } from '../API/paymentapi';
 import { useNavigate } from 'react-router-dom';
-import { CounsellingForm } from '../API/api';
 import { useValidation } from '../../hooks/FormValidation';
 
 const Form = () => {
@@ -54,12 +53,8 @@ const Form = () => {
   const handleSubmit = (e) => {
     if (paidChecked) {
       const amount = 1000
-      CounsellingPayment(amount, inVal, id)
-      CounsellingForm(inVal, id)
+      CounsellingPayment(amount, inVal, id, navigate)
       setOpen(false)
-    } else {
-      toast.success('your form will submitted successsully')
-      navigate('/')
     }
   }
 
