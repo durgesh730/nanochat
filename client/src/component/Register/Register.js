@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import Navbar from '../Navbar/Navbar';
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { serverhost } from '../../host';
-import UseFormValidation from '../../hooks/UseFormValidation';
+import { UseFormValidation } from '../../hooks/FormValidation';
 
 const Register = () => {
     const [passShow, setPassshow] = useState(false);

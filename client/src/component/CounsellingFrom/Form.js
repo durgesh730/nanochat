@@ -7,8 +7,13 @@ import FormModal from '../FormModal/FormModal';
 import toast from 'react-hot-toast';
 import { CounsellingPayment } from '../API/paymentapi';
 import { useNavigate } from 'react-router-dom';
+import { CounsellingForm } from '../API/api';
+import { useValidation } from '../../hooks/FormValidation';
 
 const Form = () => {
+  const user = localStorage.getItem('user')
+  const id = localStorage.getItem('id')
+  const navigate = useNavigate()
 
   const [inVal, setInpval] = useState({
     fname: '',
@@ -28,7 +33,7 @@ const Form = () => {
   const [open, setOpen] = useState(false);
   const [unpaidChecked, setUnpaidChecked] = useState(false);
   const [paidChecked, setPaidChecked] = useState(false);
-  const navigate = useNavigate()
+  const { errors, HandleValidation } = useValidation(inVal, user, navigate);
 
   const setVal = (e) => {
     const { name, value } = e.target;
@@ -43,38 +48,20 @@ const Form = () => {
 
   const handleOpen = (e) => {
     e.preventDefault()
-    if (!inVal.fname.trim()) {
-      toast.error("Enter Your Name", {
-        autoClose: 3000,
-      })
-    } else if (inVal.phonenumber.length < 10) {
-      toast.error("Enter Your Correct Phone number", {
-        autoClose: 3000,
-      })
-    } else if (!inVal.AIQRank.trim()) {
-      toast.error("Enter Your AIQ Rank", {
-        autoClose: 3000,
-      })
-    } else if (!inVal.category.trim()) {
-      toast.error("Enter Your Category", {
-        autoClose: 3000,
-      })
-    } else {
-      setOpen(true);
-    }
+    HandleValidation(setOpen)
   }
 
   const handleSubmit = (e) => {
     if (paidChecked) {
       const amount = 1000
-      CounsellingPayment(amount, inVal)
+      CounsellingPayment(amount, inVal, id)
+      CounsellingForm(inVal, id)
       setOpen(false)
     } else {
       toast.success('your form will submitted successsully')
       navigate('/')
     }
   }
-
 
   return (
     <>
@@ -95,6 +82,7 @@ const Form = () => {
       <div className='container formfields '>
         <form >
           <h2 className='text-center my-4'>Counselling Form</h2>
+          
           <div className=' inputs'>
             <div className="form-group p-3 ">
               <input type="fname" className="form-control" value={inVal.fname} name="fname" id="name" aria-describedby="emailHelp" placeholder="First Name" onChange={setVal} minlength="3" />
@@ -105,7 +93,7 @@ const Form = () => {
             </div>
 
             <div className="form-group p-3 ">
-              <input type="DOB" className="form-control" id="DOB" value={inVal.DOB} name="DOB" placeholder="Category" onChange={setVal} />
+              <input type="DOB" className="form-control" id="DOB" value={inVal.DOB} name="DOB" placeholder="DOB" onChange={setVal} />
             </div>
           </div>
 
@@ -121,6 +109,10 @@ const Form = () => {
             <div className="form-group p-3 ">
               <input type="phonenumber" className="form-control" name="phonenumber" value={inVal.phonenumber} id="phonenumber" placeholder="Phone Number" onChange={setVal} minlength="10" />
             </div>
+          </div>
+
+          <div className="form-group p-3 ">
+            <input type="text" className="form-control" name="category" value={inVal.category} id="category" placeholder="category" onChange={setVal} />
           </div>
 
           <div className='px-4 ' style={{ fontSize: "1.5rem", padding: "1rem" }} ><small className='text-center my-4'>Enter Your Desired College Choices </small></div>

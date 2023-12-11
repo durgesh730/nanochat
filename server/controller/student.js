@@ -1,7 +1,7 @@
 import Form from '../models/formSchema.js'
 
 export const CounsellingForm = async (req, res) => {
-    const requiredFields = ['fname', 'AIQRank', 'phonenumber', 'category'];
+    const requiredFields = ['AIQRank', 'phonenumber', 'category'];
 
     for (let field of requiredFields) {
         if (!req.body[field]) {

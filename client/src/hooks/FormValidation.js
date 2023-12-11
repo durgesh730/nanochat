@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
-const UseFormValidation = () => {
+export const UseFormValidation = () => {
   const [errors, setErrors] = useState({});
 
   const validateSignUpForm = (formData) => {
@@ -50,4 +50,48 @@ const UseFormValidation = () => {
   return { errors, handleValidation };
 };
 
-export default UseFormValidation;
+
+export const useValidation = (inVal, user, navigate) => {
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!user) {
+      newErrors.user = 'Please Firstly Login';
+    } else {
+      if (!inVal.fname.trim()) {
+        newErrors.fname = 'Enter Your Name';
+      } else if (inVal.phonenumber.length < 10) {
+        newErrors.phonenumber = 'Enter Your Correct Phone number';
+      } else if (!inVal.AIQRank.trim()) {
+        newErrors.AIQRank = 'Enter Your AIQ Rank';
+      } else if (!inVal.category.trim()) {
+        newErrors.category = 'Enter Your Category';
+      }
+    }
+    return newErrors;
+  };
+
+  const HandleValidation = (setOpen) => {
+    const validationErrors = validateForm();
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      Object.values(validationErrors).forEach((error) => {
+        toast.error(error, {
+          autoClose: 3000,
+        });
+      });
+    } else {
+      setOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    setErrors({});
+  }, [inVal, user]);
+
+  return { errors, HandleValidation };
+};
+

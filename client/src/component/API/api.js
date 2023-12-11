@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { serverhost } from '../../host'
+import toast from 'react-hot-toast'
 const token = localStorage.getItem('token')
 
 export const fetchUsersData = async () => {
@@ -17,25 +18,30 @@ export const fetchUsersData = async () => {
         })
 }
 
-export const CounsellingForm = async (data) => {
+export const CounsellingForm = async (inputVal, id) => {
+
+    const { DOB, AIQRank, CRank, phonenumber,
+        category, choice1, choice2, choice3, choice4, question, state } = inputVal
+
     const data = await fetch(`${serverhost}/studentform`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            fname, lastname, DOB, AIQRank, CRank, phonenumber,
+            userId: id,
+            DOB, AIQRank, CRank, phonenumber,
             category, choice1, choice2, choice3, choice4, question, state
         })
     });
     const res = await data.json();
     if (res.status === (201)) {
-        toast("Your form submitted successfully", {
+        toast.success("Your form submitted successfully", {
             autoClose: 3000,
         })
         return true;
     } else {
-        toast("Please Enter Correct Details!", {
+        toast.error("Please Enter Correct Details!", {
             autoClose: 3000,
         })
         return false;

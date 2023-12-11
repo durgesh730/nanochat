@@ -2,13 +2,9 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const formSchema = new Schema({
-    fname: {
+    userId: {
         type: String,
         required: true
-    },
-    lastname: {
-        type: String,
-        default: ''
     },
     DOB: {
         type: String,
