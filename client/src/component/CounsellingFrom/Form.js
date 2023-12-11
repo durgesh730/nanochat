@@ -54,12 +54,8 @@ const Form = () => {
   const handleSubmit = (e) => {
     if (paidChecked) {
       const amount = 1000
-      CounsellingPayment(amount, inVal, id)
-      CounsellingForm(inVal, id, navigate)
+      CounsellingPayment(amount, inVal, id, navigate)
       setOpen(false)
-    } else {
-      toast.success('your form will submitted successsully')
-      navigate('/')
     }
   }
 

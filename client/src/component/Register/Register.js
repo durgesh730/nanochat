@@ -46,7 +46,6 @@ const Register = () => {
                 })
             });
             const res = await data.json();
-            console.log(res, "res, ragister")
             if (res.status === (201)) {
                 toast(res.msg, {
                     autoClose: 1500,
