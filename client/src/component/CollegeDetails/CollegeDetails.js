@@ -106,7 +106,7 @@ const CollegeDetails = ({ info, Videosdata }) => {
               <div>  {info?.quickSummary?.institutionType}</div>
               <div> {info?.quickSummary?.courses} </div>
               <div>  {info?.quickSummary?.address}</div>
-              <div>  {info?.quickSummary?.officialSite}</div>
+              <div> <a href={info?.quickSummary?.officialSite} target="_blank" > {info?.quickSummary?.officialSite}</a> </div>
               <div>  {info?.quickSummary?.contacts} </div>
               <div>  {info?.quickSummary?.affiliatedUniversity}</div>
             </div>

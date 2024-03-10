@@ -12,7 +12,7 @@ import { CounsellingForm } from '../API/api';
 
 const Form = () => {
   const user = localStorage.getItem('user')
-  const id = localStorage.getItem('id')
+  const id = localStorage.getItem('Id')
   const navigate = useNavigate()
 
   const [inVal, setInpval] = useState({
