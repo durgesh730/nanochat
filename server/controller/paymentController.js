@@ -26,7 +26,7 @@ export const paymentVerification = async (req, res) => {
         .update(body.toString())
         .digest("hex");
 
-    const isAuthentic = expectedSignature === razorpay_signature;
+    const isAuthentic = expectedSignature == razorpay_signature;
 
     if (isAuthentic) {
         // Database comes here

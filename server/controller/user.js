@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
         user: "durgeshchaudhary020401@gmail.com",
-        pass: "lqfxwpogsaocehjc"
+        pass: process.env.EMAIL_PASSWORD
     }
 })
 
@@ -47,7 +47,6 @@ export const UserRegister = async (req, res) => {
 
 export const UserLogin = async (req, res) => {
     const { email, password } = req.body;
-    console.log(req.body)
     if (!email || !password) {
         return res.status(400).json({ error: "Please fill all details." });
     }
@@ -195,11 +194,9 @@ export const VerfiyUser = async (req, res) => {
 
 export const ChangePassword = async (req, res) => {
     const { id, token } = req.params;
-
     const { password } = req.body;
 
     try {
-
         const validuser = await Userdb.findOne({ _id: id, verifytoken: token });
 
         // verify user token 
