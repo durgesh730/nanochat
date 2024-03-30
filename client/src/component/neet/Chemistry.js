@@ -8,7 +8,7 @@ export default function Chemistry() {
 
     return (
         <>
-             <Navbar/>
+            <Navbar />
             <Quiz />
             <Footer />
         </>

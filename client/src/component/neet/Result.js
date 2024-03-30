@@ -69,10 +69,9 @@ export default function Result() {
                 </div>
 
                 <div className='start'>
-                    <Link to={'/neet'} className="mx-4" onClick={onRestart} >Restart</Link>
+                    <Link to={'/practice-questions/neet'} className="mx-4" onClick={onRestart} >Restart</Link>
                     <Link to={'/'} className="mx-4" onClick={onRestart} >Home</Link>
                 </div>
-
             </div>
             
             <Footer />

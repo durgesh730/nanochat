@@ -8,8 +8,8 @@ import Navbar from '../../component/Navbar/Navbar'
 const Neet = () => {
   return (
     <>
-     <Navbar/>
-      <SocialMedia/>
+      <Navbar />
+      <SocialMedia />
       <div className='container '>
         <div className='block'>
           <div className='topics'>
